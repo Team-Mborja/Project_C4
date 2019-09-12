@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
 
     public bool isGrounded;
 
+
+    public GameObject grenade;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,9 @@ public class Player : MonoBehaviour
         // Player jumps with W and up arrow and space
         if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)))
             rb.AddForce(Vector2.up * jumpForce);
+
+        if (Input.GetMouseButtonDown(0))
+            Instantiate(grenade, new Vector2(transform.position.x + 0.4f, transform.position.y), Quaternion.identity);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
