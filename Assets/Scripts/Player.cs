@@ -12,8 +12,9 @@ public class Player : MonoBehaviour
 
     public bool isGrounded;
 
-
+    public GameObject weaponSpawn;
     public GameObject grenade;
+    public GameObject c4;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,12 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce);
 
         if (Input.GetMouseButtonDown(0))
-            Instantiate(grenade, new Vector2(transform.position.x + 0.4f, transform.position.y), Quaternion.identity);
+            Instantiate(grenade, weaponSpawn.transform.position, Quaternion.identity);
+
+        if (Input.GetMouseButtonDown(1))
+            Instantiate(c4, weaponSpawn.transform.position, Quaternion.identity);
+
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
