@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 
     public bool isGrounded;
 
+    GameObject currentWeapon;
     public GameObject weaponSpawn;
     public GameObject grenade;
     public GameObject c4;
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
     {
         isGrounded = true;
         rb = GetComponent<Rigidbody2D>();
+        currentWeapon = grenade;
     }
 
     // Update is called once per frame
@@ -38,12 +40,14 @@ public class Player : MonoBehaviour
         if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)))
             rb.AddForce(Vector2.up * jumpForce);
 
+        if (Input.GetKey(KeyCode.Alpha1))
+            currentWeapon = grenade;
+        else if (Input.GetKey(KeyCode.Alpha2))
+            currentWeapon = c4;
+
+        // Throws current weapon
         if (Input.GetMouseButtonDown(0))
-            Instantiate(grenade, weaponSpawn.transform.position, Quaternion.identity);
-
-        if (Input.GetMouseButtonDown(1))
-            Instantiate(c4, weaponSpawn.transform.position, Quaternion.identity);
-
+            Instantiate(currentWeapon, weaponSpawn.transform.position, Quaternion.identity);
 
     }
 

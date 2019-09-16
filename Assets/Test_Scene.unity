@@ -555,6 +555,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!1 &1699329603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1699329604}
+  m_Layer: 0
+  m_Name: Weapon_Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1699329604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699329603}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.16, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1781350828}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1781350825
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,7 +689,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.765, z: 0}
   m_LocalScale: {x: 1.5, y: 3.5, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1699329604}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -679,6 +710,9 @@ MonoBehaviour:
   jumpForce: 200
   maximumSpeed: 50
   isGrounded: 0
+  weaponSpawn: {fileID: 1699329603}
+  grenade: {fileID: 1729466018618520986, guid: 02ce9939d6445a2408f72f38f7240904, type: 3}
+  c4: {fileID: 2342420896000991908, guid: bee33e4e334488e4facf0677eacf70e8, type: 3}
 --- !u!50 &1781350830
 Rigidbody2D:
   serializedVersion: 4

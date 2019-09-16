@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1334118023285272670}
   m_Layer: 0
   m_Name: C4
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2342420896000991908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.88653547, y: -2.8931623, z: -4.7856574}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.75, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -102,7 +102,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5829797917334025672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -141,3 +141,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611b0e7ba4d16114780d1c37de2f94fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forceForward: 250
+  forceUpward: 75

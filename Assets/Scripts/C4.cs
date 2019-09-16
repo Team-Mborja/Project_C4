@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class C4 : MonoBehaviour
 {
+    Rigidbody2D rb;
+
+    public float forceForward;
+    public float forceUpward;
+
+ 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+
+        rb.AddForce(new Vector2(forceForward, forceUpward));
+
+   
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+   private void OnCollisionEnter2D(Collision2D collider)
+    {
+
+        if (collider.gameObject.tag != "Player" && (collider.gameObject.tag == "Floor" && collider.gameObject.tag != "Weapon"))
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+        }
     }
 }
