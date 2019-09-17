@@ -49,6 +49,14 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
             Instantiate(currentWeapon, weaponSpawn.transform.position, Quaternion.identity);
 
+        if (Input.GetMouseButtonDown(1) && currentWeapon == c4)
+        {
+            GameObject[] c4s = GameObject.FindGameObjectsWithTag("C4");
+            foreach (GameObject c4 in c4s)
+                GameObject.Destroy(c4);
+        }
+           
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
