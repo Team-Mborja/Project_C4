@@ -6,23 +6,35 @@ public class Player : MonoBehaviour
 {
     Rigidbody2D rb;
 
-    public float moveSpeed;
-    public float jumpForce;
-    public float maximumSpeed;
-
+    // Left and right move speed;
+        public float moveSpeed;
+    // Height of jump
+        public float jumpForce;
+    // Checks if player is on the ground
     public bool isGrounded;
 
-    GameObject currentWeapon;
-    public GameObject weaponSpawn;
-    public GameObject grenade;
-    public GameObject c4;
+    // Holds the current weapon of the player
+        GameObject currentWeapon;
+    // Empty game object that holds the location of the weapon on the player
+        public GameObject weaponSpawn;
+    // Weapon in first slot
+        public GameObject weapon1;
+    // Weapon in seconds slot
+        public GameObject weapon2;
+
+
+    // inventory of every type of explosive for the level
+        float inventory1;
+        float inventory2;
+        float inventory3;
 
     // Start is called before the first frame update
     void Start()
     {
-        isGrounded = true;
         rb = GetComponent<Rigidbody2D>();
-        currentWeapon = grenade;
+
+        isGrounded = true;
+        currentWeapon = weapon1;
     }
 
     // Update is called once per frame
@@ -40,16 +52,18 @@ public class Player : MonoBehaviour
         if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)))
             rb.AddForce(Vector2.up * jumpForce);
 
+        // Weapon swap keys
         if (Input.GetKey(KeyCode.Alpha1))
-            currentWeapon = grenade;
+            currentWeapon = weapon1;
         else if (Input.GetKey(KeyCode.Alpha2))
-            currentWeapon = c4;
+            currentWeapon = weapon2;
 
         // Throws current weapon
         if (Input.GetMouseButtonDown(0))
             Instantiate(currentWeapon, weaponSpawn.transform.position, Quaternion.identity);
 
-        if (Input.GetMouseButtonDown(1) && currentWeapon == c4)
+        // Detonates C4
+        if (Input.GetMouseButtonDown(1) && currentWeapon.tag  == "C4")
         {
             GameObject[] c4s = GameObject.FindGameObjectsWithTag("C4");
             foreach (GameObject c4 in c4s)
