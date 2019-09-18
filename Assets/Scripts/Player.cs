@@ -5,36 +5,36 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Rigidbody2D rb;
+    LevelManager managerScript;
 
     // Left and right move speed;
         public float moveSpeed;
     // Height of jump
         public float jumpForce;
     // Checks if player is on the ground
-    public bool isGrounded;
-
-    // Holds the current weapon of the player
-        GameObject currentWeapon;
+        public bool isGrounded;
+    // bool for left facing
+        public bool isLeft;
     // Empty game object that holds the location of the weapon on the player
-        public GameObject weaponSpawn;
-    // Weapon in first slot
-        public GameObject weapon1;
-    // Weapon in seconds slot
-        public GameObject weapon2;
-
-
-    // inventory of every type of explosive for the level
-        float inventory1;
-        float inventory2;
-        float inventory3;
+        public GameObject[] weaponSpawn;
+    // Creates inventory
+         GameObject[] inventory = new GameObject[2];
+    // current inventory slot;
+         int slot;
+   
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
 
+        inventory[0] = managerScript.weapons[0];
+        inventory[1] = managerScript.weapons[1];
+        slot = 0; 
         isGrounded = true;
-        currentWeapon = weapon1;
+
+        
     }
 
     // Update is called once per frame
@@ -54,16 +54,29 @@ public class Player : MonoBehaviour
 
         // Weapon swap keys
         if (Input.GetKey(KeyCode.Alpha1))
-            currentWeapon = weapon1;
+            slot = 0;
         else if (Input.GetKey(KeyCode.Alpha2))
-            currentWeapon = weapon2;
+            slot = 1;
 
         // Throws current weapon
-        if (Input.GetMouseButtonDown(0))
-            Instantiate(currentWeapon, weaponSpawn.transform.position, Quaternion.identity);
+        if (Input.GetMouseButtonDown(0) && managerScript.inventory[slot] > 0)
+        {
+            if (Input.mousePosition.x < transform.position.x)
+            {
+                isLeft = true;
+                managerScript.inventory[slot]--;
+                Instantiate(inventory[slot], weaponSpawn[0].transform.position, Quaternion.identity);
+            }
+            else
+            {
+                isLeft = false;
+                managerScript.inventory[slot]--;
+                Instantiate(inventory[slot], weaponSpawn[1].transform.position, Quaternion.identity);
+            }
+        }
 
         // Detonates C4
-        if (Input.GetMouseButtonDown(1) && currentWeapon.tag  == "C4")
+        if (Input.GetMouseButtonDown(1) && inventory[slot].tag  == "C4")
         {
             GameObject[] c4s = GameObject.FindGameObjectsWithTag("C4");
             foreach (GameObject c4 in c4s)

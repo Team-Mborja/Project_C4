@@ -7,6 +7,8 @@ TagManager:
   - Floor
   - C4
   - Grenade
+  - Manager
+  - Box
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - No_Explosion_Zone
+  - Other
   - 
   - 
   - 
@@ -43,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: NoExplosionZone
+    uniqueID: 2558447673
     locked: 0
