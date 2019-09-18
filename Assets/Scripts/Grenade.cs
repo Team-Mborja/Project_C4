@@ -26,10 +26,21 @@ public class Grenade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(destruct);
         destruct -= Time.deltaTime;
 
         if (destruct <= 0)
             Destroy(gameObject);
     }
 
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Box" && destruct <= 0.01f)
+            Destroy(other.gameObject);
+
+
+        
+      
+    }
 }
