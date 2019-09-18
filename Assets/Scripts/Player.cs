@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     Rigidbody2D rb;
     LevelManager managerScript;
+    C4 c4Script;
 
     // Left and right move speed;
         public float moveSpeed;
@@ -42,12 +43,12 @@ public class Player : MonoBehaviour
     {
         // Player moves right with D and right arrow
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            rb.AddForce(Vector2.right * moveSpeed);
+            transform.Translate(Vector2.right* moveSpeed);
 
         // Player moves left with A and left arrow
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            rb.AddForce(Vector2.left * moveSpeed);
-        
+            transform.Translate(Vector2.left * moveSpeed);
+
         // Player jumps with W and up arrow and space
         if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)))
             rb.AddForce(Vector2.up * jumpForce);
@@ -80,7 +81,10 @@ public class Player : MonoBehaviour
         {
             GameObject[] c4s = GameObject.FindGameObjectsWithTag("C4");
             foreach (GameObject c4 in c4s)
-                GameObject.Destroy(c4);
+            {
+                if(c4.GetComponent<C4>().isStuck)
+                    GameObject.Destroy(c4);
+            }
         }
            
 
