@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -21,5 +22,8 @@ public class LevelManager : MonoBehaviour
     {
         inventory_Display[0].text = "Grendades: " + inventory[0].ToString();
         inventory_Display[1].text = "C4s: " + inventory[1].ToString();
+
+        if (Input.GetKey(KeyCode.R))
+            SceneManager.LoadScene("Test_Scene");
     }
 }
