@@ -30,4 +30,5 @@ public class C4 : MonoBehaviour
             isStuck = true;
         }
     }
+
 }

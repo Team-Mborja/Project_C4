@@ -98,6 +98,9 @@ MonoBehaviour:
   lifeTime: 5
   forceForward: 200
   forceUpward: 75
+  explosionTags:
+  - Box
+  - FuseBox
 --- !u!50 &428789718921507750
 Rigidbody2D:
   serializedVersion: 4
@@ -150,4 +153,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 5

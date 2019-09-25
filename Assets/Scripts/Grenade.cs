@@ -12,6 +12,8 @@ public class Grenade : MonoBehaviour
     public float forceForward;
     public float forceUpward;
 
+    public List<string> explosionTags = new List<string>();
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,6 @@ public class Grenade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(destruct);
         destruct -= Time.deltaTime;
 
         if (destruct <= 0)
@@ -36,11 +37,14 @@ public class Grenade : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Box" && destruct <= 0.01f)
+        if ((explosionTags.Contains(other.gameObject.tag) && destruct <= 0.01f))
+        {
+            if (other.gameObject.tag == "FuseBox")
+                GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene("Test_Scene");
+
             Destroy(other.gameObject);
 
-
-        
-      
+        }
+     
     }
 }

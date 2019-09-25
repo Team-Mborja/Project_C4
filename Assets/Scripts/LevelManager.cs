@@ -24,6 +24,11 @@ public class LevelManager : MonoBehaviour
         inventory_Display[1].text = "C4s: " + inventory[1].ToString();
 
         if (Input.GetKey(KeyCode.R))
-            SceneManager.LoadScene("Test_Scene");
+            RestartScene("Test_Scene");
+    }
+
+    public void RestartScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
