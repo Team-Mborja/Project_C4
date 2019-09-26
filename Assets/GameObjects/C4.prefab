@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7720900698088072143}
   - component: {fileID: 5829797917334025672}
   - component: {fileID: 1334118023285272670}
+  - component: {fileID: 7550561058655038551}
   m_Layer: 0
   m_Name: C4
   m_TagString: C4
@@ -143,3 +144,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceForward: 250
   forceUpward: 75
+  isStuck: 0
+  explosionTags:
+  - Box
+  - FuseBox
+--- !u!58 &7550561058655038551
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2342420896000991908}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

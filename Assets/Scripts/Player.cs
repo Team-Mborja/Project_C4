@@ -75,17 +75,6 @@ public class Player : MonoBehaviour
                 Instantiate(inventory[slot], weaponSpawn[1].transform.position, Quaternion.identity);
             }
         }
-
-        // Detonates C4
-        if (Input.GetMouseButtonDown(1) && inventory[slot].tag  == "C4")
-        {
-            GameObject[] c4s = GameObject.FindGameObjectsWithTag("C4");
-            foreach (GameObject c4 in c4s)
-            {
-                if(c4.GetComponent<C4>().isStuck)
-                    GameObject.Destroy(c4);
-            }
-        }
            
 
     }

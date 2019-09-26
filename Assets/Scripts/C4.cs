@@ -8,8 +8,10 @@ public class C4 : MonoBehaviour
 
     public float forceForward;
     public float forceUpward;
-
-    public bool isStuck;
+    // Detects if object is stuck to the ground
+        public bool isStuck;
+    // List of tags of objects that can explode to C4
+        public List<string> explosionTags = new List<string>();
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,13 @@ public class C4 : MonoBehaviour
         rb.AddForce(new Vector2(forceForward, forceUpward));
         isStuck = false;
    
+    }
+
+
+    void Update()
+    {
+        if (Input.GetMouseButton(1) && isStuck)
+            Destroy(gameObject);
     }
 
    private void OnCollisionEnter2D(Collision2D collider)
@@ -31,4 +40,17 @@ public class C4 : MonoBehaviour
         }
     }
 
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if ((explosionTags.Contains(other.gameObject.tag) && Input.GetMouseButtonDown(1) && isStuck))
+        {
+            if (other.gameObject.tag == "FuseBox")
+                GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene("Test_Scene");
+
+            Destroy(other.gameObject);
+
+        }
+
+    }
 }
