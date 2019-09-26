@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     // bool for left facing
         public bool isLeft;
     // Empty game object that holds the location of the weapon on the player
-        public GameObject[] weaponSpawn;
+        public GameObject weaponSpawn;
     // Creates inventory
          GameObject[] inventory = new GameObject[2];
     // current inventory slot;
@@ -62,18 +62,8 @@ public class Player : MonoBehaviour
         // Throws current weapon
         if (Input.GetMouseButtonDown(0) && managerScript.inventory[slot] > 0)
         {
-            if (Input.mousePosition.x < transform.position.x)
-            {
-                isLeft = true;
                 managerScript.inventory[slot]--;
-                Instantiate(inventory[slot], weaponSpawn[0].transform.position, Quaternion.identity);
-            }
-            else
-            {
-                isLeft = false;
-                managerScript.inventory[slot]--;
-                Instantiate(inventory[slot], weaponSpawn[1].transform.position, Quaternion.identity);
-            }
+                Instantiate(inventory[slot], weaponSpawn.transform.position, Quaternion.identity); 
         }
            
 
