@@ -18,6 +18,9 @@ public class C4 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isLeft == true)
+            forceForward = -Mathf.Abs(forceForward);
+
         rb.AddForce(new Vector2(forceForward, forceUpward));
         isStuck = false;
    

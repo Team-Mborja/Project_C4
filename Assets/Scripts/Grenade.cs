@@ -19,10 +19,11 @@ public class Grenade : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         destruct = lifeTime;
-        
-        
-        rb.AddForce(Vector2.right * forceForward);
-        rb.AddForce(Vector2.up * forceUpward);
+
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isLeft == true)
+            forceForward = -Mathf.Abs(forceForward);
+
+        rb.AddForce(new Vector2(forceForward, forceUpward));
     }
 
     // Update is called once per frame

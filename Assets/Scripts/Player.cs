@@ -34,8 +34,8 @@ public class Player : MonoBehaviour
         inventory[1] = managerScript.weapons[1];
         slot = 0; 
         isGrounded = true;
+        isLeft = false;
 
-        
     }
 
     // Update is called once per frame
@@ -65,7 +65,17 @@ public class Player : MonoBehaviour
                 managerScript.inventory[slot]--;
                 Instantiate(inventory[slot], weaponSpawn.transform.position, Quaternion.identity); 
         }
-           
+
+        if (Input.mousePosition.x >= Camera.main.WorldToScreenPoint(transform.position).x)
+        {
+            isLeft = false;
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else
+        {
+            isLeft = true;
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
 
     }
 
@@ -80,4 +90,6 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Floor")
             isGrounded = false;
     }
+
+  
 }
