@@ -6,27 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-
-    public Text[] inventory_Display = new Text[2];
-    public int[] inventory = new int[2];
-    public GameObject[] weapons;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
+    // UI for inventory on each equipment
+        public Text[] inventory_Display = new Text[2];
+    // Inventory for each of the equipments
+        public int[] inventory = new int[2];
+    // Weapons availible for the level
+        public GameObject[] weapons;
 
     // Update is called once per frame
     void Update()
     {
-        inventory_Display[0].text = "Grendades: " + inventory[0].ToString();
-        inventory_Display[1].text = "C4s: " + inventory[1].ToString();
+        // Displays name of the equipment and how many you have left
+            inventory_Display[0].text = "Grendades: " + inventory[0].ToString();
+            inventory_Display[1].text = "C4s: " + inventory[1].ToString();
 
-        if (Input.GetKey(KeyCode.R))
-            RestartScene("Test_Scene");
+        // Restart the level when you press "R"
+            if (Input.GetKey(KeyCode.R))
+                RestartScene("Test_Scene");
     }
 
+    // Restarts Level Function
     public void RestartScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

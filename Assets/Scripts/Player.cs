@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Rigidbody2D rb;
-    LevelManager managerScript;
-    C4 c4Script;
-
+    // Creates Rigidbody2D
+        Rigidbody2D rb;
+    // Acceses the level mangaer
+        LevelManager managerScript;
     // Left and right move speed;
         public float moveSpeed;
     // Height of jump
@@ -27,14 +27,20 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
+        // Gets the Rigidbody2D on the player
+            rb = GetComponent<Rigidbody2D>();
+        // Gets the script on the Level Manager
+            managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
 
-        inventory[0] = managerScript.weapons[0];
-        inventory[1] = managerScript.weapons[1];
-        slot = 0; 
-        isGrounded = true;
-        isLeft = false;
+        // Equips weapons from the level manager
+            inventory[0] = managerScript.weapons[0];
+            inventory[1] = managerScript.weapons[1];
+        // Defaults to the first inventory slot
+            slot = 0; 
+        // Defaults to not being on the ground
+            isGrounded = true;
+        // Defaults to facing right
+            isLeft = false;
 
     }
 
@@ -42,22 +48,22 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Player moves right with D and right arrow
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            transform.Translate(Vector2.right* moveSpeed);
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                transform.Translate(Vector2.right* moveSpeed);
 
         // Player moves left with A and left arrow
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            transform.Translate(Vector2.left * moveSpeed);
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                transform.Translate(Vector2.left * moveSpeed);
 
         // Player jumps with W and up arrow and space
-        if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)))
-            rb.AddForce(Vector2.up * jumpForce);
+            if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)))
+                rb.AddForce(Vector2.up * jumpForce);
 
         // Weapon swap keys
-        if (Input.GetKey(KeyCode.Alpha1)) 
-            slot = 0;
-        else if (Input.GetKey(KeyCode.Alpha2))
-            slot = 1;
+            if (Input.GetKey(KeyCode.Alpha1)) 
+                slot = 0;
+            else if (Input.GetKey(KeyCode.Alpha2))
+                slot = 1;
 
         // Throws current weapon
         if (Input.GetMouseButtonDown(0) && managerScript.inventory[slot] > 0)
@@ -66,25 +72,28 @@ public class Player : MonoBehaviour
                 Instantiate(inventory[slot], weaponSpawn.transform.position, Quaternion.identity); 
         }
 
-        if (Input.mousePosition.x >= Camera.main.WorldToScreenPoint(transform.position).x)
-        {
-            isLeft = false;
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-        else
-        {
-            isLeft = true;
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
+        // Cheks to see what direction the player is facing
+            if (Input.mousePosition.x >= Camera.main.WorldToScreenPoint(transform.position).x)
+            {
+                isLeft = false;
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else
+            {
+                isLeft = true;
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
 
     }
 
+    // Detects if player is on the ground
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Floor")
             isGrounded = true;
     }
 
+    //Detects if player is off the ground
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Floor")
