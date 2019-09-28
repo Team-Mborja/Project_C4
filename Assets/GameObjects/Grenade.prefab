@@ -96,8 +96,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 5
-  forceForward: 200
-  forceUpward: 75
+  xMax: 300
+  yMax: 300
+  forwardMultiply: 1.5
+  upwardMultiply: 1.5
   explosionTags:
   - Box
   - FuseBox
