@@ -101,6 +101,7 @@ MonoBehaviour:
   explosionTags:
   - Box
   - FuseBox
+  - Disable
 --- !u!50 &428789718921507750
 Rigidbody2D:
   serializedVersion: 4

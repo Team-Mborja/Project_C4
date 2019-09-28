@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce);
 
         // Weapon swap keys
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Alpha1)) 
             slot = 0;
         else if (Input.GetKey(KeyCode.Alpha2))
             slot = 1;

@@ -788,7 +788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1699329604}
   m_Layer: 0
-  m_Name: Weapon_Spawn_Right
+  m_Name: Weapon_Spawn_Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   inventory_Display:
   - {fileID: 547051943}
   - {fileID: 1434331735}
-  inventory: 050000000a000000
+  inventory: 0500000005000000
   weapons:
   - {fileID: 1729466018618520986, guid: 02ce9939d6445a2408f72f38f7240904, type: 3}
   - {fileID: 2342420896000991908, guid: bee33e4e334488e4facf0677eacf70e8, type: 3}
