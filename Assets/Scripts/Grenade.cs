@@ -51,8 +51,6 @@ public class Grenade : MonoBehaviour
     // throws grenade
         rb.AddForce(new Vector2(forceForward, forceUpward));
 
-        Debug.Log("Forward: " + forceForward);
-        Debug.Log("Upward: " + forceUpward);
     }
 
     // Update is called once per frame
@@ -62,15 +60,20 @@ public class Grenade : MonoBehaviour
             destruct -= Time.deltaTime;
 
         // checks if timer has ended and detonates if done
-            if (destruct <= 0)
-                Destroy(gameObject);
+            if (destruct <= 0.1)
+                Destroy(gameObject, 0.1f);
+
+
     }
 
 
     private void OnTriggerStay2D(Collider2D other)
     {
+
+       Debug.Log("Tag" + other.gameObject.tag + "     Destruct: " + destruct);
+
         // Checks of object in its radius can be destroyed and timer has ended
-            if ((explosionTags.Contains(other.gameObject.tag) && destruct <= 0.01f))
+            if ((explosionTags.Contains(other.gameObject.tag) && destruct <= 0.1f))
             {
             // Checks of the fuse box was destroyed and ends the game if it was
                 if (other.gameObject.tag == "FuseBox")
