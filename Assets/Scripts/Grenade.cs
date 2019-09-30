@@ -24,6 +24,8 @@ public class Grenade : MonoBehaviour
         public float upwardMultiply;
     // List of tags on objects that can be destroyed
         public List<string> explosionTags = new List<string>();
+    // Items in Range
+        List<GameObject> inRangeItems = new List<GameObject>();
     
     // Start is called before the first frame update
     void Start()
@@ -60,29 +62,37 @@ public class Grenade : MonoBehaviour
             destruct -= Time.deltaTime;
 
         // checks if timer has ended and detonates if done
-            if (destruct <= 0.1)
-                Destroy(gameObject, 0.1f);
+        if (destruct <= 0)
+            Explode();
 
 
     }
 
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (explosionTags.Contains(other.gameObject.tag))
+            inRangeItems.Add(other.gameObject);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (inRangeItems.Contains(other.gameObject))
+            inRangeItems.Remove(other.gameObject);
+    }
+
+    private void Explode()
     {
 
-       Debug.Log("Tag" + other.gameObject.tag + "     Destruct: " + destruct);
+       foreach(GameObject objects in inRangeItems)
+        {
 
-        // Checks of object in its radius can be destroyed and timer has ended
-            if ((explosionTags.Contains(other.gameObject.tag) && destruct <= 0.1f))
-            {
-            // Checks of the fuse box was destroyed and ends the game if it was
-                if (other.gameObject.tag == "FuseBox")
-                    GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene("Test_Scene");
+           if (objects.tag == "FuseBox")
+              GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene("Test_Scene");
 
-                // Destroys the objects in radius that can be destroyed
-                    Destroy(other.gameObject);
+                Destroy(objects);
+        }
 
-            }
-     
+        Destroy(gameObject);
     }
 }

@@ -22,6 +22,8 @@ public class C4 : MonoBehaviour
         public bool isStuck;
     // List of tags of objects that can explode to C4
         public List<string> explosionTags = new List<string>();
+    // Items in Range
+        List<GameObject> inRangeItems = new List<GameObject>();
 
 
     // Start is called before the first frame update
@@ -55,8 +57,8 @@ public class C4 : MonoBehaviour
     void Update()
     {
         // If C4 is stuck to someting and player detonates it, the C4 will explode
-            if (Input.GetMouseButton(1) && isStuck)
-                Destroy(gameObject, 0.1f);
+        if (Input.GetMouseButton(1) && isStuck)
+            Explode();
     }
 
     // Sticks C4 to floors
@@ -70,21 +72,31 @@ public class C4 : MonoBehaviour
         }
     }
 
-
-
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // If the object in its radius can be destroyed and player has detonated the C4 and the C4 is stuck to the ground
-            if ((explosionTags.Contains(other.gameObject.tag) && Input.GetMouseButtonDown(1) && isStuck))
-            {
-            // If fuse box is destroyed, the game ends
-                if (other.gameObject.tag == "FuseBox")
-                    GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene("Test_Scene");
-
-                // Destroys objects in its radius that can be destroyed
-                    Destroy(other.gameObject);
-
-            }
-
+        if (explosionTags.Contains(other.gameObject.tag))
+            inRangeItems.Add(other.gameObject);
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (inRangeItems.Contains(other.gameObject))
+            inRangeItems.Remove(other.gameObject);
+    }
+
+    private void Explode()
+    {
+
+        foreach (GameObject objects in inRangeItems)
+        {
+
+            if (objects.tag == "FuseBox")
+                GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene("Test_Scene");
+
+                Destroy(objects);
+        }
+
+        Destroy(gameObject);
+    }
+
 }
