@@ -125,6 +125,7 @@ MonoBehaviour:
   - Box
   - FuseBox
   - Disable
+  itemName: C4
 --- !u!61 &2785914762931918219
 BoxCollider2D:
   m_ObjectHideFlags: 0

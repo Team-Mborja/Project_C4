@@ -8,6 +8,8 @@ public class Rocket : MonoBehaviour
 
     // List of tags on objects that can be destroyed
         public List<string> explosionTags = new List<string>();
+    // Name of Equipment
+        public string itemName;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,9 @@ public class Rocket : MonoBehaviour
     {
         if (collision.gameObject.tag == "FuseBox")
             GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene("Test_Scene");
+
+        if (collision.gameObject.tag == "Box" && collision.gameObject.GetComponent<BoxDrops>() != null)
+            collision.gameObject.GetComponent<BoxDrops>().DropItem();
 
         if (explosionTags.Contains(collision.gameObject.tag))
             Destroy(collision.gameObject);

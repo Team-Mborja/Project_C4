@@ -26,7 +26,9 @@ public class Grenade : MonoBehaviour
         public List<string> explosionTags = new List<string>();
     // Items in Range
         List<GameObject> inRangeItems = new List<GameObject>();
-    
+    // Name of Equipment
+        public string itemName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -89,6 +91,9 @@ public class Grenade : MonoBehaviour
 
            if (objects.tag == "FuseBox")
               GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene("Test_Scene");
+
+            if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
+                objects.GetComponent<BoxDrops>().DropItem();
 
                 Destroy(objects);
         }
