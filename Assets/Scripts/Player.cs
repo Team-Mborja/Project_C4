@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     // Empty game object that holds the location of the weapon on the player
         public GameObject weaponSpawn;
     // Creates inventory
-         GameObject[] inventory = new GameObject[2];
+         GameObject[] inventory = new GameObject[3];
     // current inventory slot;
          int slot;
    
@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
         // Equips weapons from the level manager
             inventory[0] = managerScript.weapons[0];
             inventory[1] = managerScript.weapons[1];
+            inventory[2] = managerScript.weapons[2];
         // Defaults to the first inventory slot
             slot = 0; 
         // Defaults to not being on the ground
@@ -60,10 +61,12 @@ public class Player : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpForce);
 
         // Weapon swap keys
-            if (Input.GetKey(KeyCode.Alpha1)) 
-                slot = 0;
-            else if (Input.GetKey(KeyCode.Alpha2))
-                slot = 1;
+        if (Input.GetKey(KeyCode.Alpha1))
+            slot = 0;
+        else if (Input.GetKey(KeyCode.Alpha2))
+            slot = 1;
+        else if (Input.GetKey(KeyCode.Alpha3))
+            slot = 2;
 
         // Throws current weapon
         if (Input.GetMouseButtonDown(0) && managerScript.inventory[slot] > 0)
