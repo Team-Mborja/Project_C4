@@ -10,6 +10,8 @@ public class Rocket : MonoBehaviour
         public List<string> explosionTags = new List<string>();
     // Name of Equipment
         public string itemName;
+    // Items in Range
+        List<GameObject> inRangeItems = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -29,18 +31,41 @@ public class Rocket : MonoBehaviour
     }
 
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (explosionTags.Contains(other.gameObject.tag))
+            inRangeItems.Add(other.gameObject);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (inRangeItems.Contains(other.gameObject))
+            inRangeItems.Remove(other.gameObject);
+    }
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "FuseBox")
-            GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene("Test_Scene");
+        Explode();
+    }
 
-        if (collision.gameObject.tag == "Box" && collision.gameObject.GetComponent<BoxDrops>() != null)
-            collision.gameObject.GetComponent<BoxDrops>().DropItem();
+    private void Explode()
+    {
+            foreach (GameObject objects in inRangeItems)
+            {
 
-        if (explosionTags.Contains(collision.gameObject.tag))
-            Destroy(collision.gameObject);
+                if (objects.tag == "FuseBox")
+                    GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene("Test_Scene");
 
-        if(collision.gameObject.tag != "Player")
+                if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
+                    objects.GetComponent<BoxDrops>().DropItem();
+
+                Destroy(objects);
+
+            if (inRangeItems.Count == 0)
+                break;
+
+        }
             Destroy(gameObject);
     }
 }

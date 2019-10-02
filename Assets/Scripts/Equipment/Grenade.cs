@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
-    // Creates Rigidbody2D
-        Rigidbody2D rb;
     // LifeTime of the grenade
         public float lifeTime;
     //Countdown till destruction
@@ -30,28 +28,16 @@ public class Grenade : MonoBehaviour
         public string itemName;
     // Has been throw
         bool isThrown;
-    // Spawn Location
-        GameObject spawnPoint;
+
+      
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        spawnPoint = GameObject.FindGameObjectWithTag("Spawn");
         isThrown = false;
 
         // Sets destruct timer on
             destruct = lifeTime;
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        // timer counts down
-            destruct -= Time.deltaTime;
 
         // calculate force based on how far mouse is from player
         forceForward = Mathf.Abs(Input.mousePosition.x - GameObject.FindGameObjectWithTag("Player").transform.position.x) * forwardMultiply;
@@ -67,15 +53,32 @@ public class Grenade : MonoBehaviour
         // Checks if player is left or right
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isLeft == true)
             forceForward = -Mathf.Abs(forceForward);
+    }
 
-        if (Input.GetMouseButtonUp(0) && isThrown == false) {
-            rb.AddForce(new Vector2(forceForward, forceUpward));
+    // Update is called once per frame
+    void Update()
+    {
+
+        // timer counts down
+            destruct -= Time.deltaTime;
+
+        if (Input.GetMouseButtonUp(0) && isThrown == false)
+        {
+            ThrowGrenade();
             isThrown = true;
         }
 
         // checks if timer has ended and detonates if done
         if (destruct <= 0)
             Explode();
+
+    }
+
+    void ThrowGrenade()
+    {
+        Rigidbody2D rb = gameObject.AddComponent<Rigidbody2D>();
+
+        rb.AddForce(new Vector2(forceForward, forceUpward));
 
     }
 
@@ -105,6 +108,9 @@ public class Grenade : MonoBehaviour
                 objects.GetComponent<BoxDrops>().DropItem();
 
                 Destroy(objects);
+
+            if (inRangeItems.Count == 0)
+                break;
         }
 
         Destroy(gameObject);

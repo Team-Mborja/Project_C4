@@ -26,15 +26,18 @@ public class C4 : MonoBehaviour
         List<GameObject> inRangeItems = new List<GameObject>();
     // Name of Equipment
         public string itemName;
+    // Has the object been thrown
+        bool isThrown;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Gets the Rigidbody2D attached to the C4
-            rb = GetComponent<Rigidbody2D>();
+        isThrown = false;
+        //C4 is set to default to not stuck to anything
+            isStuck = false;
 
         // Calculates force based on mouse position compared to player position
-            forceForward = Mathf.Abs(Input.mousePosition.x - GameObject.FindGameObjectWithTag("Player").transform.position.x) * forwardMultiply;
+        forceForward = Mathf.Abs(Input.mousePosition.x - GameObject.FindGameObjectWithTag("Player").transform.position.x) * forwardMultiply;
             forceUpward = Mathf.Abs(Input.mousePosition.y - GameObject.FindGameObjectWithTag("Player").transform.position.y) * upwardMultiply;
 
         // Checks force with maximums
@@ -48,18 +51,31 @@ public class C4 : MonoBehaviour
             if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isLeft == true)
                 forceForward = -Mathf.Abs(forceForward);
 
-        // Throws the C4
-            rb.AddForce(new Vector2(forceForward, forceUpward));
-        //C4 is set to default to not stuck to anything
-            isStuck = false;
     }
 
 
     void Update()
     {
+
+        if (Input.GetMouseButtonUp(0) && isThrown == false)
+        {
+            ThrowC4();
+            isThrown = true;
+        }
+
         // If C4 is stuck to someting and player detonates it, the C4 will explode
         if (Input.GetMouseButton(1) && isStuck)
             Explode();
+    }
+
+
+    public void ThrowC4()
+    {
+
+         rb = gameObject.AddComponent<Rigidbody2D>();
+
+        // Throws the C4
+        rb.AddForce(new Vector2(forceForward, forceUpward));
     }
 
     // Sticks C4 to floors
@@ -98,6 +114,10 @@ public class C4 : MonoBehaviour
                 objects.GetComponent<BoxDrops>().DropItem();
 
             Destroy(objects);
+
+            if (inRangeItems.Count == 0)
+                break;
+
         }
 
         Destroy(gameObject);

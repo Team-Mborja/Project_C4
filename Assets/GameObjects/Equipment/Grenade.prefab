@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1729466018618520965}
   - component: {fileID: 1729466018618520964}
   - component: {fileID: 1729466018618520987}
-  - component: {fileID: 428789718921507750}
   - component: {fileID: 1050186702293425458}
   - component: {fileID: 7937050813135769309}
   m_Layer: 0
@@ -60,6 +59,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -105,27 +105,6 @@ MonoBehaviour:
   - FuseBox
   - Disable
   itemName: Grenade
---- !u!50 &428789718921507750
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729466018618520986}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &1050186702293425458
 CircleCollider2D:
   m_ObjectHideFlags: 0
