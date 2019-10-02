@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NoExplosionZone : MonoBehaviour
+public class Laser : MonoBehaviour
 {
     // Box that will disable the Disable
-        public GameObject disableBox;
+        public GameObject disableBoxLaser;
     // List of Objects the laser destroys
         public List<string> destroyList = new List<string>();
-
     void Update()
     {
-        // If someone has destroyed the Disable Box, destroy the No-Explosion Zone
-            if (disableBox == null)
-                Destroy(gameObject);
+        // If someone has destroyed the Disable Box (Laser), destroy the Laser
+        if (disableBoxLaser == null)
+            Destroy(gameObject);
     }
 
     // If an explosive enters the No-Explosion Zone it is destroyed
