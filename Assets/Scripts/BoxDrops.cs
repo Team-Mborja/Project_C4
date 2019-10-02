@@ -9,6 +9,6 @@ public class BoxDrops : MonoBehaviour
 
     public void DropItem()
     {
-        Instantiate(itemDrop, box.transform.position, Quaternion.identity);
+        Instantiate(itemDrop, new Vector2(box.transform.position.x, box.transform.position.y - 0.5f), Quaternion.identity);
     }
 }
