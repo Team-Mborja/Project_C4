@@ -12,6 +12,7 @@ TagManager:
   - FuseBox
   - Disable
   - Rocket
+  - Spawn
   layers:
   - Default
   - TransparentFX
