@@ -13,6 +13,7 @@ TagManager:
   - Disable
   - Rocket
   - Spawn
+  - Wall
   layers:
   - Default
   - TransparentFX
