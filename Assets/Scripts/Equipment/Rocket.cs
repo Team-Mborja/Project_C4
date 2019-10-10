@@ -12,11 +12,10 @@ public class Rocket : MonoBehaviour
         public string itemName;
     // Items in Range
         List<GameObject> inRangeItems = new List<GameObject>();
-
+ 
     // Start is called before the first frame update
     void Start()
     {
-
         // Checks if player is left or right
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isLeft == true)
             travelSpeed = -Mathf.Abs(travelSpeed);
