@@ -12,21 +12,29 @@ public class Rocket : MonoBehaviour
         public string itemName;
     // Items in Range
         List<GameObject> inRangeItems = new List<GameObject>();
- 
+    // Target of the rocket
+        Vector3 target;
+
     // Start is called before the first frame update
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Cursor").transform.position;
+
         // Checks if player is left or right
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isLeft == true)
             travelSpeed = -Mathf.Abs(travelSpeed);
 
-        transform.rotation = Quaternion.Euler(0,0,90);  
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.down * travelSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, target, travelSpeed * (travelSpeed/ Mathf.Abs(travelSpeed)));
+        target = Vector3.MoveTowards(target, transform.position, -(travelSpeed * (travelSpeed / Mathf.Abs(travelSpeed))));
+
+
+        
     }
 
 
