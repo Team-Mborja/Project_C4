@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     // Creates inventory
          GameObject[] inventory = new GameObject[3];
     // current inventory slot;
-         int slot;
+         public int slot;
    
 
     // Start is called before the first frame update

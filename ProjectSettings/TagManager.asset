@@ -16,6 +16,7 @@ TagManager:
   - Wall
   - Ceiling
   - Cursor
+  - RedLine
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,16 @@ public class LevelManager : MonoBehaviour
         public int[] inventory = new int[3];
     // Weapons availible for the level
         public GameObject[] weapons;
+    // Indicator
+        GameObject redLine;
+    //Player
+        GameObject player;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        redLine = GameObject.FindGameObjectWithTag("RedLine");
+    }
 
     // Update is called once per frame
     void Update()
@@ -21,8 +31,15 @@ public class LevelManager : MonoBehaviour
             inventory_Display[1].text = inventory[1].ToString();
             inventory_Display[2].text = inventory[2].ToString();
 
+        if (player.GetComponent<Player>().slot == 0)
+            redLine.transform.position = new Vector2(-11, 3.5f);
+        else if (player.GetComponent<Player>().slot == 1)
+            redLine.transform.position = new Vector2(0, 3.5f);
+        else if (player.GetComponent<Player>().slot == 2)
+            redLine.transform.position = new Vector2(11, 3.5f);
+
         // Restart the level when you press "R"
-            if (Input.GetKey(KeyCode.R))
+        if (Input.GetKey(KeyCode.R))
                 RestartScene("Test_Scene");
     }
 
