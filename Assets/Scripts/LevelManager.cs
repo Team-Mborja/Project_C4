@@ -12,15 +12,12 @@ public class LevelManager : MonoBehaviour
         public int[] inventory = new int[3];
     // Weapons availible for the level
         public GameObject[] weapons;
-    // Indicator
-        GameObject redLine;
     //Player
         GameObject player;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        redLine = GameObject.FindGameObjectWithTag("RedLine");
     }
 
     // Update is called once per frame
@@ -31,21 +28,34 @@ public class LevelManager : MonoBehaviour
             inventory_Display[1].text = inventory[1].ToString();
             inventory_Display[2].text = inventory[2].ToString();
 
-        if (player.GetComponent<Player>().slot == 0)
-            redLine.transform.position = new Vector2(-11, 3.5f);
-        else if (player.GetComponent<Player>().slot == 1)
-            redLine.transform.position = new Vector2(0, 3.5f);
-        else if (player.GetComponent<Player>().slot == 2)
-            redLine.transform.position = new Vector2(11, 3.5f);
+        switch(player.GetComponent<Player>().slot)
+        {
+            case 0:
+                inventory_Display[0].color = Color.red;
+                inventory_Display[1].color = Color.white;
+                inventory_Display[2].color = Color.white;
+                break;
+            case 1:
+                inventory_Display[0].color = Color.white;
+                inventory_Display[1].color = Color.red;
+                inventory_Display[2].color = Color.white;
+                break;
+            case 2:
+                inventory_Display[0].color = Color.white;
+                inventory_Display[1].color = Color.white;
+                inventory_Display[2].color = Color.red;
+                break;
+
+        }
 
         // Restart the level when you press "R"
         if (Input.GetKey(KeyCode.R))
-                RestartScene("Test_Scene");
+                RestartScene();
     }
 
     // Restarts Level Function
-    public void RestartScene(string sceneName)
+    public void RestartScene()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

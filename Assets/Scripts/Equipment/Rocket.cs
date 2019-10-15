@@ -69,7 +69,7 @@ public class Rocket : MonoBehaviour
             {
 
                 if (objects.tag == "FuseBox")
-                    manager.GetComponent<LevelManager>().RestartScene("Test_Scene");
+                    manager.GetComponent<LevelManager>().RestartScene();
 
                 if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
                     objects.GetComponent<BoxDrops>().DropItem();

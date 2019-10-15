@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611b0e7ba4d16114780d1c37de2f94fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardMultiply: 25
-  upwardMultiply: 25
+  forwardMultiply: 35
+  upwardMultiply: 35
   xMax: 200
   yMax: 100
   isStuck: 0
