@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class DropItems : MonoBehaviour
 {
-   public GameObject item;
+    // Item that the script applies to 
+        public GameObject item;
 
 
+    // Checks which item in the invenvtory it matches and adds one to it
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -18,7 +20,8 @@ public class DropItems : MonoBehaviour
 
             }
 
-            Destroy(gameObject);
+            //Destroys the object after its picked up
+                Destroy(gameObject);
 
         }
     }

@@ -17,9 +17,9 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         // Displays name of the equipment and how many you have left
-            inventory_Display[0].text = weapons[0].name + ": " + inventory[0].ToString();
-            inventory_Display[1].text = weapons[1].name + ": " + inventory[1].ToString();
-            inventory_Display[2].text = weapons[2].name + ": " + inventory[2].ToString();
+            inventory_Display[0].text = inventory[0].ToString();
+            inventory_Display[1].text = inventory[1].ToString();
+            inventory_Display[2].text = inventory[2].ToString();
 
         // Restart the level when you press "R"
             if (Input.GetKey(KeyCode.R))

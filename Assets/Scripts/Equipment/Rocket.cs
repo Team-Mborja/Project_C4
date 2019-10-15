@@ -15,13 +15,23 @@ public class Rocket : MonoBehaviour
     // Target of the rocket
         Vector3 target;
 
+    public GameObject player;
+    public GameObject cursor;
+    public GameObject manager;
+    
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Cursor").transform.position;
+        player = GameObject.FindGameObjectWithTag("Player");
+        cursor = GameObject.FindGameObjectWithTag("Cursor");
+        manager = GameObject.FindGameObjectWithTag("Manager");
 
+        
+        target = cursor.transform.position;
+        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(target.y, target.x) * Mathf.Rad2Deg);
+           
         // Checks if player is left or right
-        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isLeft == true)
+        if (player.GetComponent<Player>().isLeft == true)
             travelSpeed = -Mathf.Abs(travelSpeed);
 
 
@@ -32,9 +42,6 @@ public class Rocket : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, target, travelSpeed * (travelSpeed/ Mathf.Abs(travelSpeed)));
         target = Vector3.MoveTowards(target, transform.position, -(travelSpeed * (travelSpeed / Mathf.Abs(travelSpeed))));
-
-
-        
     }
 
 
@@ -62,7 +69,7 @@ public class Rocket : MonoBehaviour
             {
 
                 if (objects.tag == "FuseBox")
-                    GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene("Test_Scene");
+                    manager.GetComponent<LevelManager>().RestartScene("Test_Scene");
 
                 if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
                     objects.GetComponent<BoxDrops>().DropItem();

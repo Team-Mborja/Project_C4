@@ -32,14 +32,17 @@ public class C4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isThrown = false;
+        // Sets the defautlt to not be thrown
+            isThrown = false;
         //C4 is set to default to not stuck to anything
             isStuck = false;
 
         // Calculates force based on mouse position compared to player position
-        forceForward = Mathf.Abs(Input.mousePosition.x - GameObject.FindGameObjectWithTag("Player").transform.position.x) * forwardMultiply;
-            forceUpward = Mathf.Abs(Input.mousePosition.y - GameObject.FindGameObjectWithTag("Player").transform.position.y) * upwardMultiply;
+            forceForward = Mathf.Abs(GameObject.FindGameObjectWithTag("Cursor").transform.position.x - GameObject.FindGameObjectWithTag("Player").transform.position.x) * forwardMultiply;
+            forceUpward = Mathf.Abs(GameObject.FindGameObjectWithTag("Cursor").transform.position.y - GameObject.FindGameObjectWithTag("Player").transform.position.y) * upwardMultiply;
 
+     
+       
         // Checks force with maximums
             if (forceForward > xMax)
                 forceForward = xMax;
@@ -56,7 +59,7 @@ public class C4 : MonoBehaviour
 
     void Update()
     {
-
+        // Checks if player can throw C4
         if (Input.GetMouseButtonUp(0) && isThrown == false)
         {
             ThrowC4();
@@ -89,18 +92,21 @@ public class C4 : MonoBehaviour
         }
     }
 
+    // Puts explodable objects in range set to explode
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (explosionTags.Contains(other.gameObject.tag))
             inRangeItems.Add(other.gameObject);
     }
 
+    // Takes explodable objects in range out of range
     private void OnTriggerExit2D(Collider2D other)
     {
         if (inRangeItems.Contains(other.gameObject))
             inRangeItems.Remove(other.gameObject);
     }
 
+    // Explodes the C4 and all objects in its range
     private void Explode()
     {
 

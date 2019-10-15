@@ -62,18 +62,18 @@ public class Player : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpForce);
 
         // Weapon swap keys
-        if (Input.GetKey(KeyCode.Alpha1))
-            slot = 0;
-        else if (Input.GetKey(KeyCode.Alpha2))
-            slot = 1;
-        else if (Input.GetKey(KeyCode.Alpha3))
-            slot = 2;
+            if (Input.GetKey(KeyCode.Alpha1))
+                slot = 0;
+            else if (Input.GetKey(KeyCode.Alpha2))
+                slot = 1;
+            else if (Input.GetKey(KeyCode.Alpha3))
+                slot = 2;
 
         // Throws current weapon
-        if (Input.GetMouseButtonDown(0) && managerScript.inventory[slot] > 0)
-        {
-            SpawnEqipment(inventory[slot]);
-        }
+            if (Input.GetMouseButtonDown(0) && managerScript.inventory[slot] > 0)
+            {
+                SpawnEqipment(inventory[slot]);
+            }
 
         // Cheks to see what direction the player is facing
             if (Input.mousePosition.x >= Camera.main.WorldToScreenPoint(transform.position).x)
@@ -106,16 +106,17 @@ public class Player : MonoBehaviour
     }
 
   
+    //Spawns each equipment at a given instantiation point
     void SpawnEqipment(GameObject equipment)
     {
         managerScript.inventory[slot]--;
 
         if (equipment.GetComponent<Grenade>() != null)
-            Instantiate(equipment, new Vector2(transform.position.x + (0.4f * leftScale), transform.position.y + 0.1f), Quaternion.identity);
+            Instantiate(equipment, new Vector2(transform.position.x + (equipment.GetComponent<Grenade>().offset.x * leftScale), transform.position.y + equipment.GetComponent<Grenade>().offset.y), Quaternion.identity);
         else if (equipment.GetComponent<C4>() != null)
-            Instantiate(equipment, new Vector2(transform.position.x + (0.75f * leftScale) , transform.position.y), Quaternion.identity);
+            Instantiate(equipment, new Vector2(transform.position.x + (0.85f * leftScale) , transform.position.y), Quaternion.identity);
         else if (equipment.GetComponent<Rocket>() != null)
-            Instantiate(equipment, new Vector2(transform.position.x + (0.5f * leftScale), transform.position.y), Quaternion.Euler(0, 0, 90));
+            Instantiate(equipment, new Vector2(transform.position.x + (0.75f * leftScale), transform.position.y), Quaternion.Euler(0, 0, 90));
 
     }
 }

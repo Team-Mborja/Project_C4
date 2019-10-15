@@ -11,8 +11,8 @@ public class Laser : MonoBehaviour
     void Update()
     {
         // If someone has destroyed the Disable Box (Laser), destroy the Laser
-        if (disableBoxLaser == null)
-            Destroy(gameObject);
+            if (disableBoxLaser == null)
+                Destroy(gameObject);
     }
 
     // If an explosive enters the No-Explosion Zone it is destroyed

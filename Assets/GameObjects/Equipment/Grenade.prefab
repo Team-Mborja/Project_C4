@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1729466018618520965}
   - component: {fileID: 1729466018618520964}
   - component: {fileID: 1729466018618520987}
-  - component: {fileID: 1050186702293425458}
-  - component: {fileID: 7937050813135769309}
+  - component: {fileID: 2970643852372110376}
+  - component: {fileID: 8127675756162422810}
   m_Layer: 0
   m_Name: Grenade
   m_TagString: Grenade
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1729466018618520986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.4, y: -3.6, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.25}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 04ffd71c6f1b6ac4ba5ee9824d703a8f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4478f57a04172e74fb1839c19089de82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,15 +97,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 5
   xMax: 300
-  yMax: 300
-  forwardMultiply: 1.5
-  upwardMultiply: 1.5
+  yMax: 500
+  forwardMultiply: 45
+  upwardMultiply: 75
   explosionTags:
   - Box
   - FuseBox
   - Disable
   itemName: Grenade
---- !u!58 &1050186702293425458
+  offset: {x: 0.64, y: 0.1}
+  player: {fileID: 395514832319622186, guid: bcb5e03f6f429ef4397cf8e8e90a7384, type: 3}
+  cursor: {fileID: 2695652848354337976, guid: fb440d28d11826e499eb4cdf1259515e, type: 3}
+  manager: {fileID: 5864996815975552083, guid: 40a66d5ebbc2ff342bd3f2d1365f802c, type: 3}
+--- !u!58 &2970643852372110376
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,10 +122,10 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1, y: -0.1}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
---- !u!58 &7937050813135769309
+  m_Radius: 1.35
+--- !u!58 &8127675756162422810
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,4 +140,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 9
+  m_Radius: 4

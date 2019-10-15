@@ -17,7 +17,7 @@ public class Grenade : MonoBehaviour
     // Max Upward
         public float yMax;
     // Scale of the X-Axis throwing
-     public float forwardMultiply;
+        public float forwardMultiply;
     // Scale of the Y-Axis throwing
         public float upwardMultiply;
     // List of tags on objects that can be destroyed
@@ -28,34 +28,60 @@ public class Grenade : MonoBehaviour
         public string itemName;
     // Has been throw
         bool isThrown;
+    // Spawn Location
+        public Vector2 offset;
+
+    public GameObject player;
+    public GameObject cursor;
+    public GameObject manager;
 
     // Start is called before the first frame update
     void Start()
     {
-        isThrown = false;
+  
+        player  = GameObject.FindGameObjectWithTag("Player");
+        cursor  = GameObject.FindGameObjectWithTag("Cursor");
+        manager = GameObject.FindGameObjectWithTag("Manager");
 
+        isThrown = false;
+        
         // Sets destruct timer on
             destruct = lifeTime;
 
-        // calculate force based on how far mouse is from player
-        forceForward = Mathf.Abs(Input.mousePosition.x - GameObject.FindGameObjectWithTag("Player").transform.position.x) * forwardMultiply;
-        forceUpward = Mathf.Abs(Input.mousePosition.y - GameObject.FindGameObjectWithTag("Player").transform.position.y) * upwardMultiply;
-
-        // Checks force against max distance
-        if (forceForward > xMax)
-            forceForward = xMax;
-
-        if (forceUpward > yMax)
-            forceUpward = yMax;
-
-        // Checks if player is left or right
-        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isLeft == true)
-            forceForward = -Mathf.Abs(forceForward);
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (isThrown == false)
+        {
+            transform.position = new Vector2(player.transform.position.x + offset.x, player.transform.position.y + offset.y);
+
+            // calculate force based on how far mouse is from player
+            forceForward = Mathf.Abs(cursor.transform.position.x - player.transform.position.x) * forwardMultiply;
+            forceUpward = Mathf.Abs(cursor.transform.position.y - player.transform.position.y) * upwardMultiply;
+
+            // Checks force against max distance
+            if (forceForward > xMax)
+                forceForward = xMax;
+
+            if (forceUpward > yMax)
+                forceUpward = yMax;
+
+            // Checks if player is left or right
+           if (player.GetComponent<Player>().isLeft == true)
+            {
+               forceForward = -Mathf.Abs(forceForward);
+               offset.x = -Mathf.Abs(offset.x);
+            }
+           else
+            {
+                forceForward = Mathf.Abs(forceForward);
+                offset.x = Mathf.Abs(offset.x);
+            }
+
+        }
 
         // timer counts down
             destruct -= Time.deltaTime;
@@ -68,7 +94,12 @@ public class Grenade : MonoBehaviour
 
         // checks if timer has ended and detonates if done
         if (destruct <= 0)
+        {
+            if(isThrown == false)
+                manager.GetComponent<LevelManager>().RestartScene("Test_Scene");
+
             Explode();
+        }
 
     }
 
@@ -100,7 +131,7 @@ public class Grenade : MonoBehaviour
         {
 
            if (objects.tag == "FuseBox")
-              GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene("Test_Scene");
+              manager.GetComponent<LevelManager>().RestartScene("Test_Scene");
 
             if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
                 objects.GetComponent<BoxDrops>().DropItem();
