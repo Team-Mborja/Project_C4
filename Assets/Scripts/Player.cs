@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
         public bool isGrounded;
     // bool for left facing
         public bool isLeft;
-        int leftScale;
+        public int leftScale;
     // Empty game object that holds the location of the weapon on the player
         Vector2 weaponSpawn = Vector2.zero;
     // Creates inventory
@@ -114,9 +114,9 @@ public class Player : MonoBehaviour
         if (equipment.GetComponent<Grenade>() != null)
             Instantiate(equipment, new Vector2(transform.position.x + (equipment.GetComponent<Grenade>().offset.x * leftScale), transform.position.y + equipment.GetComponent<Grenade>().offset.y), Quaternion.identity);
         else if (equipment.GetComponent<C4>() != null)
-            Instantiate(equipment, new Vector2(transform.position.x + (0.85f * leftScale) , transform.position.y), Quaternion.identity);
-        else if (equipment.GetComponent<Rocket>() != null)
-            Instantiate(equipment, new Vector2(transform.position.x + (0.75f * leftScale), transform.position.y), Quaternion.Euler(0, 0, 90));
+            Instantiate(equipment, new Vector2(transform.position.x + (equipment.GetComponent<C4>().offset.x * leftScale) , transform.position.y + equipment.GetComponent<C4>().offset.y), Quaternion.identity);
+        else if (equipment.GetComponent<Rocket_Launcher>() != null)
+            Instantiate(equipment, new Vector2(transform.position.x + (equipment.GetComponent<Rocket_Launcher>().offset.x * leftScale), transform.position.y + equipment.GetComponent<Rocket_Launcher>().offset.y), Quaternion.Euler(0, 0, 90));
 
     }
 }

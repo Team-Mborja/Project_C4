@@ -30,37 +30,65 @@ public class C4 : MonoBehaviour
         public string itemName;
     // Has the object been thrown
         bool isThrown;
+    // Spawn Offset
+        public Vector2 offset;
+
+
+    public GameObject player;
+    public GameObject cursor;
+    public GameObject manager;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        cursor = GameObject.FindGameObjectWithTag("Cursor");
+        manager = GameObject.FindGameObjectWithTag("Manager");
+
+
         // Sets the defautlt to not be thrown
-            isThrown = false;
+        isThrown = false;
         //C4 is set to default to not stuck to anything
             isStuck = false;
-
-        // Calculates force based on mouse position compared to player position
-            forceForward = Mathf.Abs(GameObject.FindGameObjectWithTag("Cursor").transform.position.x - GameObject.FindGameObjectWithTag("Player").transform.position.x) * forwardMultiply;
-            forceUpward = Mathf.Abs(GameObject.FindGameObjectWithTag("Cursor").transform.position.y - GameObject.FindGameObjectWithTag("Player").transform.position.y) * upwardMultiply;
-
-     
-       
-        // Checks force with maximums
-            if (forceForward > xMax)
-                forceForward = xMax;
-
-            if (forceUpward > yMax)
-                forceUpward = yMax;
-
-        // Checks if the player is facing left
-            if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isLeft == true)
-                forceForward = -Mathf.Abs(forceForward);
 
     }
 
 
     void Update()
     {
+
+
+        if(isThrown == false)
+        {
+            transform.position = new Vector2(player.transform.position.x + offset.x, player.transform.position.y + offset.y);
+
+            // Calculates force based on mouse position compared to player position
+            forceForward = Mathf.Abs(GameObject.FindGameObjectWithTag("Cursor").transform.position.x - GameObject.FindGameObjectWithTag("Player").transform.position.x) * forwardMultiply;
+            forceUpward = Mathf.Abs(GameObject.FindGameObjectWithTag("Cursor").transform.position.y - GameObject.FindGameObjectWithTag("Player").transform.position.y) * upwardMultiply;
+
+            // Checks force with maximums
+            if (forceForward > xMax)
+                forceForward = xMax;
+
+            if (forceUpward > yMax)
+                forceUpward = yMax;
+
+
+            // Checks if player is left or right
+            if (player.GetComponent<Player>().isLeft == true)
+            {
+                forceForward = -Mathf.Abs(forceForward);
+                offset.x = -Mathf.Abs(offset.x);
+            }
+            else
+            {
+                forceForward = Mathf.Abs(forceForward);
+                offset.x = Mathf.Abs(offset.x);
+            }
+
+        }
+
+
         // Checks if player can throw C4
         if (Input.GetMouseButtonUp(0) && isThrown == false)
         {

@@ -106,8 +106,16 @@ MonoBehaviour:
   - Disable
   stickTags:
   - Floor
+  - Wall
+  - Ceiling
   - Box
+  - FuseBox
+  - C4
   itemName: C4
+  offset: {x: 0.84, y: 0}
+  player: {fileID: 0}
+  cursor: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!61 &2497757418744892913
 BoxCollider2D:
   m_ObjectHideFlags: 0

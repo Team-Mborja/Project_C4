@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
-    public float travelSpeed;
-
+        public float travelSpeed;
     // List of tags on objects that can be destroyed
         public List<string> explosionTags = new List<string>();
     // Name of Equipment
