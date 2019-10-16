@@ -22,6 +22,8 @@ public class C4 : MonoBehaviour
         public bool isStuck;
     // List of tags of objects that can explode to C4
         public List<string> explosionTags = new List<string>();
+    // List of tags that the C4 can stick to
+        public List<string> stickTags = new List<string>();
     // Items in Range
         List<GameObject> inRangeItems = new List<GameObject>();
     // Name of Equipment
@@ -85,7 +87,7 @@ public class C4 : MonoBehaviour
    private void OnCollisionEnter2D(Collision2D collider)
     {
 
-        if (collider.gameObject.tag != "Player" && (collider.gameObject.tag == "Floor" && collider.gameObject.tag != "Weapon"))
+        if (stickTags.Contains(collider.gameObject.tag))
         {
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             isStuck = true;

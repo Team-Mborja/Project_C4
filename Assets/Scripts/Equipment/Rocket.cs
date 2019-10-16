@@ -34,7 +34,7 @@ public class Rocket : MonoBehaviour
         if (player.GetComponent<Player>().isLeft == true)
             travelSpeed = -Mathf.Abs(travelSpeed);
 
-
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, (Mathf.Atan2(cursor.transform.position.y - transform.position.y, cursor.transform.position.x - transform.position.x) * Mathf.Rad2Deg) + 90));
     }
 
     // Update is called once per frame
@@ -42,11 +42,14 @@ public class Rocket : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, target, travelSpeed * (travelSpeed/ Mathf.Abs(travelSpeed)));
         target = Vector3.MoveTowards(target, transform.position, -(travelSpeed * (travelSpeed / Mathf.Abs(travelSpeed))));
+
+
     }
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (explosionTags.Contains(other.gameObject.tag))
             inRangeItems.Add(other.gameObject);
     }
