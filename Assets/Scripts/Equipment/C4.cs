@@ -5,7 +5,7 @@ using UnityEngine;
 public class C4 : MonoBehaviour
 {
     // Creates a Rigidbody2D
-        Rigidbody2D rb;
+        public Rigidbody2D rb;
     // Foce on the X-Axis
         float forceForward;
     // Force on the Y-Axis
@@ -18,12 +18,8 @@ public class C4 : MonoBehaviour
         public float xMax;
     // Max Upward
         public float yMax;
-    // Detects if object is stuck to the ground
-        public bool isStuck;
     // List of tags of objects that can explode to C4
         public List<string> explosionTags = new List<string>();
-    // List of tags that the C4 can stick to
-        public List<string> stickTags = new List<string>();
     // Items in Range
         List<GameObject> inRangeItems = new List<GameObject>();
     // Name of Equipment
@@ -33,10 +29,11 @@ public class C4 : MonoBehaviour
     // Spawn Offset
         public Vector2 offset;
 
+    public GameObject stuck;
 
-    public GameObject player;
-    public GameObject cursor;
-    public GameObject manager;
+     GameObject player;
+     GameObject cursor;
+     GameObject manager;
 
     // Start is called before the first frame update
     void Start()
@@ -48,15 +45,12 @@ public class C4 : MonoBehaviour
 
         // Sets the defautlt to not be thrown
         isThrown = false;
-        //C4 is set to default to not stuck to anything
-            isStuck = false;
 
     }
 
 
     void Update()
     {
-
 
         if(isThrown == false)
         {
@@ -97,7 +91,7 @@ public class C4 : MonoBehaviour
         }
 
         // If C4 is stuck to someting and player detonates it, the C4 will explode
-        if (Input.GetMouseButton(1) && isStuck)
+        if (Input.GetMouseButton(1) && stuck.GetComponent<C4_Stick>().isStuck)
             Explode();
     }
 
@@ -109,17 +103,6 @@ public class C4 : MonoBehaviour
 
         // Throws the C4
         rb.AddForce(new Vector2(forceForward, forceUpward));
-    }
-
-    // Sticks C4 to floors
-   private void OnCollisionEnter2D(Collision2D collider)
-    {
-
-        if (stickTags.Contains(collider.gameObject.tag))
-        {
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            isStuck = true;
-        }
     }
 
     // Puts explodable objects in range set to explode

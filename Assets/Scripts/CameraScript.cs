@@ -28,11 +28,5 @@ public class CameraScript : MonoBehaviour
         target = new Vector3(-target.x, -target.y, target.z);
         cursor.transform.position = new Vector2(target.x, target.y);
 
-        if(Mathf.Abs(cursor.transform.position.x - player.transform.position.x) > xMax)
-        {
-            //if(player.GetComponent<Player>().isLeft == false)
-               // cursor.transform.position.x = player.transform.position.x + xMax;
-
-        }
     }
 }
