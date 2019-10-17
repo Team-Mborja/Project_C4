@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
- 
+    void Awake()
+    {
+        Cursor.visible = true;
+    }
+
     void Update()
     {
         // Restart the level when you press "R"
