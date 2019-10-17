@@ -127,7 +127,7 @@ public class C4 : MonoBehaviour
         {
 
             if (objects.tag == "FuseBox")
-                GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene();
+                GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>().OpenScene("Title");
 
             if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
                 objects.GetComponent<BoxDrops>().DropItem();

@@ -48,14 +48,6 @@ public class LevelManager : MonoBehaviour
 
         }
 
-        // Restart the level when you press "R"
-        if (Input.GetKey(KeyCode.R))
-                RestartScene();
-    }
-
-    // Restarts Level Function
-    public void RestartScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+     
     }
 }

@@ -70,8 +70,8 @@ public class Rocket : MonoBehaviour
             foreach (GameObject objects in inRangeItems)
             {
 
-                if (objects.tag == "FuseBox")
-                    manager.GetComponent<LevelManager>().RestartScene();
+            if (objects.tag == "FuseBox")
+                GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>().OpenScene("Title");
 
                 if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
                     objects.GetComponent<BoxDrops>().DropItem();

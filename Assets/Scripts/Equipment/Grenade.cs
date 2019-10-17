@@ -95,7 +95,7 @@ public class Grenade : MonoBehaviour
         if (destruct <= 0)
         {
             if(isThrown == false)
-                manager.GetComponent<LevelManager>().RestartScene();
+                GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>().RestartScene();
 
             Explode();
         }
@@ -130,7 +130,7 @@ public class Grenade : MonoBehaviour
         {
 
            if (objects.tag == "FuseBox")
-              manager.GetComponent<LevelManager>().RestartScene();
+                GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>().OpenScene("Title");
 
             if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
                 objects.GetComponent<BoxDrops>().DropItem();
