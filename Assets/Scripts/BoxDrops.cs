@@ -12,6 +12,6 @@ public class BoxDrops : MonoBehaviour
     // Fucntion that drops the item on the boxes location when its destroyed
     public void DropItem()
     {
-        Instantiate(itemDrop, new Vector2(box.transform.position.x, box.transform.position.y - 0.5f), Quaternion.identity);
+        Instantiate(itemDrop, new Vector2(box.transform.position.x, box.transform.position.y - 0.25f), Quaternion.identity);
     }
 }
