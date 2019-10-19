@@ -31,9 +31,11 @@ public class Grenade : MonoBehaviour
     // Spawn Location
         public Vector2 offset;
 
-    public GameObject player;
-    public GameObject cursor;
-    public GameObject manager;
+    GameObject player;
+    GameObject cursor;
+    GameObject manager;
+
+    public GameObject explode;
 
     // Start is called before the first frame update
     void Start()
@@ -140,7 +142,7 @@ public class Grenade : MonoBehaviour
             if (inRangeItems.Count == 0)
                 break;
         }
-
+        Instantiate(explode, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

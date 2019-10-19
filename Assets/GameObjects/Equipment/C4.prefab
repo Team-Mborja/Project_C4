@@ -108,6 +108,7 @@ MonoBehaviour:
   itemName: C4
   offset: {x: 0.84, y: 0}
   stuck: {fileID: 8818067836928687400}
+  explode: {fileID: 5842297337180791403, guid: 4f0460ed7729c5f4c8225267f3696405, type: 3}
 --- !u!61 &2497757418744892913
 BoxCollider2D:
   m_ObjectHideFlags: 0

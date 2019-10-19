@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 966cdfb61f1256648b14b5e295aac379, type: 3}
-  m_Color: {r: 0.6415094, g: 0.5961196, b: 0.5961196, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,9 +102,7 @@ MonoBehaviour:
   - FuseBox
   - Disable
   itemName: Rocket
-  player: {fileID: 0}
-  cursor: {fileID: 0}
-  manager: {fileID: 0}
+  explode: {fileID: 5842297337180791403, guid: 4f0460ed7729c5f4c8225267f3696405, type: 3}
 --- !u!50 &3343416364185018570
 Rigidbody2D:
   serializedVersion: 4

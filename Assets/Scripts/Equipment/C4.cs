@@ -30,6 +30,7 @@ public class C4 : MonoBehaviour
         public Vector2 offset;
 
     public GameObject stuck;
+    public GameObject explode;
 
      GameObject player;
      GameObject cursor;
@@ -138,7 +139,7 @@ public class C4 : MonoBehaviour
                 break;
 
         }
-
+        Instantiate(explode, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

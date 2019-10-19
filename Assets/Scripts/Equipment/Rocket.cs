@@ -14,9 +14,11 @@ public class Rocket : MonoBehaviour
     // Target of the rocket
         Vector3 target;
 
-    public GameObject player;
-    public GameObject cursor;
-    public GameObject manager;
+     GameObject player;
+     GameObject cursor;
+     GameObject manager;
+
+    public GameObject explode;
     
     // Start is called before the first frame update
     void Start()
@@ -82,6 +84,7 @@ public class Rocket : MonoBehaviour
                 break;
 
         }
-            Destroy(gameObject);
+        Instantiate(explode, new Vector2(transform.position.x + 0.6f, transform.position.y), Quaternion.identity);
+        Destroy(gameObject);
     }
 }
