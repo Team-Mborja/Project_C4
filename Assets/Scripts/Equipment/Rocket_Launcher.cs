@@ -7,11 +7,10 @@ public class Rocket_Launcher : MonoBehaviour
     public GameObject rocket;
     public bool isLaunched;
     public Vector2 offset;
-    public Vector2 rocektOffset;
 
     GameObject player;
     GameObject cursor;
-
+    public GameObject spawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +41,7 @@ public class Rocket_Launcher : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0) && isLaunched == false)
         {
-            Instantiate(rocket, new Vector2(transform.position.x + (rocektOffset.x * player.GetComponent<Player>().leftScale), transform.position.y + (rocektOffset.y * player.GetComponent<Player>().leftScale)), Quaternion.Euler(0, 0, 90));
+            Instantiate(rocket,spawn.transform.position, Quaternion.Euler(0, 0, 90));
             Destroy(gameObject);
         }
     }

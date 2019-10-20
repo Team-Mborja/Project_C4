@@ -58,8 +58,8 @@ public class C4 : MonoBehaviour
             transform.position = new Vector2(player.transform.position.x + offset.x, player.transform.position.y + offset.y);
 
             // Calculates force based on mouse position compared to player position
-            forceForward = Mathf.Abs(GameObject.FindGameObjectWithTag("Cursor").transform.position.x - GameObject.FindGameObjectWithTag("Player").transform.position.x) * forwardMultiply;
-            forceUpward = Mathf.Abs(GameObject.FindGameObjectWithTag("Cursor").transform.position.y - GameObject.FindGameObjectWithTag("Player").transform.position.y) * upwardMultiply;
+            forceForward = Mathf.Abs(cursor.transform.position.x - player.transform.position.x) * forwardMultiply;
+            forceUpward = Mathf.Abs(cursor.transform.position.y - player.transform.position.y) * upwardMultiply;
 
             // Checks force with maximums
             if (forceForward > xMax)
