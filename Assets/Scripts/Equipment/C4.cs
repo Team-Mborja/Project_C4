@@ -35,7 +35,7 @@ public class C4 : MonoBehaviour
      GameObject player;
      GameObject cursor;
      GameObject manager;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -126,9 +126,6 @@ public class C4 : MonoBehaviour
 
         foreach (GameObject objects in inRangeItems)
         {
-
-            if (objects.tag == "FuseBox")
-                GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>().OpenScene("Title");
 
             if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
                 objects.GetComponent<BoxDrops>().DropItem();

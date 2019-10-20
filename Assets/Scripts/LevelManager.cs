@@ -14,15 +14,44 @@ public class LevelManager : MonoBehaviour
         public GameObject[] weapons;
     //Player
         GameObject player;
-
+    // Stars
+        public Image[] star;
+    //Timer Text
+        public Text timerText;
+    // Game timer
+        float timer;
+    // Par Time
+        public float parTime;
+    // FuseBox object
+        GameObject fuseBox;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        fuseBox = GameObject.FindGameObjectWithTag("FuseBox");
+        timer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        timerText.text = timer.ToString();
+
+        // runs the level timer when the level is incomplete
+            if (fuseBox != null)
+                timer += Time.deltaTime;
+
+        if (fuseBox == null)
+        {
+            star[0].GetComponent<Image>().enabled = true;
+
+            if(timer <= parTime)
+                star[1].GetComponent<Image>().enabled = true;
+
+            if(inventory[0] == 0 && inventory[1] == 2 && inventory[2] == 0)
+                star[2].GetComponent<Image>().enabled = true;
+        }
+           
+
         // Displays name of the equipment and how many you have left
             inventory_Display[0].text = inventory[0].ToString();
             inventory_Display[1].text = inventory[1].ToString();
@@ -47,7 +76,5 @@ public class LevelManager : MonoBehaviour
                 break;
 
         }
-
-     
     }
 }
