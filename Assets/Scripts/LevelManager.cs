@@ -14,16 +14,13 @@ public class LevelManager : MonoBehaviour
         public GameObject[] weapons;
     //Player
         GameObject player;
-    // Stars
-        public Image[] star;
     //Timer Text
         public Text timerText;
     // Game timer
-        float timer;
-    // Par Time
-        public float parTime;
+        public float timer;
     // FuseBox object
         GameObject fuseBox;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -39,17 +36,6 @@ public class LevelManager : MonoBehaviour
         // runs the level timer when the level is incomplete
             if (fuseBox != null)
                 timer += Time.deltaTime;
-
-        if (fuseBox == null)
-        {
-            star[0].GetComponent<Image>().enabled = true;
-
-            if(timer <= parTime)
-                star[1].GetComponent<Image>().enabled = true;
-
-            if(inventory[0] == 0 && inventory[1] == 2 && inventory[2] == 0)
-                star[2].GetComponent<Image>().enabled = true;
-        }
            
 
         // Displays name of the equipment and how many you have left
@@ -57,24 +43,28 @@ public class LevelManager : MonoBehaviour
             inventory_Display[1].text = inventory[1].ToString();
             inventory_Display[2].text = inventory[2].ToString();
 
-        switch(player.GetComponent<Player>().slot)
+        if (player != null)
         {
-            case 0:
-                inventory_Display[0].color = Color.red;
-                inventory_Display[1].color = Color.white;
-                inventory_Display[2].color = Color.white;
-                break;
-            case 1:
-                inventory_Display[0].color = Color.white;
-                inventory_Display[1].color = Color.red;
-                inventory_Display[2].color = Color.white;
-                break;
-            case 2:
-                inventory_Display[0].color = Color.white;
-                inventory_Display[1].color = Color.white;
-                inventory_Display[2].color = Color.red;
-                break;
+            switch (player.GetComponent<Player>().slot)
+            {
+                case 0:
+                    inventory_Display[0].color = Color.red;
+                    inventory_Display[1].color = Color.white;
+                    inventory_Display[2].color = Color.white;
+                    break;
+                case 1:
+                    inventory_Display[0].color = Color.white;
+                    inventory_Display[1].color = Color.red;
+                    inventory_Display[2].color = Color.white;
+                    break;
+                case 2:
+                    inventory_Display[0].color = Color.white;
+                    inventory_Display[1].color = Color.white;
+                    inventory_Display[2].color = Color.red;
+                    break;
 
+
+            }
         }
     }
 }

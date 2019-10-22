@@ -97,7 +97,7 @@ public class Grenade : MonoBehaviour
         if (destruct <= 0)
         {
             if(isThrown == false)
-                GameObject.FindGameObjectWithTag("Menu").GetComponent<MenuManager>().RestartScene();
+                Destroy(player);
 
             Explode();
         }
