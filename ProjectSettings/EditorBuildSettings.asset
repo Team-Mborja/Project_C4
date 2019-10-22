@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Game Extras/Title.unity
+    guid: f7cf57a43c5d8fa44a3ab8739e726c7a
+  - enabled: 1
+    path: Assets/Scenes/Game Extras/Kyle's Level.unity
+    guid: 0333f0ce6627df64d892148ec7273ca4
+  - enabled: 1
+    path: Assets/Scenes/Game Extras/Credits.unity
+    guid: 321eaca2c5c183544aa5503a5608e08c
   m_configObjects: {}

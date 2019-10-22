@@ -5,7 +5,7 @@ using UnityEngine;
 public class C4 : MonoBehaviour
 {
     // Creates a Rigidbody2D
-        Rigidbody2D rb;
+        public Rigidbody2D rb;
     // Foce on the X-Axis
         float forceForward;
     // Force on the Y-Axis
@@ -18,8 +18,6 @@ public class C4 : MonoBehaviour
         public float xMax;
     // Max Upward
         public float yMax;
-    // Detects if object is stuck to the ground
-        public bool isStuck;
     // List of tags of objects that can explode to C4
         public List<string> explosionTags = new List<string>();
     // Items in Range
@@ -28,37 +26,64 @@ public class C4 : MonoBehaviour
         public string itemName;
     // Has the object been thrown
         bool isThrown;
+    // Spawn Offset
+        public Vector2 offset;
 
+    public GameObject stuck;
+    public GameObject explode;
+
+     GameObject player;
+     GameObject cursor;
+     GameObject manager;
+    
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        cursor = GameObject.FindGameObjectWithTag("Cursor");
+        manager = GameObject.FindGameObjectWithTag("Manager");
+
+
         // Sets the defautlt to not be thrown
-            isThrown = false;
-        //C4 is set to default to not stuck to anything
-            isStuck = false;
-
-        // Calculates force based on mouse position compared to player position
-            forceForward = Mathf.Abs(GameObject.FindGameObjectWithTag("Cursor").transform.position.x - GameObject.FindGameObjectWithTag("Player").transform.position.x) * forwardMultiply;
-            forceUpward = Mathf.Abs(GameObject.FindGameObjectWithTag("Cursor").transform.position.y - GameObject.FindGameObjectWithTag("Player").transform.position.y) * upwardMultiply;
-
-     
-       
-        // Checks force with maximums
-            if (forceForward > xMax)
-                forceForward = xMax;
-
-            if (forceUpward > yMax)
-                forceUpward = yMax;
-
-        // Checks if the player is facing left
-            if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().isLeft == true)
-                forceForward = -Mathf.Abs(forceForward);
+        isThrown = false;
 
     }
 
 
     void Update()
     {
+
+        if(isThrown == false)
+        {
+            transform.position = new Vector2(player.transform.position.x + offset.x, player.transform.position.y + offset.y);
+
+            // Calculates force based on mouse position compared to player position
+            forceForward = Mathf.Abs(cursor.transform.position.x - player.transform.position.x) * forwardMultiply;
+            forceUpward = Mathf.Abs(cursor.transform.position.y - player.transform.position.y) * upwardMultiply;
+
+            // Checks force with maximums
+            if (forceForward > xMax)
+                forceForward = xMax;
+
+            if (forceUpward > yMax)
+                forceUpward = yMax;
+
+
+            // Checks if player is left or right
+            if (player.GetComponent<Player>().isLeft == true)
+            {
+                forceForward = -Mathf.Abs(forceForward);
+                offset.x = -Mathf.Abs(offset.x);
+            }
+            else
+            {
+                forceForward = Mathf.Abs(forceForward);
+                offset.x = Mathf.Abs(offset.x);
+            }
+
+        }
+
+
         // Checks if player can throw C4
         if (Input.GetMouseButtonUp(0) && isThrown == false)
         {
@@ -67,7 +92,7 @@ public class C4 : MonoBehaviour
         }
 
         // If C4 is stuck to someting and player detonates it, the C4 will explode
-        if (Input.GetMouseButton(1) && isStuck)
+        if (Input.GetMouseButton(1) && stuck.GetComponent<C4_Stick>().isStuck)
             Explode();
     }
 
@@ -79,17 +104,6 @@ public class C4 : MonoBehaviour
 
         // Throws the C4
         rb.AddForce(new Vector2(forceForward, forceUpward));
-    }
-
-    // Sticks C4 to floors
-   private void OnCollisionEnter2D(Collision2D collider)
-    {
-
-        if (collider.gameObject.tag != "Player" && (collider.gameObject.tag == "Floor" && collider.gameObject.tag != "Weapon"))
-        {
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            isStuck = true;
-        }
     }
 
     // Puts explodable objects in range set to explode
@@ -113,9 +127,6 @@ public class C4 : MonoBehaviour
         foreach (GameObject objects in inRangeItems)
         {
 
-            if (objects.tag == "FuseBox")
-                GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().RestartScene();
-
             if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
                 objects.GetComponent<BoxDrops>().DropItem();
 
@@ -125,7 +136,7 @@ public class C4 : MonoBehaviour
                 break;
 
         }
-
+        Instantiate(explode, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

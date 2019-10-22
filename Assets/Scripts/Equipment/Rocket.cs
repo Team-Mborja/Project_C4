@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
-    public float travelSpeed;
-
+        public float travelSpeed;
     // List of tags on objects that can be destroyed
         public List<string> explosionTags = new List<string>();
     // Name of Equipment
@@ -15,9 +14,11 @@ public class Rocket : MonoBehaviour
     // Target of the rocket
         Vector3 target;
 
-    public GameObject player;
-    public GameObject cursor;
-    public GameObject manager;
+     GameObject player;
+     GameObject cursor;
+     GameObject manager;
+
+    public GameObject explode;
     
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,7 @@ public class Rocket : MonoBehaviour
         if (player.GetComponent<Player>().isLeft == true)
             travelSpeed = -Mathf.Abs(travelSpeed);
 
-
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, (Mathf.Atan2(cursor.transform.position.y - transform.position.y, cursor.transform.position.x - transform.position.x) * Mathf.Rad2Deg) + 90));
     }
 
     // Update is called once per frame
@@ -42,11 +43,14 @@ public class Rocket : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, target, travelSpeed * (travelSpeed/ Mathf.Abs(travelSpeed)));
         target = Vector3.MoveTowards(target, transform.position, -(travelSpeed * (travelSpeed / Mathf.Abs(travelSpeed))));
+
+
     }
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (explosionTags.Contains(other.gameObject.tag))
             inRangeItems.Add(other.gameObject);
     }
@@ -68,9 +72,6 @@ public class Rocket : MonoBehaviour
             foreach (GameObject objects in inRangeItems)
             {
 
-                if (objects.tag == "FuseBox")
-                    manager.GetComponent<LevelManager>().RestartScene();
-
                 if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
                     objects.GetComponent<BoxDrops>().DropItem();
 
@@ -80,6 +81,7 @@ public class Rocket : MonoBehaviour
                 break;
 
         }
-            Destroy(gameObject);
+        Instantiate(explode, new Vector2(transform.position.x + 0.6f, transform.position.y), Quaternion.identity);
+        Destroy(gameObject);
     }
 }

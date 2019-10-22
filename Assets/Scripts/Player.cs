@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
         public bool isGrounded;
     // bool for left facing
         public bool isLeft;
-        int leftScale;
+        public int leftScale;
     // Empty game object that holds the location of the weapon on the player
         Vector2 weaponSpawn = Vector2.zero;
     // Creates inventory
@@ -49,19 +49,21 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Player moves right with D and right arrow
+        if (GameObject.FindGameObjectWithTag("FuseBox") != null)
+        {
+            // Player moves right with D and right arrow
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-                transform.Translate(Vector2.right* moveSpeed);
+                transform.Translate(Vector2.right * moveSpeed);
 
-        // Player moves left with A and left arrow
+            // Player moves left with A and left arrow
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
                 transform.Translate(Vector2.left * moveSpeed);
 
-        // Player jumps with W and up arrow and space
+            // Player jumps with W and up arrow and space
             if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)))
                 rb.AddForce(Vector2.up * jumpForce);
 
-        // Weapon swap keys
+            // Weapon swap keys
             if (Input.GetKey(KeyCode.Alpha1))
                 slot = 0;
             else if (Input.GetKey(KeyCode.Alpha2))
@@ -69,13 +71,13 @@ public class Player : MonoBehaviour
             else if (Input.GetKey(KeyCode.Alpha3))
                 slot = 2;
 
-        // Throws current weapon
+            // Throws current weapon
             if (Input.GetMouseButtonDown(0) && managerScript.inventory[slot] > 0)
             {
                 SpawnEqipment(inventory[slot]);
             }
 
-        // Cheks to see what direction the player is facing
+            // Cheks to see what direction the player is facing
             if (Input.mousePosition.x >= Camera.main.WorldToScreenPoint(transform.position).x)
             {
                 isLeft = false;
@@ -88,7 +90,7 @@ public class Player : MonoBehaviour
                 leftScale = -1;
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
-
+        }
     }
 
     // Detects if player is on the ground
@@ -114,9 +116,9 @@ public class Player : MonoBehaviour
         if (equipment.GetComponent<Grenade>() != null)
             Instantiate(equipment, new Vector2(transform.position.x + (equipment.GetComponent<Grenade>().offset.x * leftScale), transform.position.y + equipment.GetComponent<Grenade>().offset.y), Quaternion.identity);
         else if (equipment.GetComponent<C4>() != null)
-            Instantiate(equipment, new Vector2(transform.position.x + (0.85f * leftScale) , transform.position.y), Quaternion.identity);
-        else if (equipment.GetComponent<Rocket>() != null)
-            Instantiate(equipment, new Vector2(transform.position.x + (0.75f * leftScale), transform.position.y), Quaternion.Euler(0, 0, 90));
+            Instantiate(equipment, new Vector2(transform.position.x + (equipment.GetComponent<C4>().offset.x * leftScale) , transform.position.y + equipment.GetComponent<C4>().offset.y), Quaternion.identity);
+        else if (equipment.GetComponent<Rocket_Launcher>() != null)
+            Instantiate(equipment, new Vector2(transform.position.x + (equipment.GetComponent<Rocket_Launcher>().offset.x * leftScale), transform.position.y + equipment.GetComponent<Rocket_Launcher>().offset.y), Quaternion.Euler(0, 0, 90));
 
     }
 }

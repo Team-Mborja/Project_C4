@@ -106,9 +106,7 @@ MonoBehaviour:
   - Disable
   itemName: Grenade
   offset: {x: 0.64, y: 0.1}
-  player: {fileID: 395514832319622186, guid: bcb5e03f6f429ef4397cf8e8e90a7384, type: 3}
-  cursor: {fileID: 2695652848354337976, guid: fb440d28d11826e499eb4cdf1259515e, type: 3}
-  manager: {fileID: 5864996815975552083, guid: 40a66d5ebbc2ff342bd3f2d1365f802c, type: 3}
+  explode: {fileID: 5842297337180791403, guid: 4f0460ed7729c5f4c8225267f3696405, type: 3}
 --- !u!58 &2970643852372110376
 CircleCollider2D:
   m_ObjectHideFlags: 0

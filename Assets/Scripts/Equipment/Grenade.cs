@@ -31,14 +31,15 @@ public class Grenade : MonoBehaviour
     // Spawn Location
         public Vector2 offset;
 
-    public GameObject player;
-    public GameObject cursor;
-    public GameObject manager;
+    GameObject player;
+    GameObject cursor;
+    GameObject manager;
+
+    public GameObject explode;
 
     // Start is called before the first frame update
     void Start()
     {
-  
         player  = GameObject.FindGameObjectWithTag("Player");
         cursor  = GameObject.FindGameObjectWithTag("Cursor");
         manager = GameObject.FindGameObjectWithTag("Manager");
@@ -96,7 +97,7 @@ public class Grenade : MonoBehaviour
         if (destruct <= 0)
         {
             if(isThrown == false)
-                manager.GetComponent<LevelManager>().RestartScene();
+                Destroy(player);
 
             Explode();
         }
@@ -130,9 +131,6 @@ public class Grenade : MonoBehaviour
        foreach(GameObject objects in inRangeItems)
         {
 
-           if (objects.tag == "FuseBox")
-              manager.GetComponent<LevelManager>().RestartScene();
-
             if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
                 objects.GetComponent<BoxDrops>().DropItem();
 
@@ -141,7 +139,7 @@ public class Grenade : MonoBehaviour
             if (inRangeItems.Count == 0)
                 break;
         }
-
+        Instantiate(explode, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

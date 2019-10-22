@@ -59,6 +59,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -145,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 3942748237723758359, guid: 7fdc56c32da582f4ba8d667f1d39a610,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.196
       objectReference: {fileID: 0}
     - target: {fileID: 3942748237723758359, guid: 7fdc56c32da582f4ba8d667f1d39a610,
         type: 3}
@@ -195,12 +196,12 @@ PrefabInstance:
     - target: {fileID: 3942748237723758359, guid: 7fdc56c32da582f4ba8d667f1d39a610,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.05
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 3942748237723758359, guid: 7fdc56c32da582f4ba8d667f1d39a610,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fdc56c32da582f4ba8d667f1d39a610, type: 3}
