@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3343416364185018572}
   - component: {fileID: 3343416364185018574}
   - component: {fileID: 3343416364185018570}
-  - component: {fileID: 4596475893051989770}
   - component: {fileID: 2795832851270754527}
+  - component: {fileID: 2051364153513973597}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Rocket
@@ -124,8 +124,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!61 &4596475893051989770
-BoxCollider2D:
+--- !u!58 &2795832851270754527
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3343416364185018575}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.6}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!60 &2051364153513973597
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -147,22 +163,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.68, y: 1.39}
-  m_EdgeRadius: 0
---- !u!58 &2795832851270754527
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3343416364185018575}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.6}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Points:
+    m_Paths:
+    - - {x: -0.29, y: 0.675}
+      - {x: -0.34, y: 0.415}
+      - {x: -0.34, y: -0.575}
+      - {x: -0.32999998, y: -0.585}
+      - {x: -0.089999996, y: -0.695}
+      - {x: 0.19999999, y: -0.695}
+      - {x: 0.34, y: -0.435}
+      - {x: 0.34, y: 0.385}
+      - {x: 0.17, y: 0.675}
