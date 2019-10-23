@@ -21,11 +21,15 @@ public class LevelManager : MonoBehaviour
     // FuseBox object
         GameObject fuseBox;
 
+    public bool pausedGame;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         fuseBox = GameObject.FindGameObjectWithTag("FuseBox");
         timer = 0;
+        pausedGame = false;
+
     }
 
     // Update is called once per frame

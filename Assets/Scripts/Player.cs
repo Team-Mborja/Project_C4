@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("FuseBox") != null)
+        if (GameObject.FindGameObjectWithTag("FuseBox") != null && managerScript.pausedGame == false)
         {
             // Player moves right with D and right arrow
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
