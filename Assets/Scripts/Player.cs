@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
          GameObject[] inventory = new GameObject[3];
     // current inventory slot;
          public int slot;
+    // Jump Tags
+        public List<string> jumpTags = new List<string>();
    
 
     // Start is called before the first frame update
@@ -32,7 +34,6 @@ public class Player : MonoBehaviour
             rb = GetComponent<Rigidbody2D>();
         // Gets the script on the Level Manager
             managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
-
         // Equips weapons from the level manager
             inventory[0] = managerScript.weapons[0];
             inventory[1] = managerScript.weapons[1];
@@ -96,14 +97,14 @@ public class Player : MonoBehaviour
     // Detects if player is on the ground
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (jumpTags.Contains(collision.gameObject.tag))
             isGrounded = true;
     }
 
     //Detects if player is off the ground
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (jumpTags.Contains(collision.gameObject.tag))
             isGrounded = false;
     }
 

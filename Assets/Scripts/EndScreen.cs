@@ -12,21 +12,24 @@ public class EndScreen : MonoBehaviour
 
     public Image[] stars = new Image[3];
     int starCount;
-
     public float parTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        levelStatus.text = "Level Failed";
+        starCount = 0;
+        AwardStars();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         if (GameObject.FindGameObjectWithTag("Player") == null)
+        {
+            levelStatus.text = "Level Failed";
             ActivateEndScreen();
+        }
 
         if (GameObject.FindGameObjectWithTag("FuseBox") == null)
         {
@@ -50,6 +53,11 @@ public class EndScreen : MonoBehaviour
 
         switch(starCount)
         {
+            case 0:
+                stars[0].GetComponent<Image>().enabled = false;
+                stars[1].GetComponent<Image>().enabled = false;
+                stars[2].GetComponent<Image>().enabled = false;
+                break;
             case 1:
                 stars[0].GetComponent<Image>().enabled = true;
                 stars[1].GetComponent<Image>().enabled = false;
