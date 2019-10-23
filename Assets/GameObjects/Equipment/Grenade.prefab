@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1729466018618520964}
   - component: {fileID: 1729466018618520987}
   - component: {fileID: 8127675756162422810}
-  - component: {fileID: 6713637514731867589}
+  - component: {fileID: 4475190926001331388}
   m_Layer: 0
   m_Name: Grenade
   m_TagString: Grenade
@@ -123,8 +123,8 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4
---- !u!60 &6713637514731867589
-PolygonCollider2D:
+--- !u!58 &4475190926001331388
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -137,61 +137,5 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.7, y: 2.7}
-    newSize: {x: 10.24, y: 10.24}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.69, y: -1.1899999}
-      - {x: 0.77, y: -1.14}
-      - {x: 0.84999996, y: -1.0799999}
-      - {x: 1.04, y: -0.9}
-      - {x: 1.1899999, y: -0.69}
-      - {x: 1.29, y: -0.5}
-      - {x: 1.3299999, y: -0.32999998}
-      - {x: 1.35, y: -0.24}
-      - {x: 1.35, y: -0.02}
-      - {x: 1.3399999, y: -0.01}
-      - {x: 1.35, y: 0}
-      - {x: 1.35, y: 0.29}
-      - {x: 1.29, y: 0.5}
-      - {x: 1.1899999, y: 0.69}
-      - {x: 1.09, y: 0.84999996}
-      - {x: 0.89, y: 1.04}
-      - {x: 0.77, y: 1.14}
-      - {x: 0.5, y: 1.29}
-      - {x: 0.29999998, y: 1.35}
-      - {x: -0.24, y: 1.35}
-      - {x: -0.29, y: 1.3399999}
-      - {x: -0.5, y: 1.28}
-      - {x: -0.69, y: 1.1899999}
-      - {x: -0.77, y: 1.14}
-      - {x: -0.9, y: 1.04}
-      - {x: -1.09, y: 0.84999996}
-      - {x: -1.1899999, y: 0.69}
-      - {x: -1.29, y: 0.5}
-      - {x: -1.35, y: 0.29999998}
-      - {x: -1.35, y: 0.04}
-      - {x: -1.3399999, y: 0.03}
-      - {x: -1.35, y: 0.02}
-      - {x: -1.35, y: -0.28}
-      - {x: -1.31, y: -0.39999998}
-      - {x: -1.26, y: -0.53999996}
-      - {x: -1.15, y: -0.77}
-      - {x: -1.04, y: -0.89}
-      - {x: -0.89, y: -1.04}
-      - {x: -0.79999995, y: -1.11}
-      - {x: -0.74, y: -1.16}
-      - {x: -0.5, y: -1.29}
-      - {x: -0.44, y: -1.31}
-      - {x: -0.25, y: -1.35}
-      - {x: 0.24, y: -1.35}
-      - {x: 0.29, y: -1.3399999}
-      - {x: 0.39999998, y: -1.31}
-      - {x: 0.5, y: -1.28}
+  serializedVersion: 2
+  m_Radius: 1.35
