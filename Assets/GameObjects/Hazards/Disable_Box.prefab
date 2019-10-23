@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3942748237723758359}
   - component: {fileID: 3942748237723758358}
-  - component: {fileID: 4942618981459657224}
+  - component: {fileID: 6186472634095854442}
   m_Layer: 0
   m_Name: Disable_Box
   m_TagString: Disable
@@ -81,8 +81,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4942618981459657224
-BoxCollider2D:
+--- !u!60 &6186472634095854442
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -104,6 +104,9 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.1, y: 3}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.545, y: 1.5999999}
+      - {x: -1.545, y: -1.51}
+      - {x: 1.5649999, y: -1.51}
+      - {x: 1.5649999, y: 1.5999999}

@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
          GameObject[] inventory = new GameObject[3];
     // current inventory slot;
          public int slot;
+    // Jump Tags
+        public List<string> jumpTags = new List<string>();
    
 
     // Start is called before the first frame update
@@ -32,7 +34,6 @@ public class Player : MonoBehaviour
             rb = GetComponent<Rigidbody2D>();
         // Gets the script on the Level Manager
             managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
-
         // Equips weapons from the level manager
             inventory[0] = managerScript.weapons[0];
             inventory[1] = managerScript.weapons[1];
@@ -53,11 +54,11 @@ public class Player : MonoBehaviour
         {
             // Player moves right with D and right arrow
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-                transform.Translate(Vector2.right * moveSpeed);
+                transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
 
             // Player moves left with A and left arrow
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-                transform.Translate(Vector2.left * moveSpeed);
+                transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
             // Player jumps with W and up arrow and space
             if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)))
@@ -96,14 +97,14 @@ public class Player : MonoBehaviour
     // Detects if player is on the ground
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (jumpTags.Contains(collision.gameObject.tag))
             isGrounded = true;
     }
 
     //Detects if player is off the ground
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (jumpTags.Contains(collision.gameObject.tag))
             isGrounded = false;
     }
 

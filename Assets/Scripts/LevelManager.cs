@@ -31,6 +31,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //timerText.text = Mathf.Round(timer).ToString();
         timerText.text = timer.ToString();
 
         // runs the level timer when the level is incomplete
