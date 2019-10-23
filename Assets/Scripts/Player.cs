@@ -53,11 +53,11 @@ public class Player : MonoBehaviour
         {
             // Player moves right with D and right arrow
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-                transform.Translate(Vector2.right * moveSpeed);
+                transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
 
             // Player moves left with A and left arrow
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-                transform.Translate(Vector2.left * moveSpeed);
+                transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
             // Player jumps with W and up arrow and space
             if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)))

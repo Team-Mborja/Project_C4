@@ -41,8 +41,8 @@ public class Rocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, travelSpeed * (travelSpeed/ Mathf.Abs(travelSpeed)));
-        target = Vector3.MoveTowards(target, transform.position, -(travelSpeed * (travelSpeed / Mathf.Abs(travelSpeed))));
+        transform.position = Vector3.MoveTowards(transform.position, target, travelSpeed * (travelSpeed/ Mathf.Abs(travelSpeed)) * Time.deltaTime);
+        target = Vector3.MoveTowards(target, transform.position, -(travelSpeed * (travelSpeed / Mathf.Abs(travelSpeed))) * Time.deltaTime);
 
 
     }
@@ -61,10 +61,11 @@ public class Rocket : MonoBehaviour
             inRangeItems.Remove(other.gameObject);
     }
 
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Explode();
+        if(collision.gameObject.tag != "Player")
+            Explode();
     }
 
     private void Explode()
