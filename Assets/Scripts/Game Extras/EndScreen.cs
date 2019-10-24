@@ -14,24 +14,27 @@ public class EndScreen : MonoBehaviour
     int starCount;
     public float parTime;
 
+    LevelManager managerScript;
+
     // Start is called before the first frame update
     void Start()
     {
         starCount = 0;
-        AwardStars();
+        managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(starCount);
 
-        if (GameObject.FindGameObjectWithTag("Player") == null)
+        if (GameObject.FindGameObjectWithTag("Player") == null && gameObject.GetComponent<Image>().enabled == false)
         {
             levelStatus.text = "Level Failed";
             ActivateEndScreen();
         }
 
-        if (GameObject.FindGameObjectWithTag("FuseBox") == null)
+        if (GameObject.FindGameObjectWithTag("FuseBox") == null && gameObject.GetComponent<Image>().enabled == false)
         {
             levelStatus.text = "Level Complete";
             ActivateEndScreen();
@@ -82,10 +85,10 @@ public class EndScreen : MonoBehaviour
         {
             starCount += 1;
 
-            if (GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().timer <= parTime)
+            if (managerScript.timer <= parTime)
                 starCount += 1;
 
-            if (GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().inventory[0] == 0 && GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().inventory[1] == 2 && GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().inventory[2] == 0)
+            if (managerScript.inventory[0] == 0 && managerScript.inventory[1] == 2)
                 starCount += 1;
 
         }
