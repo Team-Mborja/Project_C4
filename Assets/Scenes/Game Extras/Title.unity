@@ -549,7 +549,7 @@ PrefabInstance:
     - target: {fileID: 3183185521266185173, guid: 7857e7882fb6ddf49b1d084fbefc975c,
         type: 3}
       propertyPath: m_Name
-      value: Start Demo
+      value: Start Button
       objectReference: {fileID: 0}
     - target: {fileID: 3183185521266185172, guid: 7857e7882fb6ddf49b1d084fbefc975c,
         type: 3}
@@ -664,7 +664,7 @@ PrefabInstance:
     - target: {fileID: 3183185521047630326, guid: 7857e7882fb6ddf49b1d084fbefc975c,
         type: 3}
       propertyPath: m_Text
-      value: Start Demo
+      value: Start
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7857e7882fb6ddf49b1d084fbefc975c, type: 3}

@@ -105,6 +105,7 @@ MonoBehaviour:
   - Box
   - FuseBox
   - Disable
+  - Destruct
   itemName: C4
   offset: {x: 0.84, y: 0}
   stuck: {fileID: 8818067836928687400}

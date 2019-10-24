@@ -17,6 +17,7 @@ TagManager:
   - Ceiling
   - Cursor
   - Menu
+  - Destruct
   layers:
   - Default
   - TransparentFX
