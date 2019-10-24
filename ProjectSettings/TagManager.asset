@@ -16,7 +16,6 @@ TagManager:
   - Wall
   - Ceiling
   - Cursor
-  - RedLine
   - Menu
   layers:
   - Default
@@ -27,8 +26,8 @@ TagManager:
   - UI
   - 
   - 
-  - Background
-  - Enviorment
+  - 
+  - 
   - 
   - 
   - 
@@ -55,6 +54,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: NoExplosionZone
-    uniqueID: 2558447673
+  - name: Background
+    uniqueID: 1638761801
+    locked: 0
+  - name: Enviorment
+    uniqueID: 3761829451
+    locked: 0
+  - name: UI
+    uniqueID: 2489398187
+    locked: 0
+  - name: Cursor
+    uniqueID: 4197157699
     locked: 0

@@ -35,6 +35,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Cursor.visible = false;
         //timerText.text = Mathf.Round(timer).ToString();
         timerText.text = timer.ToString();
 
