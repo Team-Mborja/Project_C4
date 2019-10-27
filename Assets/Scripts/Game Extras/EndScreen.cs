@@ -13,20 +13,23 @@ public class EndScreen : MonoBehaviour
     public Image[] stars = new Image[3];
     int starCount;
     public float parTime;
-
+    public string specialObjective;
     LevelManager managerScript;
+    Player playerScript;
 
+    public int jumpMax;
+    public int[] usedEquipment = new int[3];
     // Start is called before the first frame update
     void Start()
     {
         starCount = 0;
         managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(starCount);
 
         if (GameObject.FindGameObjectWithTag("Player") == null && gameObject.GetComponent<Image>().enabled == false)
         {
@@ -88,9 +91,17 @@ public class EndScreen : MonoBehaviour
             if (managerScript.timer <= parTime)
                 starCount += 1;
 
-            if (managerScript.inventory[0] == 0 && managerScript.inventory[1] == 2)
-                starCount += 1;
-
+            SpecialObjective();
         }
+    }
+
+    void SpecialObjective()
+    {
+        if (specialObjective == "One Grenade" && playerScript.usedEquipment[0] == 1 && playerScript.usedEquipment[1] == 0 && playerScript.usedEquipment[2] == 0)
+            starCount += 1;
+        else if (specialObjective == "Limited Jump" && playerScript.usedJump <= jumpMax)
+            starCount += 1;
+
+        
     }
 }

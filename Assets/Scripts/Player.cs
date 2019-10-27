@@ -25,7 +25,10 @@ public class Player : MonoBehaviour
          public int slot;
     // Jump Tags
         public List<string> jumpTags = new List<string>();
-   
+
+
+    public int[] usedEquipment = new int[3];
+    public int usedJump;
 
     // Start is called before the first frame update
     void Start()
@@ -52,17 +55,25 @@ public class Player : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("FuseBox") != null && managerScript.pausedGame == false)
         {
-            // Player moves right with D and right arrow
-            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            // Player moves right with D
+            if (Input.GetKey(KeyCode.D) )
                 transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
 
-            // Player moves left with A and left arrow
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            // Player moves left with A
+            if (Input.GetKey(KeyCode.A))
                 transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
-            // Player jumps with W and up arrow and space
-            if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space)))
+            // Player jumps with space
+            if (isGrounded && Input.GetKeyDown(KeyCode.Space) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
+            {
+                rb.AddForce(Vector2.up * jumpForce * 1.25f);
+                usedJump += 1;
+            }
+            else if (isGrounded && (Input.GetKeyDown(KeyCode.Space)))
+            {
                 rb.AddForce(Vector2.up * jumpForce);
+                usedJump += 1;
+            }
 
             // Weapon swap keys
             if (Input.GetKey(KeyCode.Alpha1))
@@ -76,6 +87,7 @@ public class Player : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && managerScript.inventory[slot] > 0)
             {
                 SpawnEqipment(inventory[slot]);
+                usedEquipment[slot] += 1;
             }
 
             // Cheks to see what direction the player is facing

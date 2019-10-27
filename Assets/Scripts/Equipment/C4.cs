@@ -92,7 +92,7 @@ public class C4 : MonoBehaviour
         }
 
         // If C4 is stuck to someting and player detonates it, the C4 will explode
-        if (Input.GetMouseButton(1) && stuck.GetComponent<C4_Stick>().isStuck)
+        if (Input.GetMouseButton(1) && stuck.GetComponent<C4_Stick>().isStuck == true)
             Explode();
     }
 
