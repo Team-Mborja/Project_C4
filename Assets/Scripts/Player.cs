@@ -55,8 +55,11 @@ public class Player : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("FuseBox") != null && managerScript.pausedGame == false)
         {
+
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right);
+            Debug.Log(hit.distance);
             // Player moves right with D
-            if (Input.GetKey(KeyCode.D) )
+            if (Input.GetKey(KeyCode.D))
                 transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
 
             // Player moves left with A

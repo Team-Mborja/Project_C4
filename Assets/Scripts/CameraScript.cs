@@ -12,6 +12,8 @@ public class CameraScript : MonoBehaviour
         Vector3 target;
     // Max X Disance 
         public float xMax;
+    // Max X Distance
+        public float yMax;
     void Start()
     {
         // Makes the mouse cursor invisible in the game
@@ -28,5 +30,16 @@ public class CameraScript : MonoBehaviour
         target = new Vector3(-target.x, -target.y, target.z);
         cursor.transform.position = new Vector2(target.x, target.y);
 
+        if (cursor.transform.position.x - player.transform.position.x >= xMax)
+            cursor.transform.position = new Vector2(player.transform.position.x + xMax, cursor.transform.position.y);
+
+        if (cursor.transform.position.x - player.transform.position.x <= -xMax)
+            cursor.transform.position = new Vector2(player.transform.position.x - xMax, cursor.transform.position.y);
+
+        if (cursor.transform.position.y - player.transform.position.y >= yMax)
+            cursor.transform.position = new Vector2(cursor.transform.position.x, player.transform.position.y + yMax);
+
+        if (cursor.transform.position.y - player.transform.position.y <= -yMax)
+            cursor.transform.position = new Vector2(cursor.transform.position.x, player.transform.position.y - yMax);
     }
 }
