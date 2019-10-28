@@ -10,14 +10,6 @@ public class MenuManager : MonoBehaviour
         Cursor.visible = true;
     }
 
-    void Update()
-    {
-        // Restart the level when you press "R"
-        if (Input.GetKey(KeyCode.R))
-            RestartScene();
-     
-    }
-
     public void RestartScene()
     {
         OpenScene(SceneManager.GetActiveScene().name);

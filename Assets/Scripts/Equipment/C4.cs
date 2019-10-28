@@ -29,13 +29,14 @@ public class C4 : MonoBehaviour
     // Spawn Offset
         public Vector2 offset;
 
-    public GameObject stuck;
     public GameObject explode;
 
      GameObject player;
      GameObject cursor;
      GameObject manager;
-    
+
+    public bool isStuck;
+    public List<string> stickTags = new List<string>();
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +47,7 @@ public class C4 : MonoBehaviour
 
         // Sets the defautlt to not be thrown
         isThrown = false;
+        isStuck = false;
 
     }
 
@@ -92,7 +94,7 @@ public class C4 : MonoBehaviour
         }
 
         // If C4 is stuck to someting and player detonates it, the C4 will explode
-        if (Input.GetMouseButton(1) && stuck.GetComponent<C4_Stick>().isStuck == true)
+        if (Input.GetMouseButton(1) && isStuck == true)
             Explode();
     }
 
@@ -106,6 +108,17 @@ public class C4 : MonoBehaviour
         rb.AddForce(new Vector2(forceForward, forceUpward));
     }
 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (stickTags.Contains(collision.gameObject.tag))
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, collision.gameObject.transform.eulerAngles.z);
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            isStuck = true;
+        }
+            
+    }
     // Puts explodable objects in range set to explode
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -139,5 +152,7 @@ public class C4 : MonoBehaviour
         Instantiate(explode, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
+
+   
 
 }

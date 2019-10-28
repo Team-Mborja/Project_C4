@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 5
   xMax: 300
-  yMax: 500
+  yMax: 750
   forwardMultiply: 45
   upwardMultiply: 75
   explosionTags:
