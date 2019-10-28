@@ -114,6 +114,8 @@ MonoBehaviour:
   - Wall
   - Box
   - Destruct
+  - FuseBox
+  - C4
 --- !u!58 &8371301693947800524
 CircleCollider2D:
   m_ObjectHideFlags: 0

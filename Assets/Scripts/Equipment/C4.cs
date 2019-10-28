@@ -113,7 +113,10 @@ public class C4 : MonoBehaviour
     {
         if (stickTags.Contains(collision.gameObject.tag))
         {
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, collision.gameObject.transform.eulerAngles.z);
+            var contact = collision.contacts[0];
+            var rot = Quaternion.FromToRotation(transform.up, contact.normal);
+            transform.rotation *= rot;
+
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             isStuck = true;
         }
