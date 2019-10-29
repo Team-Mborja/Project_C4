@@ -45,8 +45,8 @@ public class CameraScript : MonoBehaviour
         }
         else if (managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Rocket_Launcher>() != null)
         {
-            xMax = managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Rocket>().xMax;
-            yMax = managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Rocket>().yMax;
+            xMax = managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Rocket_Launcher>().xMax;
+            yMax = managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Rocket_Launcher>().yMax;
         }
 
         if (cursor.transform.position.x - player.transform.position.x >= xMax)

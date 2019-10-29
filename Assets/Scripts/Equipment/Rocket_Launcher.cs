@@ -11,6 +11,9 @@ public class Rocket_Launcher : MonoBehaviour
     GameObject player;
     GameObject cursor;
     public GameObject spawn;
+
+    public float xMax;
+    public float yMax;
     // Start is called before the first frame update
     void Start()
     {
