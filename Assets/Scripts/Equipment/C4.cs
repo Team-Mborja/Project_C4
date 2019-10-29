@@ -63,14 +63,6 @@ public class C4 : MonoBehaviour
             forceForward = Mathf.Abs(cursor.transform.position.x - player.transform.position.x) * forwardMultiply;
             forceUpward = Mathf.Abs(cursor.transform.position.y - player.transform.position.y) * upwardMultiply;
 
-            // Checks force with maximums
-            if (forceForward > xMax)
-                forceForward = xMax;
-
-            if (forceUpward > yMax)
-                forceUpward = yMax;
-
-
             // Checks if player is left or right
             if (player.GetComponent<Player>().isLeft == true)
             {

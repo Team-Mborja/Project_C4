@@ -98,8 +98,8 @@ MonoBehaviour:
   rb: {fileID: 0}
   forwardMultiply: 55
   upwardMultiply: 35
-  xMax: 200
-  yMax: 100
+  xMax: 3
+  yMax: 4
   explosionTags:
   - Box
   - FuseBox

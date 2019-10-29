@@ -14,6 +14,9 @@ public class Rocket : MonoBehaviour
     // Target of the rocket
         Vector3 target;
 
+    public float xMax;
+    public float yMax;
+
      GameObject player;
      GameObject cursor;
      GameObject manager;
