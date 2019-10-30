@@ -25,7 +25,7 @@ public class CameraScript : MonoBehaviour
     // Gets the positon of the mouse in world position and puts the new cursor thereS
     void Update()
     {
-        if (GameObject.Find|| GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().pausedGame == true)
+        if (GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().pausedGame == true)
         {
             Cursor.visible = true;
             cursor.SetActive(false);

@@ -1238,6 +1238,16 @@ PrefabInstance:
       propertyPath: parTime
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
+        type: 3}
+      propertyPath: specialObjective
+      value: Protected Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
+        type: 3}
+      propertyPath: protectedObject
+      value: 
+      objectReference: {fileID: 2050639550}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c1bcda5689242b419513ced09fe282e, type: 3}
 --- !u!114 &991652011 stripped
@@ -2456,6 +2466,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5238980199169291804, guid: 1dda9fb9f2b0f794db4907d58c16563d,
+        type: 3}
+      propertyPath: m_Name
+      value: Safe Box
+      objectReference: {fileID: 0}
     - target: {fileID: 470373907274271576, guid: 1dda9fb9f2b0f794db4907d58c16563d,
         type: 3}
       propertyPath: m_Name
@@ -2530,11 +2545,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3.18472
-      objectReference: {fileID: 0}
-    - target: {fileID: 5238980199169291804, guid: 1dda9fb9f2b0f794db4907d58c16563d,
-        type: 3}
-      propertyPath: m_Name
-      value: Box (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5238980199169291792, guid: 1dda9fb9f2b0f794db4907d58c16563d,
         type: 3}
@@ -2952,12 +2962,12 @@ PrefabInstance:
     - target: {fileID: 395514832319622191, guid: bcb5e03f6f429ef4397cf8e8e90a7384,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.72
+      value: -10.13
       objectReference: {fileID: 0}
     - target: {fileID: 395514832319622191, guid: bcb5e03f6f429ef4397cf8e8e90a7384,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.06
+      value: -4.25
       objectReference: {fileID: 0}
     - target: {fileID: 395514832319622191, guid: bcb5e03f6f429ef4397cf8e8e90a7384,
         type: 3}
@@ -3006,6 +3016,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb5e03f6f429ef4397cf8e8e90a7384, type: 3}
+--- !u!1 &2050639550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5238980199169291804, guid: 1dda9fb9f2b0f794db4907d58c16563d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1672890859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2609687408226797560
 PrefabInstance:
   m_ObjectHideFlags: 0

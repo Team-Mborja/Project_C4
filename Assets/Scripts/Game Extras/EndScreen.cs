@@ -19,6 +19,7 @@ public class EndScreen : MonoBehaviour
 
     public int jumpMax;
     public int[] usedEquipment = new int[3];
+    public GameObject protectedObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +101,8 @@ public class EndScreen : MonoBehaviour
         if (specialObjective == "One Grenade" && playerScript.usedEquipment[0] == 1 && playerScript.usedEquipment[1] == 0 && playerScript.usedEquipment[2] == 0)
             starCount += 1;
         else if (specialObjective == "Limited Jump" && playerScript.usedJump <= jumpMax)
+            starCount += 1;
+        else if (specialObjective == "Protected Object" && protectedObject != null)
             starCount += 1;
 
         
