@@ -22,6 +22,7 @@ public class LevelManager : MonoBehaviour
         GameObject fuseBox;
 
     public bool pausedGame;
+    public bool gameOver;
 
     void Start()
     {

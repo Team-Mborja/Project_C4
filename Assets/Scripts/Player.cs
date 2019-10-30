@@ -30,6 +30,9 @@ public class Player : MonoBehaviour
     public int[] usedEquipment = new int[3];
     public int usedJump;
 
+    RaycastHit2D left;
+    RaycastHit2D right;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +58,12 @@ public class Player : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("FuseBox") != null && managerScript.pausedGame == false)
         {
+
+            left = Physics2D.Raycast(transform.position, Vector2.left, moveSpeed/2);
+            right = Physics2D.Raycast(transform.position, Vector2.right, moveSpeed/2);
+
+
+
             // Player moves right with D
             if (Input.GetKey(KeyCode.D))
                 transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
