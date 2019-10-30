@@ -18,9 +18,6 @@ public class CameraScript : MonoBehaviour
     public float yMax;
     void Start()
     {
-        // Makes the mouse cursor invisible in the game
-        Cursor.visible = false;
-
         player = GameObject.FindGameObjectWithTag("Player");
         managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
     }
@@ -28,16 +25,23 @@ public class CameraScript : MonoBehaviour
     // Gets the positon of the mouse in world position and puts the new cursor thereS
     void Update()
     {
+        if (GameObject.FindGameObjectWithTag("FuseBox") == null || GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().pausedGame == true)
+        {
+            Cursor.visible = true;
+            cursor.SetActive(false);
+        }
+        else
+        {
+            Cursor.visible = false;
+            cursor.SetActive(true);
+        }
 
         target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
         target = new Vector3(-target.x, -target.y, target.z);
         cursor.transform.position = new Vector2(target.x, target.y);
 
-        if (GameObject.FindGameObjectWithTag("FuseBox") == null || GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().pausedGame == true) {
-                xMax = 1000;
-                yMax = 1000;
-            }
-        else if (managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Grenade>() != null)
+      
+        if (managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Grenade>() != null)
             {
                 xMax = managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Grenade>().xMax;
                 yMax = managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Grenade>().yMax;
