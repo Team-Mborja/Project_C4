@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 200
+  jumpForce: 250
   isGrounded: 0
   isLeft: 0
   leftScale: 0

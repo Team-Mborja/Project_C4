@@ -72,13 +72,8 @@ public class Player : MonoBehaviour
             if (Input.GetKey(KeyCode.A))
                 transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
-            // Player jumps with space
-            if (isGrounded && Input.GetKeyDown(KeyCode.Space) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
-            {
-                rb.AddForce(Vector2.up * jumpForce * 1.25f);
-                usedJump += 1;
-            }
-            else if (isGrounded && (Input.GetKeyDown(KeyCode.Space)))
+       
+             if (isGrounded && (Input.GetKeyDown(KeyCode.Space)))
             {
                 rb.AddForce(Vector2.up * jumpForce);
                 usedJump += 1;
