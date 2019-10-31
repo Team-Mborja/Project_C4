@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour
         fuseBox = GameObject.FindGameObjectWithTag("FuseBox");
         timer = 0;
         pausedGame = false;
+        gameOver = false;
 
     }
 

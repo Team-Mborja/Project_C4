@@ -25,7 +25,7 @@ public class CameraScript : MonoBehaviour
     // Gets the positon of the mouse in world position and puts the new cursor thereS
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().pausedGame == true)
+        if (managerScript.pausedGame == true || managerScript.gameOver == true)
         {
             Cursor.visible = true;
             cursor.SetActive(false);
@@ -40,8 +40,9 @@ public class CameraScript : MonoBehaviour
         target = new Vector3(-target.x, -target.y, target.z);
         cursor.transform.position = new Vector2(target.x, target.y);
 
-      
-        if (managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Grenade>() != null)
+        if (managerScript.gameOver == false)
+        {
+            if (managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Grenade>() != null)
             {
                 xMax = managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Grenade>().xMax;
                 yMax = managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Grenade>().yMax;
@@ -69,4 +70,5 @@ public class CameraScript : MonoBehaviour
             if (cursor.transform.position.y - player.transform.position.y <= -yMax)
                 cursor.transform.position = new Vector2(cursor.transform.position.x, player.transform.position.y - yMax);
         }
+    }
     }

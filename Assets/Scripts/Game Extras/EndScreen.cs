@@ -48,6 +48,7 @@ public class EndScreen : MonoBehaviour
 
     void ActivateEndScreen()
     {
+        managerScript.gameOver = true;
         gameObject.GetComponent<Image>().enabled = true;
 
         for (int i = 0; i < gameObject.transform.childCount; i++)
