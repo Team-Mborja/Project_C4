@@ -42,7 +42,7 @@ public class LevelManager : MonoBehaviour
         timerText.text = timer.ToString();
 
         // runs the level timer when the level is incomplete
-            if (fuseBox != null)
+            if (gameOver == false && pausedGame == false)
                 timer += Time.deltaTime;
            
 
