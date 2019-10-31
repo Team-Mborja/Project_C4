@@ -83,6 +83,7 @@ public class C4 : MonoBehaviour
         {
             ThrowC4();
             isThrown = true;
+            GetComponent<Animator>().enabled = true;
         }
 
         // If C4 is stuck to someting and player detonates it, the C4 will explode
@@ -111,6 +112,7 @@ public class C4 : MonoBehaviour
 
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             isStuck = true;
+            GetComponent<Animator>().enabled = false;
         }
             
     }
