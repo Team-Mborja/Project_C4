@@ -726,7 +726,7 @@ PrefabInstance:
     - target: {fileID: 5808612315271851998, guid: eb54cc695d026fc4996481cacf120f2d,
         type: 3}
       propertyPath: m_Text
-      value: Another One
+      value: Its All About Timing
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb54cc695d026fc4996481cacf120f2d, type: 3}
