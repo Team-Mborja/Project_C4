@@ -105,6 +105,7 @@ MonoBehaviour:
   - FuseBox
   - Disable
   - Destruct
+  - Player
   itemName: Grenade
   offset: {x: 0.64, y: 0.1}
   explode: {fileID: 5842297337180791403, guid: 4f0460ed7729c5f4c8225267f3696405, type: 3}

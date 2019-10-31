@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3343416364185018574}
   - component: {fileID: 3343416364185018570}
   - component: {fileID: 2795832851270754527}
-  - component: {fileID: 2051364153513973597}
+  - component: {fileID: 556329051874658707}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Rocket
@@ -102,9 +102,8 @@ MonoBehaviour:
   - FuseBox
   - Disable
   - Destruct
+  - Player
   itemName: Rocket
-  xMax: 1000
-  yMax: 1000
   explode: {fileID: 5842297337180791403, guid: 4f0460ed7729c5f4c8225267f3696405, type: 3}
 --- !u!50 &3343416364185018570
 Rigidbody2D:
@@ -143,8 +142,8 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.6}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!60 &2051364153513973597
-PolygonCollider2D:
+--- !u!61 &556329051874658707
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -166,14 +165,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.29, y: 0.675}
-      - {x: -0.34, y: 0.415}
-      - {x: -0.34, y: -0.575}
-      - {x: -0.32999998, y: -0.585}
-      - {x: -0.089999996, y: -0.695}
-      - {x: 0.19999999, y: -0.695}
-      - {x: 0.34, y: -0.435}
-      - {x: 0.34, y: 0.385}
-      - {x: 0.17, y: 0.675}
+  serializedVersion: 2
+  m_Size: {x: 0.68, y: 1.39}
+  m_EdgeRadius: 0
