@@ -150,6 +150,4 @@ public class C4 : MonoBehaviour
         Destroy(gameObject);
     }
 
-   
-
 }
