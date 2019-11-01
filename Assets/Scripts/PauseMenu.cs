@@ -14,7 +14,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKey(KeyCode.Escape) && gameObject.GetComponent<Image>().enabled == false)
+        if (Input.GetKey(KeyCode.Escape) && gameObject.GetComponent<Image>().enabled == false && GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().gameOver == false)
            ActivatePauseScreen();
 
     }
