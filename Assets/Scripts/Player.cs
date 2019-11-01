@@ -28,7 +28,9 @@ public class Player : MonoBehaviour
 
     RaycastHit2D left;
     RaycastHit2D right;
-    RaycastHit2D down;
+
+    RaycastHit2D downLeft;
+    RaycastHit2D downRight;
 
 
     // Start is called before the first frame update
@@ -52,28 +54,27 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        left = Physics2D.Raycast(transform.position, Vector2.left, 1.0f);
-        right = Physics2D.Raycast(transform.position, Vector2.right, 1.0f);
-        down = Physics2D.Raycast(transform.position, Vector2.down, 1.0f);
+        left = Physics2D.Raycast(transform.position, Vector2.left, 0.5f);
+        right = Physics2D.Raycast(transform.position, Vector2.right, 0.5f);
+
+        downLeft = Physics2D.Raycast(new Vector2(transform.position.x - 0.5f, transform.position.y), Vector2.down, 1.0f);
+        downRight = Physics2D.Raycast(new Vector2(transform.position.x + 0.5f, transform.position.y), Vector2.down, 1.0f);
 
         if (GameObject.FindGameObjectWithTag("FuseBox") != null && managerScript.pausedGame == false)
         {
 
-            left = Physics2D.Raycast(transform.position, Vector2.left, moveSpeed/2);
-            right = Physics2D.Raycast(transform.position, Vector2.right, moveSpeed/2);
-
 
 
             // Player moves right with D
-            if (Input.GetKey(KeyCode.D))
+            if (right.collider == null && Input.GetKey(KeyCode.D))
                 transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
 
             // Player moves left with A
-            if (Input.GetKey(KeyCode.A))
+            if (left.collider == null && Input.GetKey(KeyCode.A))
                 transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
        
-             if (down.collider != null && (Input.GetKeyDown(KeyCode.Space)))
+             if ((downLeft.collider != null || downRight.collider != null) && (Input.GetKeyDown(KeyCode.Space)))
             {
                 rb.AddForce(Vector2.up * jumpForce);
                 usedJump += 1;
