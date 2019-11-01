@@ -19,7 +19,8 @@ public class Rocket : MonoBehaviour
      GameObject manager;
 
     public GameObject explode;
-    
+    RaycastHit2D front;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,9 +42,15 @@ public class Rocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, travelSpeed * (travelSpeed/ Mathf.Abs(travelSpeed)) * Time.deltaTime);
-        target = Vector3.MoveTowards(target, transform.position, -(travelSpeed * (travelSpeed / Mathf.Abs(travelSpeed))) * Time.deltaTime);
+        front = Physics2D.Raycast(transform.position, Vector2.left, 0.75f);
 
+        if (front.collider == null)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target, travelSpeed * (travelSpeed / Mathf.Abs(travelSpeed)) * Time.deltaTime);
+            target = Vector3.MoveTowards(target, transform.position, -(travelSpeed * (travelSpeed / Mathf.Abs(travelSpeed))) * Time.deltaTime);
+        }
+        else
+            Explode();
 
     }
 
@@ -59,13 +66,6 @@ public class Rocket : MonoBehaviour
     {
         if (inRangeItems.Contains(other.gameObject))
             inRangeItems.Remove(other.gameObject);
-    }
-
-    
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag != "Player")
-            Explode();
     }
 
     private void Explode()

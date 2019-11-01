@@ -12,8 +12,6 @@ public class Player : MonoBehaviour
         public float moveSpeed;
     // Height of jump
         public float jumpForce;
-    // Checks if player is on the ground
-        public bool isGrounded;
     // bool for left facing
         public bool isLeft;
         public int leftScale;
@@ -23,8 +21,6 @@ public class Player : MonoBehaviour
          GameObject[] inventory = new GameObject[3];
     // current inventory slot;
          public int slot;
-    // Jump Tags
-        public List<string> jumpTags = new List<string>();
 
 
     public int[] usedEquipment = new int[3];
@@ -32,6 +28,10 @@ public class Player : MonoBehaviour
 
     RaycastHit2D left;
     RaycastHit2D right;
+
+    RaycastHit2D downLeft;
+    RaycastHit2D downRight;
+
 
     // Start is called before the first frame update
     void Start()
@@ -46,8 +46,6 @@ public class Player : MonoBehaviour
             inventory[2] = managerScript.weapons[2];
         // Defaults to the first inventory slot
             slot = 0; 
-        // Defaults to not being on the ground
-            isGrounded = true;
         // Defaults to facing right
             isLeft = false;
             leftScale = 1;
@@ -56,24 +54,27 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        left = Physics2D.Raycast(transform.position, Vector2.left, 0.5f);
+        right = Physics2D.Raycast(transform.position, Vector2.right, 0.5f);
+
+        downLeft = Physics2D.Raycast(new Vector2(transform.position.x - 0.5f, transform.position.y), Vector2.down, 1.0f);
+        downRight = Physics2D.Raycast(new Vector2(transform.position.x + 0.5f, transform.position.y), Vector2.down, 1.0f);
+
         if (GameObject.FindGameObjectWithTag("FuseBox") != null && managerScript.pausedGame == false)
         {
-
-            left = Physics2D.Raycast(transform.position, Vector2.left, moveSpeed/2);
-            right = Physics2D.Raycast(transform.position, Vector2.right, moveSpeed/2);
 
 
 
             // Player moves right with D
-            if (Input.GetKey(KeyCode.D))
+            if (right.collider == null && Input.GetKey(KeyCode.D))
                 transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
 
             // Player moves left with A
-            if (Input.GetKey(KeyCode.A))
+            if (left.collider == null && Input.GetKey(KeyCode.A))
                 transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
        
-             if (isGrounded && (Input.GetKeyDown(KeyCode.Space)))
+             if ((downLeft.collider != null || downRight.collider != null) && (Input.GetKeyDown(KeyCode.Space)))
             {
                 rb.AddForce(Vector2.up * jumpForce);
                 usedJump += 1;
@@ -110,21 +111,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Detects if player is on the ground
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (jumpTags.Contains(collision.gameObject.tag))
-            isGrounded = true;
-    }
 
-    //Detects if player is off the ground
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (jumpTags.Contains(collision.gameObject.tag))
-            isGrounded = false;
-    }
-
-  
     //Spawns each equipment at a given instantiation point
     void SpawnEqipment(GameObject equipment)
     {
