@@ -18,6 +18,7 @@ TagManager:
   - Cursor
   - Menu
   - Destruct
+  - Laser
   layers:
   - Default
   - TransparentFX

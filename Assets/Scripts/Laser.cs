@@ -4,24 +4,17 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    // Box that will disable the Disable
-        public GameObject disableBoxLaser;
-    // List of Objects the laser destroys
-        public List<string> destroyList = new List<string>();
-    void Update()
-    {
-        // If someone has destroyed the Disable Box (Laser), destroy the Laser
-            if (disableBoxLaser == null)
-                Destroy(gameObject);
-    }
+    public GameObject disable_box;
+    public GameObject laser_beam;
+    public GameObject laser_end;
 
-    // If an explosive enters the No-Explosion Zone it is destroyed
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (destroyList.Contains(other.gameObject.tag))
-            Destroy(other.gameObject);
-    }
 
+    private void Update()
+    {
+        if(disable_box == null)
+            Destroy(gameObject);
+        
+    }
 
 
 }
