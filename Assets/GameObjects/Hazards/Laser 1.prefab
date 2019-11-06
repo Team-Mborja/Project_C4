@@ -28,7 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1708901121496245651}
-  - {fileID: 2377979929225223298}
+  - {fileID: 6335433995750086069}
   - {fileID: 2377979930878108197}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -137,6 +137,68 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &2441731118388680268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 4865626295431876317}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2377979929225223298}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2377979929225223298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 7099473409901204063, guid: b031bd551e28a65438d9c4899c7458ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 4865626295431876317}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441731118388680268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6335433995750086069}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3062652701526502296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 4865626295431876317}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6335433995750086069}
+  m_Layer: 0
+  m_Name: Laser Beam (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6335433995750086069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 4865626295431876317}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3062652701526502296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2377979929225223298}
+  m_Father: {fileID: 2377979929640447229}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2377979930859505845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -228,11 +290,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2377979929640447229}
     m_Modifications:
-    - target: {fileID: 3942748237723758352, guid: 7fdc56c32da582f4ba8d667f1d39a610,
-        type: 3}
-      propertyPath: m_Name
-      value: Disable_Box
-      objectReference: {fileID: 0}
     - target: {fileID: 3942748237723758359, guid: 7fdc56c32da582f4ba8d667f1d39a610,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -298,6 +355,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.20000012
       objectReference: {fileID: 0}
+    - target: {fileID: 3942748237723758352, guid: 7fdc56c32da582f4ba8d667f1d39a610,
+        type: 3}
+      propertyPath: m_Name
+      value: Disable_Box
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fdc56c32da582f4ba8d667f1d39a610, type: 3}
 --- !u!1 &1708901121496245652 stripped
@@ -319,11 +381,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2377979929640447229}
     m_Modifications:
-    - target: {fileID: 7099473409901204051, guid: b031bd551e28a65438d9c4899c7458ec,
-        type: 3}
-      propertyPath: m_Name
-      value: Laser Beam
-      objectReference: {fileID: 0}
     - target: {fileID: 7099473409901204063, guid: b031bd551e28a65438d9c4899c7458ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -379,6 +436,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 7099473409901204051, guid: b031bd551e28a65438d9c4899c7458ec,
+        type: 3}
+      propertyPath: m_Name
+      value: Laser Beam
+      objectReference: {fileID: 0}
     - target: {fileID: 7099473409901204062, guid: b031bd551e28a65438d9c4899c7458ec,
         type: 3}
       propertyPath: disableBoxLaser
@@ -386,9 +448,3 @@ PrefabInstance:
       objectReference: {fileID: 1708901121496245652}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b031bd551e28a65438d9c4899c7458ec, type: 3}
---- !u!4 &2377979929225223298 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7099473409901204063, guid: b031bd551e28a65438d9c4899c7458ec,
-    type: 3}
-  m_PrefabInstance: {fileID: 4865626295431876317}
-  m_PrefabAsset: {fileID: 0}
