@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     RaycastHit2D downLeft;
     RaycastHit2D downRight;
 
+    public GameObject warning;
 
     // Start is called before the first frame update
     void Start()

@@ -95,6 +95,10 @@ public class Grenade : MonoBehaviour
             Explode();
         }
 
+        if (inRangeItems.Contains(player))
+            player.GetComponent<Player>().warning.SetActive(true);
+        else
+            player.GetComponent<Player>().warning.SetActive(false);
     }
 
     void ThrowGrenade()

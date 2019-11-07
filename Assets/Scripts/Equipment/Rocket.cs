@@ -50,7 +50,16 @@ public class Rocket : MonoBehaviour
             target = Vector3.MoveTowards(target, transform.position, -(travelSpeed * (travelSpeed / Mathf.Abs(travelSpeed))) * Time.deltaTime);
         }
         else
-            Explode();
+        {
+            if(front.collider.tag != "Laser")
+                Explode();
+        }
+
+
+        if (inRangeItems.Contains(player))
+            player.GetComponent<Player>().warning.SetActive(true);
+        else
+            player.GetComponent<Player>().warning.SetActive(false);
 
     }
 
