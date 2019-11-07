@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explosion : MonoBehaviour
+public class Explosion_Animation : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, 0.2f);
     }
-
-   
 }
