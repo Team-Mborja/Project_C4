@@ -47,7 +47,9 @@ public class Rocket : MonoBehaviour
         }
         else
         {
-            if(front.collider.tag != "Laser")
+            if (front.collider.tag == "Laser")
+                Destroy(gameObject);
+            else
                 explosionObject.GetComponent<Explode>().Explosion();
         }
     }

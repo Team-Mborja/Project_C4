@@ -7,6 +7,6 @@ public class Explosion_Animation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 0.2f);
+        Destroy(gameObject, 0.25f);
     }
 }

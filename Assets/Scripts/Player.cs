@@ -50,6 +50,8 @@ public class Player : MonoBehaviour
         // Defaults to facing right
             isLeft = false;
             leftScale = 1;
+
+        warning.SetActive(false);
     }
 
     // Update is called once per frame
