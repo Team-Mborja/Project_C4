@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1729466018618520964}
   - component: {fileID: 1729466018618520987}
   - component: {fileID: 4475190926001331388}
+  - component: {fileID: 8333968217038144892}
   m_Layer: 2
   m_Name: Grenade
   m_TagString: Grenade
@@ -119,6 +120,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.35
+--- !u!95 &8333968217038144892
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729466018618520986}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3ad61d2785e82d4eb8994f7cbb4fd40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3383070254447885751
 PrefabInstance:
   m_ObjectHideFlags: 0
