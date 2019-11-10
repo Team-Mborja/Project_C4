@@ -18,10 +18,6 @@ public class C4 : MonoBehaviour
         public float xMax;
     // Max Upward
         public float yMax;
-    // List of tags of objects that can explode to C4
-        public List<string> explosionTags = new List<string>();
-    // Items in Range
-        List<GameObject> inRangeItems = new List<GameObject>();
     // Name of Equipment
         public string itemName;
     // Has the object been thrown
@@ -29,7 +25,7 @@ public class C4 : MonoBehaviour
     // Spawn Offset
         public Vector2 offset;
 
-    public GameObject explode;
+    public GameObject explodeObject;
 
      GameObject player;
      GameObject cursor;
@@ -88,7 +84,8 @@ public class C4 : MonoBehaviour
 
         // If C4 is stuck to someting and player detonates it, the C4 will explode
         if (Input.GetMouseButton(1) && isStuck == true)
-            Explode();
+            explodeObject.GetComponent<Explode>().Explosion();
+
     }
 
 
@@ -116,38 +113,4 @@ public class C4 : MonoBehaviour
         }
             
     }
-    // Puts explodable objects in range set to explode
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (explosionTags.Contains(other.gameObject.tag))
-            inRangeItems.Add(other.gameObject);
-    }
-
-    // Takes explodable objects in range out of range
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (inRangeItems.Contains(other.gameObject))
-            inRangeItems.Remove(other.gameObject);
-    }
-
-    // Explodes the C4 and all objects in its range
-    private void Explode()
-    {
-
-        foreach (GameObject objects in inRangeItems)
-        {
-
-            if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
-                objects.GetComponent<BoxDrops>().DropItem();
-
-            Destroy(objects);
-
-            if (inRangeItems.Count == 0)
-                break;
-
-        }
-        Instantiate(explode, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-    }
-
 }

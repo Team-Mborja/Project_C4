@@ -5,12 +5,8 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
         public float travelSpeed;
-    // List of tags on objects that can be destroyed
-        public List<string> explosionTags = new List<string>();
     // Name of Equipment
         public string itemName;
-    // Items in Range
-        List<GameObject> inRangeItems = new List<GameObject>();
     // Target of the rocket
         Vector3 target;
 
@@ -18,7 +14,7 @@ public class Rocket : MonoBehaviour
      GameObject cursor;
      GameObject manager;
 
-    public GameObject explode;
+    public GameObject explosionObject;
     RaycastHit2D front;
 
     // Start is called before the first frame update
@@ -50,39 +46,11 @@ public class Rocket : MonoBehaviour
             target = Vector3.MoveTowards(target, transform.position, -(travelSpeed * (travelSpeed / Mathf.Abs(travelSpeed))) * Time.deltaTime);
         }
         else
-            Explode();
-
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-
-        if (explosionTags.Contains(other.gameObject.tag))
-            inRangeItems.Add(other.gameObject);
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (inRangeItems.Contains(other.gameObject))
-            inRangeItems.Remove(other.gameObject);
-    }
-
-    private void Explode()
-    {
-            foreach (GameObject objects in inRangeItems)
-            {
-
-                if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
-                    objects.GetComponent<BoxDrops>().DropItem();
-
-                Destroy(objects);
-
-            if (inRangeItems.Count == 0)
-                break;
-
+        {
+            if (front.collider.tag == "Laser")
+                Destroy(gameObject);
+            else
+                explosionObject.GetComponent<Explode>().Explosion();
         }
-        Instantiate(explode, new Vector2(transform.position.x + 0.6f, transform.position.y), Quaternion.identity);
-        Destroy(gameObject);
     }
 }

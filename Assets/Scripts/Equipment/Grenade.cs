@@ -20,10 +20,6 @@ public class Grenade : MonoBehaviour
         public float forwardMultiply;
     // Scale of the Y-Axis throwing
         public float upwardMultiply;
-    // List of tags on objects that can be destroyed
-        public List<string> explosionTags = new List<string>();
-    // Items in Range
-        List<GameObject> inRangeItems = new List<GameObject>();
     // Name of Equipment
         public string itemName;
     // Has been throw
@@ -35,8 +31,7 @@ public class Grenade : MonoBehaviour
     GameObject cursor;
     GameObject manager;
 
-    public GameObject explode;
-
+    public GameObject explodeObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -92,7 +87,7 @@ public class Grenade : MonoBehaviour
             if(isThrown == false)
                 Destroy(player);
 
-            Explode();
+            explodeObject.GetComponent<Explode>().Explosion();
         }
 
     }
@@ -103,36 +98,5 @@ public class Grenade : MonoBehaviour
 
         rb.AddForce(new Vector2(forceForward, forceUpward));
 
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (explosionTags.Contains(other.gameObject.tag))
-            inRangeItems.Add(other.gameObject);
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (inRangeItems.Contains(other.gameObject))
-            inRangeItems.Remove(other.gameObject);
-    }
-
-    private void Explode()
-    {
-
-       foreach(GameObject objects in inRangeItems)
-        {
-
-            if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
-                objects.GetComponent<BoxDrops>().DropItem();
-
-                Destroy(objects);
-
-            if (inRangeItems.Count == 0)
-                break;
-        }
-        Instantiate(explode, transform.position, Quaternion.identity);
-        Destroy(gameObject);
     }
 }

@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     RaycastHit2D downLeft;
     RaycastHit2D downRight;
 
+    public GameObject warning;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +50,8 @@ public class Player : MonoBehaviour
         // Defaults to facing right
             isLeft = false;
             leftScale = 1;
+
+        warning.SetActive(false);
     }
 
     // Update is called once per frame
@@ -57,8 +60,8 @@ public class Player : MonoBehaviour
         left = Physics2D.Raycast(transform.position, Vector2.left, 0.5f);
         right = Physics2D.Raycast(transform.position, Vector2.right, 0.5f);
 
-        downLeft = Physics2D.Raycast(new Vector2(transform.position.x - 0.5f, transform.position.y), Vector2.down, 1.0f);
-        downRight = Physics2D.Raycast(new Vector2(transform.position.x + 0.5f, transform.position.y), Vector2.down, 1.0f);
+        downLeft = Physics2D.Raycast(new Vector2(transform.position.x - 0.4f, transform.position.y), Vector2.down, 1.0f);
+        downRight = Physics2D.Raycast(new Vector2(transform.position.x + 0.4f, transform.position.y), Vector2.down, 1.0f);
 
         if (GameObject.FindGameObjectWithTag("FuseBox") != null && managerScript.pausedGame == false)
         {
