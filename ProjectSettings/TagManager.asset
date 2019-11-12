@@ -19,6 +19,7 @@ TagManager:
   - Menu
   - Destruct
   - Laser
+  - Death
   layers:
   - Default
   - TransparentFX

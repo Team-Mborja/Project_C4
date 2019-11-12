@@ -57,8 +57,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        left = Physics2D.Raycast(transform.position, Vector2.left, 0.5f);
-        right = Physics2D.Raycast(transform.position, Vector2.right, 0.5f);
+        left = Physics2D.Raycast(transform.position, Vector2.left, 0.4f);
+        right = Physics2D.Raycast(transform.position, Vector2.right, 0.4f);
 
         downLeft = Physics2D.Raycast(new Vector2(transform.position.x - 0.4f, transform.position.y), Vector2.down, 1.0f);
         downRight = Physics2D.Raycast(new Vector2(transform.position.x + 0.4f, transform.position.y), Vector2.down, 1.0f);
