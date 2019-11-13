@@ -189,9 +189,10 @@ MonoBehaviour:
     - {x: 1, y: -1, z: 0}
     m_Sprites:
     - {fileID: -6385706106285818984, guid: fbabedacf054555479c22e78dfd7288e, type: 3}
+    - {fileID: -3169994074268352641, guid: c631d0c928c9f5e44b40dd6462c1ee28, type: 3}
     m_GameObject: {fileID: 0}
     m_AnimationSpeed: 1
-    m_PerlinScale: 0.5
+    m_PerlinScale: 0.52
     m_RuleTransform: 0
     m_Output: 0
     m_ColliderType: 1
