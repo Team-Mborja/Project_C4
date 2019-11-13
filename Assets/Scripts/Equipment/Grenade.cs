@@ -75,6 +75,7 @@ public class Grenade : MonoBehaviour
         // timer counts down
             destruct -= Time.deltaTime;
 
+
         if (Input.GetMouseButtonUp(0) && isThrown == false)
         {
             ThrowGrenade();
