@@ -1,6 +1,6 @@
 User Controls
 
-Mouse0
+A
 D
 Space
 Alpha1
