@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
         Rigidbody2D rb;
     // Acceses the level mangaer
         LevelManager managerScript;
+        SettingsManager settingsScript;
     // Left and right move speed;
         public float moveSpeed;
     // Height of jump
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
             rb = GetComponent<Rigidbody2D>();
         // Gets the script on the Level Manager
             managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
+            settingsScript = GameObject.FindGameObjectWithTag("Settings").GetComponent<SettingsManager>();
         // Equips weapons from the level manager
             inventory[0] = managerScript.weapons[0];
             inventory[1] = managerScript.weapons[1];
@@ -51,6 +53,7 @@ public class Player : MonoBehaviour
             isLeft = false;
             leftScale = 1;
 
+        // defaults explosive warning to false
         warning.SetActive(false);
     }
 
@@ -69,26 +72,26 @@ public class Player : MonoBehaviour
 
 
             // Player moves right with D
-            if (right.collider == null && Input.GetKey(KeyCode.D))
+            if (right.collider == null && Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode), settingsScript.controls[1])))
                 transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
 
             // Player moves left with A
-            if (left.collider == null && Input.GetKey(KeyCode.A))
+            if (left.collider == null && Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[0])))
                 transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
        
-             if ((downLeft.collider != null || downRight.collider != null) && (Input.GetKeyDown(KeyCode.Space)))
+             if ((downLeft.collider != null || downRight.collider != null) && (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[2]))))
             {
                 rb.AddForce(Vector2.up * jumpForce);
                 usedJump += 1;
             }
 
             // Weapon swap keys
-            if (Input.GetKey(KeyCode.Alpha1))
+            if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[3])))
                 slot = 0;
-            else if (Input.GetKey(KeyCode.Alpha2))
+            else if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[4])))
                 slot = 1;
-            else if (Input.GetKey(KeyCode.Alpha3))
+            else if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[5])))
                 slot = 2;
 
             // Throws current weapon
