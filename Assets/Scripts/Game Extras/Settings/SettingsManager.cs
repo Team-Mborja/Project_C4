@@ -51,7 +51,7 @@ public class SettingsManager : MonoBehaviour
             fileText += "\n" + controls[i];
         }
 
-        CreateFile(path, fileText);
+        File.WriteAllText(path, fileText);
         ReadFile(path);
     }
 }
