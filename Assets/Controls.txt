@@ -2,7 +2,7 @@ User Controls
 
 A
 D
-W
+Space
 Alpha1
 Alpha2
 Alpha3
