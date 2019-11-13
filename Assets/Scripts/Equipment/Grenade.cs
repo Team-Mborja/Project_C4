@@ -32,6 +32,8 @@ public class Grenade : MonoBehaviour
     GameObject manager;
 
     public GameObject explodeObject;
+
+    RaycastHit2D hit;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,11 +54,20 @@ public class Grenade : MonoBehaviour
 
         if (isThrown == false)
         {
-            transform.position = new Vector2(player.transform.position.x + offset.x, player.transform.position.y + offset.y);
 
+            transform.position = new Vector2(player.transform.position.x + offset.x, player.transform.position.y + offset.y);
+           // hit = Physics2D.Raycast(player.transform.position, cursor.transform.position - player.transform.position, 1.0f);
+            //Vector2 normalMousePos = Vector3.Normalize(cursor.transform.position - player.transform.position);
+            //transform.position = new Vector2(player.transform.position.x + (normalMousePos.x - player.transform.position.x), player.transform.position.y + (normalMousePos.y - player.transform.position.y));
+            //transform.position = new Vector2(normalMousePos.x -player.transform.position.x, normalMousePos.y - player.transform.position.y);
+
+
+
+            Debug.DrawRay(player.transform.position, cursor.transform.position - player.transform.position, Color.red);
             // calculate force based on how far mouse is from player
             forceForward = Mathf.Abs(cursor.transform.position.x - player.transform.position.x) * forwardMultiply;
             forceUpward = Mathf.Abs(cursor.transform.position.y - player.transform.position.y) * upwardMultiply;
+
 
             // Checks if player is left or right
            if (player.GetComponent<Player>().isLeft == true)
