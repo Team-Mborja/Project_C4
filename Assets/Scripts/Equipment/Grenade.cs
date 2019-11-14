@@ -14,8 +14,10 @@ public class Grenade : MonoBehaviour
         float forceUpward;
     // Max Forward
         public float xMax;
+        public float xMin;
     // Max Upward
         public float yMax;
+        public float yMin;
     // Scale of the X-Axis throwing
         public float forwardMultiply;
     // Scale of the Y-Axis throwing
@@ -33,7 +35,6 @@ public class Grenade : MonoBehaviour
 
     public GameObject explodeObject;
 
-    RaycastHit2D hit;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,14 +57,8 @@ public class Grenade : MonoBehaviour
         {
 
             transform.position = new Vector2(player.transform.position.x + offset.x, player.transform.position.y + offset.y);
-           // hit = Physics2D.Raycast(player.transform.position, cursor.transform.position - player.transform.position, 1.0f);
-            //Vector2 normalMousePos = Vector3.Normalize(cursor.transform.position - player.transform.position);
-            //transform.position = new Vector2(player.transform.position.x + (normalMousePos.x - player.transform.position.x), player.transform.position.y + (normalMousePos.y - player.transform.position.y));
-            //transform.position = new Vector2(normalMousePos.x -player.transform.position.x, normalMousePos.y - player.transform.position.y);
+            //transform.position = new Vector2(player.transform.position.x + ((cursor.transform.position.x - player.transform.position.x)/5), player.transform.position.y + ((cursor.transform.position.y - player.transform.position.y)/5));
 
-
-
-            Debug.DrawRay(player.transform.position, cursor.transform.position - player.transform.position, Color.red);
             // calculate force based on how far mouse is from player
             forceForward = Mathf.Abs(cursor.transform.position.x - player.transform.position.x) * forwardMultiply;
             forceUpward = Mathf.Abs(cursor.transform.position.y - player.transform.position.y) * upwardMultiply;

@@ -16,8 +16,10 @@ public class C4 : MonoBehaviour
         public float upwardMultiply;
     // Max Forward
         public float xMax;
+        public float xMin;
     // Max Upward
         public float yMax;
+        public float yMin;
     // Name of Equipment
         public string itemName;
     // Has the object been thrown

@@ -16,6 +16,9 @@ public class CameraScript : MonoBehaviour
     public float xMax;
     // Max X Distance
     public float yMax;
+
+    public float xMin;
+    public float yMin;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -58,6 +61,7 @@ public class CameraScript : MonoBehaviour
                 yMax = managerScript.weapons[player.GetComponent<Player>().slot].GetComponent<Rocket_Launcher>().yMax;
             }
 
+            // Max Distances
             if (cursor.transform.position.x - player.transform.position.x >= xMax)
                 cursor.transform.position = new Vector2(player.transform.position.x + xMax, cursor.transform.position.y);
 
@@ -69,6 +73,9 @@ public class CameraScript : MonoBehaviour
 
             if (cursor.transform.position.y - player.transform.position.y <= -yMax)
                 cursor.transform.position = new Vector2(cursor.transform.position.x, player.transform.position.y - yMax);
+
+            // Min Distances
+
         }
     }
     }
