@@ -22,91 +22,99 @@ public class C4 : MonoBehaviour
         public string itemName;
     // Has the object been thrown
         bool isThrown;
+    // GameObject for the explosions on the C4
+        public GameObject explodeObject;
+    // GameObjects for the player, cursor, and level manager
+        GameObject player;
+        GameObject cursor;
+        GameObject manager;
+    // Bool to check if the C4 is stuck to something
+        public bool isStuck;
+    // Tags for all objects the C4 can stick to
+        public List<string> stickTags = new List<string>();
 
-    public GameObject explodeObject;
-
-     GameObject player;
-     GameObject cursor;
-     GameObject manager;
-
-    public bool isStuck;
-    public List<string> stickTags = new List<string>();
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        cursor = GameObject.FindGameObjectWithTag("Cursor");
-        manager = GameObject.FindGameObjectWithTag("Manager");
-
+        // Initalizes the player, cursor, and level manager
+            player = GameObject.FindGameObjectWithTag("Player");
+            cursor = GameObject.FindGameObjectWithTag("Cursor");
+            manager = GameObject.FindGameObjectWithTag("Manager");
 
         // Sets the defautlt to not be thrown
-        isThrown = false;
-        isStuck = false;
-
+            isThrown = false;
+        // Sets the default to not be stuck
+            isStuck = false;
     }
 
 
+    // Function that is called every frame
     void Update()
     {
 
-        if(isThrown == false)
-        {
-            transform.position = (cursor.transform.position - player.transform.position).normalized * 1.25f + player.transform.position;
-            // Calculates force based on mouse position compared to player position
-            forceForward = Mathf.Abs(cursor.transform.position.x - player.transform.position.x) * forwardMultiply;
-            forceUpward = Mathf.Abs(cursor.transform.position.y - player.transform.position.y) * upwardMultiply;
+        // All code that runs when the C4 is in your hand
+            if(isThrown == false)
+            {
+                // Changes the position once held to move with the cursor
+                    transform.position = (cursor.transform.position - player.transform.position).normalized * 1.25f + player.transform.position;
 
-            // Checks if player is left or right
-            if (player.GetComponent<Player>().isLeft == true)
-                forceForward = -Mathf.Abs(forceForward);
-            else
-                forceForward = Mathf.Abs(forceForward);
+                // Calculates force based on mouse position compared to player position
+                    forceForward = Mathf.Abs(cursor.transform.position.x - player.transform.position.x) * forwardMultiply;
+                    forceUpward = Mathf.Abs(cursor.transform.position.y - player.transform.position.y) * upwardMultiply;
 
-            if (player.GetComponent<Player>().isUp == true)
-                forceUpward = Mathf.Abs(forceUpward);
-            else
-                forceUpward = -Mathf.Abs(forceUpward);
+                // Checks if the cursor is left or right of the player
+                    if (player.GetComponent<Player>().isLeft == true)
+                        forceForward = -Mathf.Abs(forceForward);
+                    else
+                        forceForward = Mathf.Abs(forceForward);
+
+                // Check if the cursor is above or below the player
+                    if (player.GetComponent<Player>().isUp == true)
+                        forceUpward = Mathf.Abs(forceUpward);
+                    else
+                        forceUpward = -Mathf.Abs(forceUpward);
 
         }
 
 
-        // Checks if player can throw C4
-        if (Input.GetMouseButtonUp(0) && isThrown == false)
-        {
-            ThrowC4();
-            isThrown = true;
-            GetComponent<Animator>().enabled = true;
-        }
+        // Throws the C4 with left mouse
+            if (Input.GetMouseButtonUp(0) && isThrown == false)
+            {
+                ThrowC4();
+                isThrown = true;
+                GetComponent<Animator>().enabled = true;
+            }
 
         // If C4 is stuck to someting and player detonates it, the C4 will explode
-        if (Input.GetMouseButton(1) && isStuck == true)
-            explodeObject.GetComponent<Explode>().Explosion();
+            if (Input.GetMouseButton(1) && isStuck == true)
+                explodeObject.GetComponent<Explode>().Explosion();
 
     }
 
-
-    public void ThrowC4()
-    {
-
-         rb = gameObject.AddComponent<Rigidbody2D>();
-
-        // Throws the C4
-        rb.AddForce(new Vector2(forceForward, forceUpward));
-    }
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (stickTags.Contains(collision.gameObject.tag))
+    // Adds a rigidbody and adds force to the C4
+        public void ThrowC4()
         {
-            var contact = collision.contacts[0];
-            var rot = Quaternion.FromToRotation(transform.up, contact.normal);
-            transform.rotation *= rot;
 
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
-            isStuck = true;
-            GetComponent<Animator>().enabled = false;
+            rb = gameObject.AddComponent<Rigidbody2D>();
+
+            // Throws the C4
+                rb.AddForce(new Vector2(forceForward, forceUpward));
         }
+
+    // Code that is called when the C4 collides with an object it sticks to
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            // rotates to match the object it sticks to and locks it in place
+                if (stickTags.Contains(collision.gameObject.tag))
+                {
+                    var contact = collision.contacts[0];
+                    var rot = Quaternion.FromToRotation(transform.up, contact.normal);
+                    transform.rotation *= rot;
+
+                    rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                    isStuck = true;
+                    GetComponent<Animator>().enabled = false;
+                }
             
     }
 }
