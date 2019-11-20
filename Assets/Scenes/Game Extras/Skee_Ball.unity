@@ -10047,5 +10047,20 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 1567803261}
+    - target: {fileID: 5864996815975552081, guid: 40a66d5ebbc2ff342bd3f2d1365f802c,
+        type: 3}
+      propertyPath: inventory.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864996815975552081, guid: 40a66d5ebbc2ff342bd3f2d1365f802c,
+        type: 3}
+      propertyPath: inventory.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864996815975552081, guid: 40a66d5ebbc2ff342bd3f2d1365f802c,
+        type: 3}
+      propertyPath: inventory.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40a66d5ebbc2ff342bd3f2d1365f802c, type: 3}
