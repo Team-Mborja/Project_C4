@@ -63,8 +63,11 @@ public class Grenade : MonoBehaviour
                forceForward = -Mathf.Abs(forceForward);
            else
                 forceForward = Mathf.Abs(forceForward);
-              
-            
+
+            if (player.GetComponent<Player>().isUp == true)
+                forceUpward = Mathf.Abs(forceUpward);
+            else
+                forceUpward = -Mathf.Abs(forceUpward);
 
         }
 
