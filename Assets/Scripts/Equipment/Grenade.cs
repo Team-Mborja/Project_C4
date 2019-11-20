@@ -24,8 +24,6 @@ public class Grenade : MonoBehaviour
         public string itemName;
     // Has been throw
         bool isThrown;
-    // Spawn Location
-        public Vector2 offset;
 
     GameObject player;
     GameObject cursor;
@@ -62,15 +60,11 @@ public class Grenade : MonoBehaviour
 
             // Checks if player is left or right
            if (player.GetComponent<Player>().isLeft == true)
-            {
                forceForward = -Mathf.Abs(forceForward);
-               offset.x = -Mathf.Abs(offset.x);
-            }
            else
-            {
                 forceForward = Mathf.Abs(forceForward);
-                offset.x = Mathf.Abs(offset.x);
-            }
+              
+            
 
         }
 
