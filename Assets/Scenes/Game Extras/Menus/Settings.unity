@@ -706,7 +706,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Left Move
+  m_Text: Equipment 3
 --- !u!222 &344849122
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1474,7 +1474,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Left Move
+  m_Text: Equipment 2
 --- !u!222 &894443228
 CanvasRenderer:
   m_ObjectHideFlags: 0

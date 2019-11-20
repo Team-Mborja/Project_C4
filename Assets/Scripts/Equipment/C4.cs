@@ -22,8 +22,6 @@ public class C4 : MonoBehaviour
         public string itemName;
     // Has the object been thrown
         bool isThrown;
-    // Spawn Offset
-        public Vector2 offset;
 
     public GameObject explodeObject;
 
@@ -53,23 +51,21 @@ public class C4 : MonoBehaviour
 
         if(isThrown == false)
         {
-            transform.position = new Vector2(player.transform.position.x + offset.x, player.transform.position.y + offset.y);
-
+            transform.position = (cursor.transform.position - player.transform.position).normalized * 1.25f + player.transform.position;
             // Calculates force based on mouse position compared to player position
             forceForward = Mathf.Abs(cursor.transform.position.x - player.transform.position.x) * forwardMultiply;
             forceUpward = Mathf.Abs(cursor.transform.position.y - player.transform.position.y) * upwardMultiply;
 
             // Checks if player is left or right
             if (player.GetComponent<Player>().isLeft == true)
-            {
                 forceForward = -Mathf.Abs(forceForward);
-                offset.x = -Mathf.Abs(offset.x);
-            }
             else
-            {
                 forceForward = Mathf.Abs(forceForward);
-                offset.x = Mathf.Abs(offset.x);
-            }
+
+            if (player.GetComponent<Player>().isUp == true)
+                forceUpward = Mathf.Abs(forceUpward);
+            else
+                forceUpward = -Mathf.Abs(forceUpward);
 
         }
 

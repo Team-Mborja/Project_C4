@@ -24,14 +24,13 @@ public class Grenade : MonoBehaviour
         public string itemName;
     // Has been throw
         bool isThrown;
-    // Spawn Location
-        public Vector2 offset;
 
     GameObject player;
     GameObject cursor;
     GameObject manager;
 
     public GameObject explodeObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,23 +51,23 @@ public class Grenade : MonoBehaviour
 
         if (isThrown == false)
         {
-            transform.position = new Vector2(player.transform.position.x + offset.x, player.transform.position.y + offset.y);
 
+            transform.position = (cursor.transform.position - player.transform.position).normalized  + player.transform.position;
             // calculate force based on how far mouse is from player
             forceForward = Mathf.Abs(cursor.transform.position.x - player.transform.position.x) * forwardMultiply;
             forceUpward = Mathf.Abs(cursor.transform.position.y - player.transform.position.y) * upwardMultiply;
 
+
             // Checks if player is left or right
            if (player.GetComponent<Player>().isLeft == true)
-            {
                forceForward = -Mathf.Abs(forceForward);
-               offset.x = -Mathf.Abs(offset.x);
-            }
            else
-            {
                 forceForward = Mathf.Abs(forceForward);
-                offset.x = Mathf.Abs(offset.x);
-            }
+
+            if (player.GetComponent<Player>().isUp == true)
+                forceUpward = Mathf.Abs(forceUpward);
+            else
+                forceUpward = -Mathf.Abs(forceUpward);
 
         }
 

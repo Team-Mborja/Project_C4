@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     // bool for left facing
         public bool isLeft;
         public int leftScale;
+    // bool for above player
+        public bool isUp;
     // Empty game object that holds the location of the weapon on the player
         Vector2 weaponSpawn = Vector2.zero;
     // Creates inventory
@@ -34,10 +36,12 @@ public class Player : MonoBehaviour
     RaycastHit2D downRight;
 
     public GameObject warning;
+    GameObject cursor;
 
     // Start is called before the first frame update
     void Start()
     {
+            cursor = GameObject.FindGameObjectWithTag("Cursor");
         // Gets the Rigidbody2D on the player
             rb = GetComponent<Rigidbody2D>();
         // Gets the script on the Level Manager
@@ -68,8 +72,6 @@ public class Player : MonoBehaviour
 
         if (GameObject.FindGameObjectWithTag("FuseBox") != null && managerScript.pausedGame == false)
         {
-
-
 
             // Player moves right with D
             if (right.collider == null && Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode), settingsScript.controls[1])))
@@ -102,7 +104,7 @@ public class Player : MonoBehaviour
             }
 
             // Cheks to see what direction the player is facing
-            if (Input.mousePosition.x >= Camera.main.WorldToScreenPoint(transform.position).x)
+            if (cursor.transform.position.x >= transform.position.x)
             {
                 isLeft = false;
                 leftScale = 1;
@@ -114,6 +116,11 @@ public class Player : MonoBehaviour
                 leftScale = -1;
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
+
+            if (cursor.transform.position.y >= transform.position.y)
+                isUp = true;
+            else
+                isUp = false;
         }
     }
 
@@ -124,9 +131,9 @@ public class Player : MonoBehaviour
         managerScript.inventory[slot]--;
 
         if (equipment.GetComponent<Grenade>() != null)
-            Instantiate(equipment, new Vector2(transform.position.x + (equipment.GetComponent<Grenade>().offset.x * leftScale), transform.position.y + equipment.GetComponent<Grenade>().offset.y), Quaternion.identity);
+            Instantiate(equipment, (cursor.transform.position - transform.position).normalized + transform.position, Quaternion.identity);
         else if (equipment.GetComponent<C4>() != null)
-            Instantiate(equipment, new Vector2(transform.position.x + (equipment.GetComponent<C4>().offset.x * leftScale) , transform.position.y + equipment.GetComponent<C4>().offset.y), Quaternion.identity);
+            Instantiate(equipment,(cursor.transform.position - transform.position).normalized * 1.25f + transform.position, Quaternion.identity);
         else if (equipment.GetComponent<Rocket_Launcher>() != null)
             Instantiate(equipment, new Vector2(transform.position.x + (equipment.GetComponent<Rocket_Launcher>().offset.x * leftScale), transform.position.y + equipment.GetComponent<Rocket_Launcher>().offset.y), Quaternion.Euler(0, 0, 90));
 
