@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Extras/Test.unity
     guid: 6bf5a6bb49f778643a6af35b84541646
   - enabled: 1
-    path: Assets/Scenes/Game Extras/The_Floor_Is_Laser.unity
+    path: Assets/Scenes/Primary Levels/The_Floor_Is_Laser.unity
     guid: 820bff2556f683c4e85e3e03d2d5c297
   - enabled: 1
     path: Assets/Scenes/Game Extras/In_The_Tube.unity
