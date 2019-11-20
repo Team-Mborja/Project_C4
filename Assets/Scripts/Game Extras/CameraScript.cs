@@ -13,12 +13,10 @@ public class CameraScript : MonoBehaviour
     // Location of the mouse
     Vector3 target;
     // Max X Disance 
-    public float xMax;
+        float xMax;
     // Max X Distance
-    public float yMax;
+        float yMax;
 
-    public float xMin;
-    public float yMin;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -62,19 +60,16 @@ public class CameraScript : MonoBehaviour
             }
 
             // Max Distances
+
             if (cursor.transform.position.x - player.transform.position.x >= xMax)
                 cursor.transform.position = new Vector2(player.transform.position.x + xMax, cursor.transform.position.y);
-
-            if (cursor.transform.position.x - player.transform.position.x <= -xMax)
+            else if (cursor.transform.position.x - player.transform.position.x <= -xMax)
                 cursor.transform.position = new Vector2(player.transform.position.x - xMax, cursor.transform.position.y);
 
             if (cursor.transform.position.y - player.transform.position.y >= yMax)
                 cursor.transform.position = new Vector2(cursor.transform.position.x, player.transform.position.y + yMax);
-
-            if (cursor.transform.position.y - player.transform.position.y <= -yMax)
+            else if (cursor.transform.position.y - player.transform.position.y <= -yMax)
                 cursor.transform.position = new Vector2(cursor.transform.position.x, player.transform.position.y - yMax);
-
-            // Min Distances
 
         }
     }

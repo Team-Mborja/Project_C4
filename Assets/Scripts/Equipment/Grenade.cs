@@ -14,10 +14,8 @@ public class Grenade : MonoBehaviour
         float forceUpward;
     // Max Forward
         public float xMax;
-        public float xMin;
     // Max Upward
         public float yMax;
-        public float yMin;
     // Scale of the X-Axis throwing
         public float forwardMultiply;
     // Scale of the Y-Axis throwing
@@ -56,9 +54,7 @@ public class Grenade : MonoBehaviour
         if (isThrown == false)
         {
 
-            transform.position = new Vector2(player.transform.position.x + offset.x, player.transform.position.y + offset.y);
-            //transform.position = new Vector2(player.transform.position.x + ((cursor.transform.position.x - player.transform.position.x)/5), player.transform.position.y + ((cursor.transform.position.y - player.transform.position.y)/5));
-
+            transform.position = (cursor.transform.position - player.transform.position).normalized  + player.transform.position;
             // calculate force based on how far mouse is from player
             forceForward = Mathf.Abs(cursor.transform.position.x - player.transform.position.x) * forwardMultiply;
             forceUpward = Mathf.Abs(cursor.transform.position.y - player.transform.position.y) * upwardMultiply;

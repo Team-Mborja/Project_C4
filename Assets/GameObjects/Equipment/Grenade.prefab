@@ -98,7 +98,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 5
   xMax: 7.5
+  xMin: 2.5
   yMax: 5
+  yMin: 2.5
   forwardMultiply: 45
   upwardMultiply: 75
   itemName: Grenade
