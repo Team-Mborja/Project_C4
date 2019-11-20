@@ -22,11 +22,12 @@ public class Player : MonoBehaviour
         Vector2 weaponSpawn = Vector2.zero;
     // Creates inventory
          GameObject[] inventory = new GameObject[3];
-    // current inventory slot;
+    // Current inventory slot;
          public int slot;
 
-
+    // Checks how many equpments have been used
     public int[] usedEquipment = new int[3];
+    // Checks how many jumps have been used
     public int usedJump;
 
     RaycastHit2D left;
@@ -35,7 +36,9 @@ public class Player : MonoBehaviour
     RaycastHit2D downLeft;
     RaycastHit2D downRight;
 
+    // Checks if the player will be destroyed by an explosive
     public GameObject warning;
+    // Creates a cursor
     GameObject cursor;
 
     // Start is called before the first frame update
@@ -64,12 +67,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Sets raycast length on the left and right of the player
         left = Physics2D.Raycast(transform.position, Vector2.left, 0.4f);
         right = Physics2D.Raycast(transform.position, Vector2.right, 0.4f);
 
+        // Sets raycast length on the bottom of the player to the left and right
         downLeft = Physics2D.Raycast(new Vector2(transform.position.x - 0.4f, transform.position.y), Vector2.down, 1.0f);
         downRight = Physics2D.Raycast(new Vector2(transform.position.x + 0.4f, transform.position.y), Vector2.down, 1.0f);
 
+        // Function that moves the character right and left
         if (GameObject.FindGameObjectWithTag("FuseBox") != null && managerScript.pausedGame == false)
         {
 
@@ -81,10 +87,12 @@ public class Player : MonoBehaviour
             if (left.collider == null && Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[0])))
                 transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
-       
+                // Function that makes sure you are standing on something before you jump
              if ((downLeft.collider != null || downRight.collider != null) && (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[2]))))
             {
+                // Jumps with force
                 rb.AddForce(Vector2.up * jumpForce);
+                // Adds one to the jump count only if you are standing on something
                 usedJump += 1;
             }
 
@@ -99,24 +107,29 @@ public class Player : MonoBehaviour
             // Throws current weapon
             if (Input.GetMouseButtonDown(0) && managerScript.inventory[slot] > 0)
             {
+                // Spawns the equipment  
                 SpawnEqipment(inventory[slot]);
+                // Increases the used equipment
                 usedEquipment[slot] += 1;
             }
 
             // Cheks to see what direction the player is facing
             if (cursor.transform.position.x >= transform.position.x)
             {
+                // If the cursor is right of the player, the player faces right
                 isLeft = false;
                 leftScale = 1;
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else
             {
+                // If the cursor is left of the player, the player faces left
                 isLeft = true;
                 leftScale = -1;
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
 
+            // 
             if (cursor.transform.position.y >= transform.position.y)
                 isUp = true;
             else
@@ -128,6 +141,7 @@ public class Player : MonoBehaviour
     //Spawns each equipment at a given instantiation point
     void SpawnEqipment(GameObject equipment)
     {
+        // Checks what equipment is being used and uses the equipment acordingly
         managerScript.inventory[slot]--;
 
         if (equipment.GetComponent<Grenade>() != null)
