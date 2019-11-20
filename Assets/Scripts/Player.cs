@@ -133,7 +133,7 @@ public class Player : MonoBehaviour
         if (equipment.GetComponent<Grenade>() != null)
             Instantiate(equipment, (cursor.transform.position - transform.position).normalized + transform.position, Quaternion.identity);
         else if (equipment.GetComponent<C4>() != null)
-            Instantiate(equipment, new Vector2(transform.position.x + (equipment.GetComponent<C4>().offset.x * leftScale) , transform.position.y + equipment.GetComponent<C4>().offset.y), Quaternion.identity);
+            Instantiate(equipment,(cursor.transform.position - transform.position).normalized * 1.25f + transform.position, Quaternion.identity);
         else if (equipment.GetComponent<Rocket_Launcher>() != null)
             Instantiate(equipment, new Vector2(transform.position.x + (equipment.GetComponent<Rocket_Launcher>().offset.x * leftScale), transform.position.y + equipment.GetComponent<Rocket_Launcher>().offset.y), Quaternion.Euler(0, 0, 90));
 
