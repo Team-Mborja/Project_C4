@@ -10,6 +10,7 @@ public class DestroyThings : MonoBehaviour
     // Function that checks if the tag is in the collider, then destroys it
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (destroyList.Contains(other.gameObject.tag))
             Destroy(other.gameObject);
     }

@@ -7,6 +7,6 @@ public class Explosion_Animation : MonoBehaviour
    // Destroys the animation after 0.25 seconds
     void Start()
     {
-        Destroy(gameObject, 0.25f);
+        Destroy(gameObject, 0.4f);
     }
 }
