@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public Text title;
-    public List<Button> buttons = new List<Button>();
+    //Text field for the title on the pause menu
+        public Text title;
+    // Buttons on the pause menu
+        public List<Button> buttons = new List<Button>();
 
-    
-    // Update is called once per frame
+    // Activates pause screen when you press escape
     void Update()
     {
         
@@ -19,6 +20,7 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+    // Enables all relevant UI Elements for the pause screen
     void ActivatePauseScreen()
     {
         GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().pausedGame = true;
@@ -32,6 +34,7 @@ public class PauseMenu : MonoBehaviour
     }
 
 
+    // Disables all relevant UI Elements for the pause screen
     public void DisablePauseScreen()
     {
         GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().pausedGame = false;

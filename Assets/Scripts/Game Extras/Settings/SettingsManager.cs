@@ -5,9 +5,12 @@ using System.IO;
 
 public class SettingsManager : MonoBehaviour
 {
-    public string path;
-    string defaultFile = "User Controls\n\nA\nD\nSpace\nAlpha1\nAlpha2\nAlpha3";
-    public List<string> controls = new List<string>();
+    // String of file path
+        public string path;
+    // Default controls written to the file
+        string defaultFile = "User Controls\n\nA\nD\nSpace\nAlpha1\nAlpha2\nAlpha3";
+    // Controls of the player
+        public List<string> controls = new List<string>();
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +19,7 @@ public class SettingsManager : MonoBehaviour
         ReadFile(path);
     }
 
-
+    // Creates a text file if one does't exist
     void CreateFile(string fileName, string contents)
     {
         path = Application.dataPath + "/" + fileName + ".txt";
@@ -26,6 +29,7 @@ public class SettingsManager : MonoBehaviour
         
     }
 
+    // Sets the controls to what contents are in the file
     void ReadFile(string fileName)
     {
         StreamReader reader = new StreamReader(path);
@@ -42,6 +46,7 @@ public class SettingsManager : MonoBehaviour
 
     }
 
+    // Updates the text file with new controls
     public void UpdateFile(string fileName)
     {
         string fileText = "User Controls\n";
