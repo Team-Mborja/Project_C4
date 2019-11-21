@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
          GameObject[] inventory = new GameObject[3];
     // Current inventory slot;
          public int slot;
+    // Jump Audio Source
+        public AudioSource jumpSound;
 
     // Checks how many equpments have been used
     public int[] usedEquipment = new int[3];
@@ -94,6 +96,8 @@ public class Player : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpForce);
                 // Adds one to the jump count only if you are standing on something
                 usedJump += 1;
+                // plays jump sound
+                jumpSound.Play();
             }
 
             // Weapon swap keys
