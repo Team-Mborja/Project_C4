@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class SettingsChange : MonoBehaviour
 {
-    // Text field for the key name and key
+    // Text field for the key name, key and change prompt
         public Text keyName;
         public Text key;
+        public Text changePrompt;
     // Button to change key binding
         public Button changeButton;
     // Index of which key you are chnaging
@@ -41,6 +42,7 @@ public class SettingsChange : MonoBehaviour
             {
                 settingsScript.controls[index] = kcode.ToString();
                 canChange = false;
+                changePrompt.text = "";
                 settingsScript.UpdateFile(settingsScript.path);
             }
         }
@@ -50,5 +52,6 @@ public class SettingsChange : MonoBehaviour
     public void ChangeKey()
     {
         canChange = true;
+        changePrompt.text = "Press Any Key";
     }
 }
