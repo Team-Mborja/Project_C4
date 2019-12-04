@@ -21,6 +21,7 @@ TagManager:
   - Laser
   - Death
   - Settings
+  - Sound
   layers:
   - Default
   - TransparentFX
