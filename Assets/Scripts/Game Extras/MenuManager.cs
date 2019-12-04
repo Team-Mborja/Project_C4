@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    // Makes the mouse turn on
+
+    // Makes the mouse turn on and creates the audio manager if necessary
     void Awake()
     {
         Cursor.visible = true;
@@ -35,4 +36,5 @@ public class MenuManager : MonoBehaviour
     {
         Application.Quit();
     }
+
 }
