@@ -10,6 +10,6 @@ public class Explosion_Animation : MonoBehaviour
     void Start()
     {
         soundScript.PlaySoundFile(soundScript.explode);
-        Destroy(gameObject, 0.4f);
+        Destroy(gameObject, 0.2f);
     }
 }
