@@ -7,6 +7,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip click;
     public AudioClip jump;
     public AudioClip explode;
+    public AudioClip laser;
+
 
     public void PlaySoundFile(AudioClip audio)
     {

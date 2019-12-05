@@ -39,7 +39,6 @@ public class LevelManager : MonoBehaviour
         pausedGame = false;
         // Sets the gameOver function to false
         gameOver = false;
-
     }
 
     // Update is called once per frame
