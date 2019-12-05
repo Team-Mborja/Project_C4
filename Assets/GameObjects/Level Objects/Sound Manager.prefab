@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   click: {fileID: 8300000, guid: 549da9df2027af641b31b850d323b084, type: 3}
+  jump: {fileID: 8300000, guid: 12154b60f8044ac4786cbce35cb92914, type: 3}
+  explode: {fileID: 8300000, guid: e85342e7a8410dc4fa529543a7029bab, type: 3}

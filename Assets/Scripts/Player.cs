@@ -6,9 +6,10 @@ public class Player : MonoBehaviour
 {
     // Creates Rigidbody2D
         Rigidbody2D rb;
-    // Acceses the level mangaer
+    // Acceses the managers
         LevelManager managerScript;
         SettingsManager settingsScript;
+        public SoundManager souundScript;
     // Left and right move speed;
         public float moveSpeed;
     // Height of jump
@@ -24,13 +25,11 @@ public class Player : MonoBehaviour
          GameObject[] inventory = new GameObject[3];
     // Current inventory slot;
          public int slot;
-    // Jump Audio Source
-        public AudioSource jumpSound;
 
     // Checks how many equpments have been used
-    public int[] usedEquipment = new int[3];
+        public int[] usedEquipment = new int[3];
     // Checks how many jumps have been used
-    public int usedJump;
+        public int usedJump;
 
     RaycastHit2D left;
     RaycastHit2D right;
@@ -97,7 +96,7 @@ public class Player : MonoBehaviour
                 // Adds one to the jump count only if you are standing on something
                 usedJump += 1;
                 // plays jump sound
-                jumpSound.Play();
+                    souundScript.PlaySoundFile(souundScript.jump);
             }
 
             // Weapon swap keys
