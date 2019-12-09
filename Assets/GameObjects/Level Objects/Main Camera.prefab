@@ -97,4 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 0}
-  xMax: 0
+  xMax: 5
+  yMax: 5
+  xMin: 2
+  yMin: 2

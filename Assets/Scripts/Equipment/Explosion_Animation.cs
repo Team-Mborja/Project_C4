@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Explosion_Animation : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public SoundManager soundScript;
+
+   // Destroys the animation after 0.25 seconds
     void Start()
     {
-        Destroy(gameObject, 0.25f);
+        soundScript.PlaySoundFile(soundScript.explode);
+        Destroy(gameObject, 0.2f);
     }
 }

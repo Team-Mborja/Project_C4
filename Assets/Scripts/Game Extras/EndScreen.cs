@@ -6,20 +6,29 @@ using UnityEngine.UI;
 
 public class EndScreen : MonoBehaviour
 {
-    public Text levelStatus;
-    public Button restartButton;
-    public Button mainMenuButton;
+    // Text field of the level completion status
+        public Text levelStatus;
+    // Buttons on the End Screen
+        public Button restartButton;
+        public Button mainMenuButton;
+    // Star images on the end screen
+        public Image[] stars = new Image[3];
+    // Int for how many stars you have 
+        int starCount;
+    // Float for the par time of the level
+        public float parTime;
+    // String of the name of the special objective
+        public string specialObjective;
+    // Scripts of the level manager and player
+        LevelManager managerScript;
+        Player playerScript;
+    // Max jumps allowed for max jumps objective 
+        public int jumpMax;
+    // Total equipments used
+        public int[] usedEquipment = new int[3];
+    // Protected GameObject for that special objective
+        public GameObject protectedObject;
 
-    public Image[] stars = new Image[3];
-    int starCount;
-    public float parTime;
-    public string specialObjective;
-    LevelManager managerScript;
-    Player playerScript;
-
-    public int jumpMax;
-    public int[] usedEquipment = new int[3];
-    public GameObject protectedObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,13 +40,14 @@ public class EndScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // Activates the end screnn with level failed
         if (GameObject.FindGameObjectWithTag("Player") == null && gameObject.GetComponent<Image>().enabled == false)
         {
             levelStatus.text = "Level Failed";
             ActivateEndScreen();
         }
 
+        // Activates the end screnn with level failed
         if (GameObject.FindGameObjectWithTag("FuseBox") == null && gameObject.GetComponent<Image>().enabled == false)
         {
             levelStatus.text = "Level Complete";
@@ -45,7 +55,7 @@ public class EndScreen : MonoBehaviour
         }
 
     }
-
+    // Activates the end screeen and awards stars
     void ActivateEndScreen()
     {
         managerScript.gameOver = true;
@@ -84,6 +94,7 @@ public class EndScreen : MonoBehaviour
         }
     }
 
+    // Sets star count for destoying the fuse box, beating the par time, and completing the special objective
     public void AwardStars()
     {
         if (GameObject.FindGameObjectWithTag("FuseBox") == null)
@@ -97,13 +108,14 @@ public class EndScreen : MonoBehaviour
         }
     }
 
+    // Checking the special objective
     void SpecialObjective()
     {
-        if (specialObjective == "One Grenade" && playerScript.usedEquipment[0] == 1 && playerScript.usedEquipment[1] == 0 && playerScript.usedEquipment[2] == 0)
+        if (specialObjective == "One Grenade" && playerScript.usedEquipment[0] == 1 && playerScript.usedEquipment[1] == 0 && playerScript.usedEquipment[2] == 0) // Was only one grenade used
             starCount += 1;
-        else if (specialObjective == "Limited Jump" && playerScript.usedJump <= jumpMax)
+        else if (specialObjective == "Limited Jump" && playerScript.usedJump <= jumpMax) // Was the correct amount of jumps used
             starCount += 1;
-        else if (specialObjective == "Protected Object" && protectedObject != null)
+        else if (specialObjective == "Protected Object" && protectedObject != null) // Was the protected object saved
             starCount += 1;
 
         

@@ -20,6 +20,8 @@ TagManager:
   - Destruct
   - Laser
   - Death
+  - Settings
+  - Sound
   layers:
   - Default
   - TransparentFX
@@ -62,6 +64,15 @@ TagManager:
     locked: 0
   - name: Enviorment
     uniqueID: 3761829451
+    locked: 0
+  - name: 'Background '
+    uniqueID: 2789931803
+    locked: 0
+  - name: Tileset
+    uniqueID: 3498463257
+    locked: 0
+  - name: Foreground
+    uniqueID: 1707751469
     locked: 0
   - name: UI
     uniqueID: 2489398187

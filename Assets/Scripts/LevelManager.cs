@@ -12,33 +12,39 @@ public class LevelManager : MonoBehaviour
         public int[] inventory = new int[3];
     // Weapons availible for the level
         public GameObject[] weapons;
-    //Player
+    // Player
         GameObject player;
-    //Timer Text
+    // Timer Text
         public Text timerText;
     // Game timer
         public float timer;
     // FuseBox object
         GameObject fuseBox;
 
+    // Creates pause variable
     public bool pausedGame;
+    // Creates game over variable
     public bool gameOver;
 
+    // Start is called once at the start
     void Start()
     {
+        // Creates the tag for player
         player = GameObject.FindGameObjectWithTag("Player");
+        // Creates the tag for Fusebox
         fuseBox = GameObject.FindGameObjectWithTag("FuseBox");
+        // Sets the timer variable to 0
         timer = 0;
+        // Sets the pauseGame function bool to false
         pausedGame = false;
+        // Sets the gameOver function to false
         gameOver = false;
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        Cursor.visible = false;
-        //timerText.text = Mathf.Round(timer).ToString();
+        // Creates a timer in a string
         timerText.text = timer.ToString();
 
         // runs the level timer when the level is incomplete
@@ -51,6 +57,7 @@ public class LevelManager : MonoBehaviour
             inventory_Display[1].text = inventory[1].ToString();
             inventory_Display[2].text = inventory[2].ToString();
 
+        // If the player tag is still in the scene display which equuiment you ar using in the UI 
         if (player != null)
         {
             switch (player.GetComponent<Player>().slot)

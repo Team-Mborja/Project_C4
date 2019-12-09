@@ -8,7 +8,7 @@ public class DropItems : MonoBehaviour
         public GameObject item;
 
 
-    // Checks which item in the invenvtory it matches and adds one to it
+    // Checks which item in the invenvtory is chosen, it matches and adds one to it
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
