@@ -426,18 +426,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &906911242 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6258072777926194258, guid: 2c1bcda5689242b419513ced09fe282e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1669899079}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &932545440
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +640,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &1077072598 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2346459990605460225, guid: 2c1bcda5689242b419513ced09fe282e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1669899079}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1297962528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,7 +2050,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory_Display.Array.data[2]
       value: 
-      objectReference: {fileID: 906911242}
+      objectReference: {fileID: 1077072598}
     - target: {fileID: 5864996815975552081, guid: 40a66d5ebbc2ff342bd3f2d1365f802c,
         type: 3}
       propertyPath: timerText

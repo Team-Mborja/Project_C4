@@ -219,18 +219,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad861b63705083a48a0d0b55d61dc94c, type: 3}
---- !u!114 &3903920 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6258072777926194258, guid: 2c1bcda5689242b419513ced09fe282e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1169925050}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &47893961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1347,6 +1335,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609687407999170684, guid: 521006ec932a1ec44886267bfbf9a489,
+        type: 3}
+      propertyPath: cursor
+      value: 
+      objectReference: {fileID: 1202065904}
     - target: {fileID: 2609687407999170682, guid: 521006ec932a1ec44886267bfbf9a489,
         type: 3}
       propertyPath: m_ClearFlags
@@ -1357,11 +1350,6 @@ PrefabInstance:
       propertyPath: field of view
       value: 77
       objectReference: {fileID: 0}
-    - target: {fileID: 2609687407999170684, guid: 521006ec932a1ec44886267bfbf9a489,
-        type: 3}
-      propertyPath: cursor
-      value: 
-      objectReference: {fileID: 1202065904}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521006ec932a1ec44886267bfbf9a489, type: 3}
 --- !u!1 &665853217
@@ -2007,21 +1995,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
-        type: 3}
-      propertyPath: parTime
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
-        type: 3}
-      propertyPath: specialObjective
-      value: One Grenade
-      objectReference: {fileID: 0}
-    - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
-        type: 3}
-      propertyPath: usedEquipment.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8118078923258362334, guid: 2c1bcda5689242b419513ced09fe282e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2041,6 +2014,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 276.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
+        type: 3}
+      propertyPath: parTime
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
+        type: 3}
+      propertyPath: specialObjective
+      value: One Grenade
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
+        type: 3}
+      propertyPath: usedEquipment.Array.data[0]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2291869789975208678, guid: 2c1bcda5689242b419513ced09fe282e,
         type: 3}
@@ -2109,6 +2097,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c1bcda5689242b419513ced09fe282e, type: 3}
+--- !u!114 &1169925051 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2346459990605460225, guid: 2c1bcda5689242b419513ced09fe282e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1169925050}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1202065904 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2695652848354337976, guid: fb440d28d11826e499eb4cdf1259515e,
@@ -2856,7 +2856,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inventory_Display.Array.data[2]
       value: 
-      objectReference: {fileID: 3903920}
+      objectReference: {fileID: 1169925051}
     - target: {fileID: 5864996815975552081, guid: 40a66d5ebbc2ff342bd3f2d1365f802c,
         type: 3}
       propertyPath: timerText
