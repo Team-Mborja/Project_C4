@@ -69,8 +69,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Sets raycast length on the left and right of the player
-        left = Physics2D.Raycast(transform.position, Vector2.left, 0.4f);
-        right = Physics2D.Raycast(transform.position, Vector2.right, 0.4f);
+        left = Physics2D.Raycast(transform.position, Vector2.left, 0.6f);
+        right = Physics2D.Raycast(transform.position, Vector2.right, 0.6f);
 
         // Sets raycast length on the bottom of the player to the left and right
         downLeft = Physics2D.Raycast(new Vector2(transform.position.x - 0.4f, transform.position.y), Vector2.down, 1.0f);
