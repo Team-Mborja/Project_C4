@@ -5,17 +5,28 @@ using UnityEngine;
 public class Camera_Follow : MonoBehaviour
 {
 
+
     private Transform playerTransform;
 
     public float offset;
+    public Animation anim;
 
     void Start () {
+
+
+        anim = GetComponent<Animation>();
+                    //anim.Play("YourAnimationClipName"); // <--- Change this to the actual name of the animation
+
+
+
+
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform; 
     }
 
     //called every frame
     void Update()
     {
+
     }
 
     //called every fixed frame rate
