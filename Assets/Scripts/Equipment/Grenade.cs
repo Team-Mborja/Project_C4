@@ -57,7 +57,7 @@ public class Grenade : MonoBehaviour
             if (isThrown == false)
             {
                 // Changes the position once held to move with the cursor
-                    transform.position = (cursor.transform.position - player.transform.position).normalized  + player.transform.position;
+                    transform.position = (cursor.transform.position - player.transform.position).normalized * 1.1f  + player.transform.position;
 
                 // calculate force based on how far mouse is from player
                     forceForward = Mathf.Abs(cursor.transform.position.x - player.transform.position.x) * forwardMultiply;
