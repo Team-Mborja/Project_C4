@@ -11,6 +11,12 @@ public class Camera_Follow : MonoBehaviour
     public float offset;
     public Animation anim;
 
+
+    IEnumerator wait()
+    {
+        // The wait function in the IEnumerator
+        yield return new WaitForSeconds(5);
+    }
     void Start () {
 
 
@@ -53,6 +59,8 @@ public class Camera_Follow : MonoBehaviour
 
         //we set back the camera's temp pos to the camera's current pos
         transform.position = temp;
+
+        StartCoroutine(wait()); //testing
     }
 
 
