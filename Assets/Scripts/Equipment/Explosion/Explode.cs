@@ -47,7 +47,14 @@ public class Explode : MonoBehaviour
             if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
                 objects.GetComponent<BoxDrops>().DropItem();
 
-            Destroy(objects);
+            if (objects.tag == "Destruct" && objects.GetComponent<Animator>() != null)
+            {
+                objects.GetComponent<Animator>().SetTrigger("Destroyed");
+                Destroy(objects, 1.0f);
+            }
+            else
+                Destroy(objects);
+
 
             if (inRangeItems.Count == 0)
                 break;
