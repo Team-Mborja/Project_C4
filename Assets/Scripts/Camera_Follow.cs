@@ -9,37 +9,11 @@ public class Camera_Follow : MonoBehaviour
     private Transform playerTransform;
 
     public float offset;
-    public Animation anim;
 
-
-    IEnumerator wait()
-    {
-        // The wait function in the IEnumerator
-        yield return new WaitForSeconds(5);
-    }
     void Start () {
-
-
-        anim = GetComponent<Animation>();
-                    //anim.Play("YourAnimationClipName"); // <--- Change this to the actual name of the animation
-
-
-
-
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform; 
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    //called every frame
-    void Update()
-    {
-
-    }
-
-    //called every fixed frame rate
-    void FixedUpdate()
-    {
-        
-    }
 
     //called after update and fixed update
     void LateUpdate()
@@ -60,8 +34,9 @@ public class Camera_Follow : MonoBehaviour
         //we set back the camera's temp pos to the camera's current pos
         transform.position = temp;
 
-        StartCoroutine(wait()); //testing
+      
     }
 
+  
 
 }
