@@ -777,7 +777,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3871602234723886798, guid: b834a5456e2b7c443bf1f08a2815dbb0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b834a5456e2b7c443bf1f08a2815dbb0, type: 3}
 --- !u!4 &444478696 stripped
 Transform:
@@ -2028,6 +2029,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40a66d5ebbc2ff342bd3f2d1365f802c, type: 3}
+--- !u!1 &1702806391 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3246740563609565987, guid: b834a5456e2b7c443bf1f08a2815dbb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 350572194}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1702806392
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702806391}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f7c7ddb46734644886899d3f4b5fe5b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &1702806393
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702806391}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.66, y: -2.22}
+      - {x: 0.29, y: -2.22}
+      - {x: 1.4699999, y: -2.21}
+      - {x: 1.5999999, y: -2.09}
+      - {x: 1.48, y: -1.74}
+      - {x: 0.75, y: -1.8}
+      - {x: 1.06, y: -1.5}
+      - {x: 1.15, y: -0.48}
+      - {x: 1.26, y: -0.32}
+      - {x: 1.24, y: 0.19}
+      - {x: 1.09, y: 0.32}
+      - {x: 1.06, y: 1.3199999}
+      - {x: -0.22999999, y: 2.47}
+      - {x: -0.16, y: 2.53}
+      - {x: -0.26, y: 2.56}
+      - {x: -0.55, y: 2.56}
+      - {x: -0.59999996, y: 2.47}
+      - {x: -1.06, y: 1.3299999}
+      - {x: -1.06, y: -1.4}
+      - {x: -0.07, y: -2.49}
+      - {x: 0, y: -2.56}
+      - {x: 1.6899999, y: -2.56}
+      - {x: 1.74, y: -2.51}
+      - {x: 1.74, y: -2.32}
+      - {x: 1.73, y: -2.26}
+    - - {x: 1.06, y: 0.17}
+      - {x: 1.0699999, y: 0.16}
+      - {x: 1.1, y: -0.29}
+      - {x: 1.0699999, y: -0.29}
+      - {x: 1.06, y: -0.29999998}
+      - {x: 1.0699999, y: -0.29999998}
 --- !u!1 &1811443046
 GameObject:
   m_ObjectHideFlags: 0

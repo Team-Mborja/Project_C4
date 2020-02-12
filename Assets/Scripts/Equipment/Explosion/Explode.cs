@@ -6,6 +6,7 @@ public class Explode : MonoBehaviour
 {
     // List of tags on objects that can be destroyed
         public List<string> explosionTags = new List<string>();
+        public List<string> animateTags = new List<string>();
     // Items in Range
         List<GameObject> inRangeItems = new List<GameObject>();
     // GameObjects for the explosive and the explosion
@@ -47,7 +48,14 @@ public class Explode : MonoBehaviour
             if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
                 objects.GetComponent<BoxDrops>().DropItem();
 
-            Destroy(objects);
+            if (animateTags.Contains(objects.tag) && objects.GetComponent<Animator>() != null)
+            {
+                objects.GetComponent<Animator>().SetTrigger("Destroyed");
+                Destroy(objects, 1.0f);
+            }
+            else
+                Destroy(objects);
+
 
             if (inRangeItems.Count == 0)
                 break;
