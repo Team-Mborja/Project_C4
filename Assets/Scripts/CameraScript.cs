@@ -17,6 +17,10 @@ public class CameraScript : MonoBehaviour
     // Max X Distance
         float yMax;
 
+    float timer;
+    public float panCamera;
+    
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -26,6 +30,11 @@ public class CameraScript : MonoBehaviour
 
     void Update()
     {
+        timer += Time.deltaTime;
+
+        if (timer >= panCamera && gameObject.GetComponent<Camera_Follow>() == null)
+            gameObject.AddComponent<Camera_Follow>();
+
         // Makes the cursor invisible when the game is playing
         if (managerScript.pausedGame == true || managerScript.gameOver == true)
         {
