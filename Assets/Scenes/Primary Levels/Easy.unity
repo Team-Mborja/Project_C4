@@ -3718,7 +3718,7 @@ PrefabInstance:
     - target: {fileID: 252995708640595489, guid: 8668880ba68b8e1489dff2f6a09805c8,
         type: 3}
       propertyPath: m_Tiles.Array.data[271].second.m_TileSpriteIndex
-      value: 26
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 252995708640595489, guid: 8668880ba68b8e1489dff2f6a09805c8,
         type: 3}
@@ -3839,7 +3839,7 @@ PrefabInstance:
     - target: {fileID: 252995708640595489, guid: 8668880ba68b8e1489dff2f6a09805c8,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[26].m_RefCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 252995708640595489, guid: 8668880ba68b8e1489dff2f6a09805c8,
         type: 3}
@@ -3875,7 +3875,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[28].m_Data
       value: 
-      objectReference: {fileID: 3645166110379216154, guid: fbabedacf054555479c22e78dfd7288e,
+      objectReference: {fileID: 1755047010036531875, guid: fbabedacf054555479c22e78dfd7288e,
         type: 3}
     - target: {fileID: 252995708640595489, guid: 8668880ba68b8e1489dff2f6a09805c8,
         type: 3}
@@ -5820,7 +5820,7 @@ PrefabInstance:
     - target: {fileID: 252995708640595489, guid: 8668880ba68b8e1489dff2f6a09805c8,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[35].m_RefCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 252995708640595489, guid: 8668880ba68b8e1489dff2f6a09805c8,
         type: 3}
@@ -8647,7 +8647,7 @@ PrefabInstance:
     - target: {fileID: 252995708640595489, guid: 8668880ba68b8e1489dff2f6a09805c8,
         type: 3}
       propertyPath: m_Tiles.Array.data[260].second.m_TileSpriteIndex
-      value: 28
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 252995708640595489, guid: 8668880ba68b8e1489dff2f6a09805c8,
         type: 3}
@@ -14664,7 +14664,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[35].m_Data
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3645166110379216154, guid: fbabedacf054555479c22e78dfd7288e,
+        type: 3}
     - target: {fileID: 252995708640595489, guid: 8668880ba68b8e1489dff2f6a09805c8,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[27].m_Data
@@ -14861,8 +14862,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[26].m_Data
       value: 
-      objectReference: {fileID: 1755047010036531875, guid: fbabedacf054555479c22e78dfd7288e,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 252995708640595489, guid: 8668880ba68b8e1489dff2f6a09805c8,
         type: 3}
       propertyPath: m_Tiles.Array.data[5].second.m_TileIndex
@@ -62515,6 +62515,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5066ecec7a28b545a89855e870e0860, type: 3}
+--- !u!1 &1999386151 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6748687723449517946, guid: a5066ecec7a28b545a89855e870e0860,
+    type: 3}
+  m_PrefabInstance: {fileID: 1999386150}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1999386152
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999386151}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &2025220691 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6748687723449517942, guid: a5066ecec7a28b545a89855e870e0860,
