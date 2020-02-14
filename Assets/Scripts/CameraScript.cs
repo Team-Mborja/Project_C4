@@ -35,22 +35,13 @@ public class CameraScript : MonoBehaviour
         if (timer >= panCamera && gameObject.GetComponent<Camera_Follow>() == null)
             gameObject.AddComponent<Camera_Follow>();
 
-        // Makes the cursor invisible when the game is playing
-        if (managerScript.pausedGame == true || managerScript.gameOver == true)
-        {
-            Cursor.visible = true;
-            cursor.SetActive(false);
-        }
-        else
-        {
-            Cursor.visible = false;
-            cursor.SetActive(true);
-        }
+       
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Plane plane = new Plane(Vector3.forward, Vector3.zero);
+            float dist = 0;
 
-        // Sets the cursor position to match the mouse
-            target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
-            target = new Vector3(-target.x, -target.y, target.z);
-            cursor.transform.position = new Vector2(target.x, target.y);
+            if (plane.Raycast(ray, out dist))
+                cursor.transform.position = ray.GetPoint(dist);
 
         // Sets cursor maximums based on what equipment you are holding 
             if (managerScript.gameOver == false)
@@ -84,4 +75,6 @@ public class CameraScript : MonoBehaviour
 
         }
     }
-    }
+
+
+}
