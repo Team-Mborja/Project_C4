@@ -18,25 +18,25 @@ public class Camera_Follow : MonoBehaviour
     //called after update and fixed update
     void LateUpdate()
     {
-        // we store current camera's positon in variable temporary
-        Vector3 temp = transform.position;
+        if (playerTransform != null)
+        {
 
-        //we set the players camera's position equal to the player's position x
-        temp.x = playerTransform.position.x;
+            // we store current camera's positon in variable temporary
+            Vector3 temp = transform.position;
 
-        //temp.y = playerTransform.position.y;
-        //temp.y += offset;
+            //we set the players camera's position equal to the player's position x
+            temp.x = playerTransform.position.x;
+
+            //temp.y = playerTransform.position.y;
+            //temp.y += offset;
 
 
-        //this will add the offset value to the temp camera pos
-        temp.x += offset;
+            //this will add the offset value to the temp camera pos
+            temp.x += offset;
 
-        //we set back the camera's temp pos to the camera's current pos
-        transform.position = temp;
+            //we set back the camera's temp pos to the camera's current pos
+            transform.position = temp;
 
-      
+        }
     }
-
-  
-
 }
