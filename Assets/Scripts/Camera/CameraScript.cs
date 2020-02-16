@@ -16,32 +16,46 @@ public class CameraScript : MonoBehaviour
         float xMax;
     // Max X Distance
         float yMax;
-
-    float timer;
-    public float panCamera;
+    // Timer for the panning camera to end
+        float timer;
+    // How long the panning camera is active for
+        public float panCamera;
     
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
+        // Gets the Player and Level Manager from the Game 
+            player = GameObject.FindGameObjectWithTag("Player");
+            managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
     }
 
 
     void Update()
     {
-        timer += Time.deltaTime;
+        // Adds to the panning camera timer
+            timer += Time.deltaTime;
 
-        if (timer >= panCamera && gameObject.GetComponent<Camera_Follow>() == null)
-            gameObject.AddComponent<Camera_Follow>();
+        // Once the timer reaches a certain value, active the camera follow script
+            if (timer >= panCamera && gameObject.GetComponent<Camera_Follow>() == null)
+                gameObject.AddComponent<Camera_Follow>();
 
-       
+       // Tracks the mouse position in game
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Plane plane = new Plane(Vector3.forward, Vector3.zero);
             float dist = 0;
 
             if (plane.Raycast(ray, out dist))
                 cursor.transform.position = ray.GetPoint(dist);
+
+            if (managerScript.pausedGame == true || managerScript.gameOver == true)
+            {
+            Cursor.visible = true;
+            cursor.GetComponent<SpriteRenderer>().enabled = false;
+            }
+            else {
+            Cursor.visible = false;
+            cursor.GetComponent<SpriteRenderer>().enabled = true;
+            }
 
         // Sets cursor maximums based on what equipment you are holding 
             if (managerScript.gameOver == false)
