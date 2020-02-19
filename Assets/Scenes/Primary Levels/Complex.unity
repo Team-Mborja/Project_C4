@@ -975,7 +975,7 @@ PrefabInstance:
     - target: {fileID: 2609687407999170683, guid: 521006ec932a1ec44886267bfbf9a489,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.53
+      value: 4.06
       objectReference: {fileID: 0}
     - target: {fileID: 2609687407999170683, guid: 521006ec932a1ec44886267bfbf9a489,
         type: 3}
@@ -1042,6 +1042,11 @@ PrefabInstance:
       propertyPath: cursor
       value: 
       objectReference: {fileID: 1202065904}
+    - target: {fileID: 2609687407999170684, guid: 521006ec932a1ec44886267bfbf9a489,
+        type: 3}
+      propertyPath: panCamera
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521006ec932a1ec44886267bfbf9a489, type: 3}
 --- !u!1 &613803013 stripped
@@ -1060,7 +1065,7 @@ Animator:
   m_GameObject: {fileID: 613803013}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e341afed45af0d942a8dd90b616a88ef, type: 2}
+  m_Controller: {fileID: 9100000, guid: b08da0641f198cb49accf48ecc48be6d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
