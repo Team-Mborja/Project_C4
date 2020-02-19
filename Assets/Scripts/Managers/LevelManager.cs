@@ -48,7 +48,7 @@ public class LevelManager : MonoBehaviour
         timerText.text = timer.ToString();
 
         // runs the level timer when the level is incomplete
-            if (gameOver == false && pausedGame == false && Camera.main.GetComponent<CameraScript>().timer >= Camera.main.GetComponent<CameraScript>().panCamera)
+            if (gameOver == false && pausedGame == false)
                 timer += Time.deltaTime;
            
 

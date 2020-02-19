@@ -17,7 +17,7 @@ public class CameraScript : MonoBehaviour
     // Max X Distance
         float yMax;
     // Timer for the panning camera to end
-        public float timer;
+        float timer;
     // How long the panning camera is active for
         public float panCamera;
     
