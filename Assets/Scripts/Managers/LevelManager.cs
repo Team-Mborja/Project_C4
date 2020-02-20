@@ -50,7 +50,9 @@ public class LevelManager : MonoBehaviour
         // runs the level timer when the level is incomplete
             if (gameOver == false && pausedGame == false)
                 timer += Time.deltaTime;
-           
+
+        if (inventory[0] <= 0 && inventory[1] <= 0 && inventory[2] <= 0 && GameObject.FindGameObjectWithTag("FuseBox") && GameObject.FindGameObjectWithTag("Grenade") == null && GameObject.FindGameObjectWithTag("C4") == null && GameObject.FindGameObjectWithTag("Rocket") == null)
+            gameOver = true;
 
         // Displays name of the equipment and how many you have left
             inventory_Display[0].text = inventory[0].ToString();
