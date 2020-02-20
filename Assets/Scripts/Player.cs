@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
         downRight = Physics2D.Raycast(new Vector2(transform.position.x + 0.4f, transform.position.y), Vector2.down, 1.0f);
 
         // Function that moves the character right and left
-        if (GameObject.FindGameObjectWithTag("FuseBox") != null && managerScript.pausedGame == false)
+        if (GameObject.FindGameObjectWithTag("FuseBox") != null && managerScript.pausedGame == false && Camera.main.GetComponent<CameraScript>().cameraPanned == true)
         {
 
             // Player moves right with D

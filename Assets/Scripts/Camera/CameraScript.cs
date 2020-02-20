@@ -20,6 +20,8 @@ public class CameraScript : MonoBehaviour
         float timer;
     // How long the panning camera is active for
         public float panCamera;
+    // Camera Panned
+        public bool cameraPanned;
     
 
     void Start()
@@ -27,6 +29,7 @@ public class CameraScript : MonoBehaviour
         // Gets the Player and Level Manager from the Game 
             player = GameObject.FindGameObjectWithTag("Player");
             managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
+            cameraPanned = false;
     }
 
 
@@ -36,8 +39,11 @@ public class CameraScript : MonoBehaviour
             timer += Time.deltaTime;
 
         // Once the timer reaches a certain value, active the camera follow script
-            if (timer >= panCamera && gameObject.GetComponent<Camera_Follow>() == null)
-                gameObject.AddComponent<Camera_Follow>();
+        if (timer >= panCamera && gameObject.GetComponent<Camera_Follow>() == null)
+        {
+            gameObject.AddComponent<Camera_Follow>();
+            cameraPanned = true;
+        }
 
        // Tracks the mouse position in game
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
