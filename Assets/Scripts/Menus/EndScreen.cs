@@ -41,7 +41,7 @@ public class EndScreen : MonoBehaviour
     void Update()
     {
         // Activates the end screnn with level failed
-        if (GameObject.FindGameObjectWithTag("Player") == null && gameObject.GetComponent<Image>().enabled == false)
+        if (GameObject.FindGameObjectWithTag("Player") == null && gameObject.GetComponent<Image>().enabled == false || managerScript.gameOver == true)
         {
             levelStatus.text = "Level Failed";
             ActivateEndScreen();
