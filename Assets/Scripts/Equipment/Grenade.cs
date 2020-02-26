@@ -33,6 +33,9 @@ public class Grenade : MonoBehaviour
     // GameObject for the explosions on the grenade
         public GameObject explodeObject;
 
+    // GameObject of the Timer
+        public GameObject timer;
+        GameObject timerInstance;
 
     // Start is called before the first frame update
     void Start()
@@ -81,6 +84,12 @@ public class Grenade : MonoBehaviour
         // timer counts down
             destruct -= Time.deltaTime;
 
+        if (destruct <= 3.0f && timerInstance == null)
+            timerInstance = Instantiate(timer, new Vector2(transform.position.x, transform.position.y + 0.5f), Quaternion.identity);
+
+        if (timerInstance != null)
+            timerInstance.transform.position = new Vector2(transform.position.x, transform.position.y + 0.5f);
+
         // Throws the grenade if you press left mouse
             if (Input.GetMouseButtonUp(0) && isThrown == false)
             {
@@ -94,6 +103,7 @@ public class Grenade : MonoBehaviour
                 if(isThrown == false)
                     Destroy(player);
 
+                Destroy(timerInstance);
                 explodeObject.GetComponent<Explode>().Explosion();
             }
 

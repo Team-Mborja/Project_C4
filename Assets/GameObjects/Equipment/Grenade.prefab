@@ -98,14 +98,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 5
   xMax: 7.5
-  xMin: 2.5
   yMax: 5
-  yMin: 2.5
   forwardMultiply: 45
   upwardMultiply: 75
   itemName: Grenade
-  offset: {x: 0.64, y: 0.1}
   explodeObject: {fileID: 7007638980257892551}
+  timer: {fileID: 590128540528731766, guid: 3728751c321fa464d90a0500c4656aa9, type: 3}
 --- !u!58 &4475190926001331388
 CircleCollider2D:
   m_ObjectHideFlags: 0
