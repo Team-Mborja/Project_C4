@@ -1,0 +1,3343 @@
+fileFormatVersion: 2
+guid: db62d088b0544074ebfc6505bcb1918b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5280298220146045913
+    second: C4_Tilemap_CompressedV3_0
+  - first:
+      213: 927156631771624656
+    second: C4_Tilemap_CompressedV3_1
+  - first:
+      213: -58108897977180298
+    second: C4_Tilemap_CompressedV3_2
+  - first:
+      213: -5744797569563873183
+    second: C4_Tilemap_CompressedV3_3
+  - first:
+      213: 6519377091995271039
+    second: C4_Tilemap_CompressedV3_4
+  - first:
+      213: 1886239302361022059
+    second: C4_Tilemap_CompressedV3_5
+  - first:
+      213: 2784525141094901583
+    second: C4_Tilemap_CompressedV3_6
+  - first:
+      213: -3488756189481124279
+    second: C4_Tilemap_CompressedV3_7
+  - first:
+      213: -4310195001646912328
+    second: C4_Tilemap_CompressedV3_8
+  - first:
+      213: 1376717095165262328
+    second: C4_Tilemap_CompressedV3_9
+  - first:
+      213: -9136802348318861162
+    second: C4_Tilemap_CompressedV3_10
+  - first:
+      213: 3468603430461961724
+    second: C4_Tilemap_CompressedV3_11
+  - first:
+      213: 2996663796197421583
+    second: C4_Tilemap_CompressedV3_12
+  - first:
+      213: 542295517638374862
+    second: C4_Tilemap_CompressedV3_13
+  - first:
+      213: 5893603633250136416
+    second: C4_Tilemap_CompressedV3_14
+  - first:
+      213: 6276744030424443253
+    second: C4_Tilemap_CompressedV3_15
+  - first:
+      213: -366643328622082370
+    second: C4_Tilemap_CompressedV3_16
+  - first:
+      213: -8549476320618823967
+    second: C4_Tilemap_CompressedV3_17
+  - first:
+      213: -6091286612628439127
+    second: C4_Tilemap_CompressedV3_18
+  - first:
+      213: 748109189701176971
+    second: C4_Tilemap_CompressedV3_19
+  - first:
+      213: 5400925105238289776
+    second: C4_Tilemap_CompressedV3_20
+  - first:
+      213: -2063893494931924030
+    second: C4_Tilemap_CompressedV3_21
+  - first:
+      213: -3516103961135757093
+    second: C4_Tilemap_CompressedV3_22
+  - first:
+      213: -2970914345701361273
+    second: C4_Tilemap_CompressedV3_23
+  - first:
+      213: 5957438070269313266
+    second: C4_Tilemap_CompressedV3_24
+  - first:
+      213: 4525125490255420386
+    second: C4_Tilemap_CompressedV3_25
+  - first:
+      213: 5046013529505217264
+    second: C4_Tilemap_CompressedV3_26
+  - first:
+      213: -2993905395003650973
+    second: C4_Tilemap_CompressedV3_27
+  - first:
+      213: 201149936481393927
+    second: C4_Tilemap_CompressedV3_28
+  - first:
+      213: 6698264607576818842
+    second: C4_Tilemap_CompressedV3_29
+  - first:
+      213: 1277301015904115808
+    second: C4_Tilemap_CompressedV3_30
+  - first:
+      213: -7505597230015272028
+    second: C4_Tilemap_CompressedV3_31
+  - first:
+      213: 417777598065830947
+    second: C4_Tilemap_CompressedV3_32
+  - first:
+      213: 5604668635304949589
+    second: C4_Tilemap_CompressedV3_33
+  - first:
+      213: 2249192008155455262
+    second: C4_Tilemap_CompressedV3_34
+  - first:
+      213: 4956472886939435628
+    second: C4_Tilemap_CompressedV3_35
+  - first:
+      213: -5009407035285976830
+    second: C4_Tilemap_CompressedV3_36
+  - first:
+      213: 465059631837795115
+    second: C4_Tilemap_CompressedV3_37
+  - first:
+      213: -5566335043262061145
+    second: C4_Tilemap_CompressedV3_38
+  - first:
+      213: 7257950183167576513
+    second: C4_Tilemap_CompressedV3_39
+  - first:
+      213: 3946233618904216352
+    second: C4_Tilemap_CompressedV3_40
+  - first:
+      213: -2483336390919954547
+    second: C4_Tilemap_CompressedV3_41
+  - first:
+      213: 5483736070139532873
+    second: C4_Tilemap_CompressedV3_42
+  - first:
+      213: -7512523623307136578
+    second: C4_Tilemap_CompressedV3_43
+  - first:
+      213: 4683935023517226026
+    second: C4_Tilemap_CompressedV3_44
+  - first:
+      213: 4731696999506418001
+    second: C4_Tilemap_CompressedV3_45
+  - first:
+      213: -7607194101786420930
+    second: C4_Tilemap_CompressedV3_46
+  - first:
+      213: -6339791253864439168
+    second: C4_Tilemap_CompressedV3_47
+  - first:
+      213: 9162293303925530010
+    second: C4_Tilemap_CompressedV3_48
+  - first:
+      213: 7084458595515744781
+    second: C4_Tilemap_CompressedV3_49
+  - first:
+      213: -8026468554760165969
+    second: C4_Tilemap_CompressedV3_50
+  - first:
+      213: -1553048322161134364
+    second: C4_Tilemap_CompressedV3_51
+  - first:
+      213: 4270419034277428868
+    second: C4_Tilemap_CompressedV3_52
+  - first:
+      213: -6689041975670713152
+    second: C4_Tilemap_CompressedV3_53
+  - first:
+      213: -8639819919848655983
+    second: C4_Tilemap_CompressedV3_54
+  - first:
+      213: -5565050035482193328
+    second: C4_Tilemap_CompressedV3_55
+  - first:
+      213: 5471418893583597701
+    second: C4_Tilemap_CompressedV3_56
+  - first:
+      213: 202684931336824585
+    second: C4_Tilemap_CompressedV3_57
+  - first:
+      213: -5410142641425127276
+    second: C4_Tilemap_CompressedV3_58
+  - first:
+      213: 8752674273980450945
+    second: C4_Tilemap_CompressedV3_59
+  - first:
+      213: 6579552464969385599
+    second: C4_Tilemap_CompressedV3_60
+  - first:
+      213: -6411959743123552295
+    second: C4_Tilemap_CompressedV3_61
+  - first:
+      213: -1444021536086271980
+    second: C4_Tilemap_CompressedV3_62
+  - first:
+      213: -912642535067377857
+    second: C4_Tilemap_CompressedV3_63
+  - first:
+      213: -483247811096533059
+    second: C4_Tilemap_CompressedV3_64
+  - first:
+      213: 5051378116789625909
+    second: C4_Tilemap_CompressedV3_65
+  - first:
+      213: -3248152092755288903
+    second: C4_Tilemap_CompressedV3_66
+  - first:
+      213: -125820172374403219
+    second: C4_Tilemap_CompressedV3_67
+  - first:
+      213: -2994395680656913696
+    second: C4_Tilemap_CompressedV3_68
+  - first:
+      213: -2132275880142125489
+    second: C4_Tilemap_CompressedV3_69
+  - first:
+      213: 3322450905148764044
+    second: C4_Tilemap_CompressedV3_70
+  - first:
+      213: -7230934727717607277
+    second: C4_Tilemap_CompressedV3_71
+  - first:
+      213: -4856030002572790998
+    second: C4_Tilemap_CompressedV3_72
+  - first:
+      213: -5304320372796692022
+    second: C4_Tilemap_CompressedV3_73
+  - first:
+      213: -1616486442882721264
+    second: C4_Tilemap_CompressedV3_74
+  - first:
+      213: 5574243991011403967
+    second: C4_Tilemap_CompressedV3_75
+  - first:
+      213: -3355762861200293896
+    second: C4_Tilemap_CompressedV3_76
+  - first:
+      213: 2502898533400980262
+    second: C4_Tilemap_CompressedV3_77
+  - first:
+      213: -2681307814389796028
+    second: C4_Tilemap_CompressedV3_78
+  - first:
+      213: -2988331472615240020
+    second: C4_Tilemap_CompressedV3_79
+  - first:
+      213: 3616120499995531329
+    second: C4_Tilemap_CompressedV3_80
+  - first:
+      213: 4008116908149391642
+    second: C4_Tilemap_CompressedV3_81
+  - first:
+      213: -5588846705000439184
+    second: C4_Tilemap_CompressedV3_82
+  - first:
+      213: -6959941905924699174
+    second: C4_Tilemap_CompressedV3_83
+  - first:
+      213: 2771620163345138507
+    second: C4_Tilemap_CompressedV3_84
+  - first:
+      213: -2405097081102016507
+    second: C4_Tilemap_CompressedV3_85
+  - first:
+      213: 5103050288931180513
+    second: C4_Tilemap_CompressedV3_86
+  - first:
+      213: -7319896307492489706
+    second: C4_Tilemap_CompressedV3_87
+  - first:
+      213: 7095742599116107106
+    second: C4_Tilemap_CompressedV3_88
+  - first:
+      213: -6136307149818673454
+    second: C4_Tilemap_CompressedV3_89
+  - first:
+      213: -3005991226315298972
+    second: C4_Tilemap_CompressedV3_90
+  - first:
+      213: 4624583939934338280
+    second: C4_Tilemap_CompressedV3_91
+  - first:
+      213: 9046044877047960733
+    second: C4_Tilemap_CompressedV3_92
+  - first:
+      213: 2627024095049647491
+    second: C4_Tilemap_CompressedV3_93
+  - first:
+      213: 2158897457873719954
+    second: C4_Tilemap_CompressedV3_94
+  - first:
+      213: 8797396426644476196
+    second: C4_Tilemap_CompressedV3_95
+  - first:
+      213: -4368339729388412275
+    second: C4_Tilemap_CompressedV3_96
+  - first:
+      213: -6382255971667126411
+    second: C4_Tilemap_CompressedV3_97
+  - first:
+      213: 8511618896434599036
+    second: C4_Tilemap_CompressedV3_98
+  - first:
+      213: -3704895705025510078
+    second: C4_Tilemap_CompressedV3_99
+  - first:
+      213: -2911322252106879289
+    second: C4_Tilemap_CompressedV3_100
+  - first:
+      213: 7935229934702883030
+    second: C4_Tilemap_CompressedV3_101
+  - first:
+      213: 7146215625732662583
+    second: C4_Tilemap_CompressedV3_102
+  - first:
+      213: 6410373201506809305
+    second: C4_Tilemap_CompressedV3_103
+  - first:
+      213: 3203314724057319517
+    second: C4_Tilemap_CompressedV3_104
+  - first:
+      213: 9012003753409568633
+    second: C4_Tilemap_CompressedV3_105
+  - first:
+      213: 4998618733303010035
+    second: C4_Tilemap_CompressedV3_106
+  - first:
+      213: 5600615279544717405
+    second: C4_Tilemap_CompressedV3_107
+  - first:
+      213: -3971241592165838706
+    second: C4_Tilemap_CompressedV3_108
+  - first:
+      213: -3166946790434661458
+    second: C4_Tilemap_CompressedV3_109
+  - first:
+      213: 3042766561212962027
+    second: C4_Tilemap_CompressedV3_110
+  - first:
+      213: -2968280400595316473
+    second: C4_Tilemap_CompressedV3_111
+  - first:
+      213: 2212405582659703216
+    second: C4_Tilemap_CompressedV3_112
+  - first:
+      213: -4867868886145163536
+    second: C4_Tilemap_CompressedV3_113
+  - first:
+      213: 159126764405873488
+    second: C4_Tilemap_CompressedV3_114
+  - first:
+      213: -3336697126816936613
+    second: C4_Tilemap_CompressedV3_115
+  - first:
+      213: -8615892161292322304
+    second: C4_Tilemap_CompressedV3_116
+  - first:
+      213: 1111101216779329262
+    second: C4_Tilemap_CompressedV3_117
+  - first:
+      213: 6033599774927710634
+    second: C4_Tilemap_CompressedV3_118
+  - first:
+      213: 8782859557645325314
+    second: C4_Tilemap_CompressedV3_119
+  - first:
+      213: 1062407902430604275
+    second: C4_Tilemap_CompressedV3_120
+  - first:
+      213: -3254679340548163650
+    second: C4_Tilemap_CompressedV3_121
+  - first:
+      213: -1860757802831631208
+    second: C4_Tilemap_CompressedV3_122
+  - first:
+      213: 4262738489785322370
+    second: C4_Tilemap_CompressedV3_123
+  - first:
+      213: -1666802680897983262
+    second: C4_Tilemap_CompressedV3_124
+  - first:
+      213: -6495916231876678796
+    second: C4_Tilemap_CompressedV3_125
+  - first:
+      213: -8178621177843556602
+    second: C4_Tilemap_CompressedV3_126
+  - first:
+      213: 3222939744882128442
+    second: C4_Tilemap_CompressedV3_127
+  - first:
+      213: -2169544803487826689
+    second: C4_Tilemap_CompressedV3_128
+  - first:
+      213: -3206947314988033742
+    second: C4_Tilemap_CompressedV3_129
+  - first:
+      213: -4382440105815345905
+    second: C4_Tilemap_CompressedV3_130
+  - first:
+      213: 3279864613110461216
+    second: C4_Tilemap_CompressedV3_131
+  - first:
+      213: 8762239526355909095
+    second: C4_Tilemap_CompressedV3_132
+  - first:
+      213: 5189454753345640553
+    second: C4_Tilemap_CompressedV3_133
+  - first:
+      213: 8461925433284477059
+    second: C4_Tilemap_CompressedV3_134
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7679
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d106965abf531bd4ea05d2c213e99600
+      internalID: 5280298220146045913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 7679
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16339ada396cbd347ac9f5264a5ca66d
+      internalID: 927156631771624656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 7679
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1b5cd77615d22449a0346b00df17e6
+      internalID: -58108897977180298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 7679
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b0cc0c2f018d84ca98f1e94d67e6ab
+      internalID: -5744797569563873183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 7679
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e691df3f28115eb4dbe603a5a77480b9
+      internalID: 6519377091995271039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 7679
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f2ec39cc733074eb23ee0945434aba
+      internalID: 1886239302361022059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 7679
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8cd07a10ea38f43994e26e576b41b9
+      internalID: 2784525141094901583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 7679
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7f8616913327a4a950a58cf62c58fb
+      internalID: -3488756189481124279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_8
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 7679
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df6f01a87d72fc4db239951c9bdb07a
+      internalID: -4310195001646912328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7167
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9ed79c389a70141a89cb2fc0215397
+      internalID: 1376717095165262328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 7167
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37f898e838650249a3f8095f50d09aa
+      internalID: -9136802348318861162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 7167
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f47277b05d61384e859105247abd772
+      internalID: 3468603430461961724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 7167
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3eeab299c7923e469329a7241fda7dd
+      internalID: 2996663796197421583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_13
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 7167
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e4e8a18fc1d304d9ff9d8fe83c0428
+      internalID: 542295517638374862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_14
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 7167
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb68801910946ba4f8caea9c708a63c4
+      internalID: 5893603633250136416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_15
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 7167
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1efa6ff05db5341908e05cadb634e9
+      internalID: 6276744030424443253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_16
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 7167
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ff5d2ef188d5b4ea9a62bbab9666e0
+      internalID: -366643328622082370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_17
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 7167
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c56564e9fd43c43898c37bbb51e4fe
+      internalID: -8549476320618823967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6655
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbd278eeb7d5db469d6fe512978ce7c
+      internalID: -6091286612628439127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_19
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 6655
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5421a1da644265e4b93522a95a28b99e
+      internalID: 748109189701176971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 6655
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e11ba627a119cb4198a7505811bbfa6
+      internalID: 5400925105238289776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_21
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 6655
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5078b68eeed66784a9fda71943e37473
+      internalID: -2063893494931924030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_22
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 6655
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2b1f6764a2dc14082913c1d17d149f
+      internalID: -3516103961135757093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_23
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 6655
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e961f7a2f43d5d54f9c7b7257bf9cc44
+      internalID: -2970914345701361273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_24
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 6655
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c80a383a07bb04f8042fc7ccdeb295
+      internalID: 5957438070269313266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_25
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 6655
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40cad9f41b908b84484aef83e516e92e
+      internalID: 4525125490255420386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_26
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 6655
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6271acb6e619b304693622fa631d00ad
+      internalID: 5046013529505217264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6143
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add4b59567d4822428bd2ec1fd097ca1
+      internalID: -2993905395003650973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 6143
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025680ed204f87248ba3ca9afa298e89
+      internalID: 201149936481393927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_29
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 6143
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8581eccaa8c31f4e86af82d6a0dedf6
+      internalID: 6698264607576818842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_30
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 6143
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd22babfc42e5446adc999f17545813
+      internalID: 1277301015904115808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_31
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 6143
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6037695a639ce1b46a4efd3f97b43d02
+      internalID: -7505597230015272028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_32
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 6143
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301177ec0506a3c4085df09044f81318
+      internalID: 417777598065830947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_33
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 6143
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7efd53a82e16bb54194f0317072fc726
+      internalID: 5604668635304949589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_34
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 6143
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce7c29bf0375ce4080013235fc9a9d5
+      internalID: 2249192008155455262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_35
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 6143
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e69e23e5e2d55d42a8da651ddbbf1e2
+      internalID: 4956472886939435628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5631
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de60cd5395128c141bab01c928bb956e
+      internalID: -5009407035285976830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_37
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 5631
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1951d7db237a2f84aad95c689457c6f0
+      internalID: 465059631837795115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_38
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 5631
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735f6612202ba5943b9397ed262af53f
+      internalID: -5566335043262061145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_39
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 5631
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80f5f3aceea4b84c9df91a8ca48b262
+      internalID: 7257950183167576513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_40
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 5631
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1d15312b4e28447bb9edc7e28e76a3
+      internalID: 3946233618904216352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_41
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 5631
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715bd84db4b2a13469ef10b226074548
+      internalID: -2483336390919954547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_42
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 5631
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e7fd7adb5e4f94eae2c1dde62be5cd
+      internalID: 5483736070139532873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_43
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 5631
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2efa833ab290c8458b3abbed770bd97
+      internalID: -7512523623307136578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_44
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 5631
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6c6771b30a0e748821065a8c74c836
+      internalID: 4683935023517226026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5119
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2584b6ad973c144b9dcbff0d5677f4
+      internalID: 4731696999506418001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_46
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 5119
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9112fe8ebe4aab40ba16d8607010e29
+      internalID: -7607194101786420930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_47
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 5119
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8fc6cec6b9a3d47a607d00afa0a161
+      internalID: -6339791253864439168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_48
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 5119
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1e076ea9e69c644bad4aeea42f94bd
+      internalID: 9162293303925530010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_49
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 5119
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36dac5d6230d99b47b7d9ee04bb8cf67
+      internalID: 7084458595515744781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_50
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 5119
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df09682776d7b142821c0f5aa98ad07
+      internalID: -8026468554760165969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_51
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 5119
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a052cebc2d18f45b894131f8479ac1
+      internalID: -1553048322161134364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_52
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 5119
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2f5127aef3b914b83aa5aa26a7fdde
+      internalID: 4270419034277428868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_53
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 5119
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c00a71a0fe2feb409b0da171528eba5
+      internalID: -6689041975670713152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4607
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e4e92e1254947479e6d71854408ca6
+      internalID: -8639819919848655983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_55
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 4607
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bb8e846a3a594488b14425a1a27da0
+      internalID: -5565050035482193328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_56
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4607
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee756ce2b56ebb74697f86173cfdd871
+      internalID: 5471418893583597701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_57
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 4607
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5db66649220ab41bc591ec44610537
+      internalID: 202684931336824585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_58
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 4607
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a6584b1dbae2c499921dbbacd9490d
+      internalID: -5410142641425127276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_59
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 4607
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d926260ceab8c4fbc3b7ae222d3edb
+      internalID: 8752674273980450945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_60
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4607
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d785db6a28191d4296caf8d8fe469af
+      internalID: 6579552464969385599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_61
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 4607
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1e5e8fcb07d3e4cbe6d4cd0aaf27bd
+      internalID: -6411959743123552295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_62
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 4607
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f370dc29ef495c944844d4e521fe1c12
+      internalID: -1444021536086271980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4095
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f7bed021bf35142a46b09c4234f71f
+      internalID: -912642535067377857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_64
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 4095
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0cac1da9e9cb064683b50f0e83a1145
+      internalID: -483247811096533059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_65
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4095
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdaecae788ba3904ebfc4b79a3dc61e9
+      internalID: 5051378116789625909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_66
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 4095
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69c2dea375f7a04a925750342c2a2ca
+      internalID: -3248152092755288903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_67
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 4095
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d476f45c800e84b8ce05521fbf0961
+      internalID: -125820172374403219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_68
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 4095
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913dddbf014951740993b5b3fcb832ba
+      internalID: -2994395680656913696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_69
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4095
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699cef0de1645ff4b8292cc1752793ce
+      internalID: -2132275880142125489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_70
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 4095
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3edd2dc8fc0d4948aeea3ba69b534ea
+      internalID: 3322450905148764044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_71
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 4095
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9806858ca8695474488c3e8233c6e162
+      internalID: -7230934727717607277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3583
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e95ee79a9a523c459a354a36f25f98c
+      internalID: -4856030002572790998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_73
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3583
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45c3a6238eca5f42bcbdd360bfc7373
+      internalID: -5304320372796692022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_74
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3583
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ae47ca32b9eca45be47453b150c8d3
+      internalID: -1616486442882721264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_75
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3583
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4284fdff9c68f9044b35cccfea9b9b96
+      internalID: 5574243991011403967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_76
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3583
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274c32aa47ff5f346ae9c2cfdf3e4aea
+      internalID: -3355762861200293896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_77
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3583
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b221d220d45bbc34ba51024330236db9
+      internalID: 2502898533400980262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_78
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3583
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e1fc37a0bbb0e4aa1b6120591fa8ed
+      internalID: -2681307814389796028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_79
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 3583
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c991b4ffce84e864f926be8a9b611a76
+      internalID: -2988331472615240020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_80
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3583
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e333ce9a0bc6fc341ac634e96b0a1996
+      internalID: 3616120499995531329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3071
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9353adc5babb54faa9770ff2409d14
+      internalID: 4008116908149391642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_82
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3071
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903fa579336c6e448aafef188ea27bd0
+      internalID: -5588846705000439184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_83
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3071
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc718f6ddc7e95241902754a7e0ae506
+      internalID: -6959941905924699174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_84
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3071
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99e0f46870f2ce42a9044558bdcccea
+      internalID: 2771620163345138507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_85
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3071
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866c6770c3e685f469cd76429f6764d1
+      internalID: -2405097081102016507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_86
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3071
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 606d23ab6dd8afa45b20d25410f8b5c9
+      internalID: 5103050288931180513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_87
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3071
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d080fec5181b71b43a7b93f9c24353ef
+      internalID: -7319896307492489706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_88
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 3071
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd3fb39f6dcfe34bbceb79c5d23d31b
+      internalID: 7095742599116107106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_89
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3071
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9dc6080e4145046beee8e1ec1178fb
+      internalID: -6136307149818673454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2559
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69198046872b7f418b05ff87779a0d0
+      internalID: -3005991226315298972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_91
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2559
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01490d5f6f30a74f9d32298fdd4275d
+      internalID: 4624583939934338280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_92
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2559
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76f42e809373be41b47053ec66e9939
+      internalID: 9046044877047960733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_93
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2559
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767c7d5fc25048f4f9e5cc967bdbf379
+      internalID: 2627024095049647491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_94
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2559
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9d73215048f2f458ec90b2cfc83a8c
+      internalID: 2158897457873719954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_95
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2559
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060fa765a695473458d8a2aa97e6f4d9
+      internalID: 8797396426644476196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_96
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2559
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7e6215fe2f38f45b137ae39c59c353
+      internalID: -4368339729388412275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_97
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2559
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efcd7319de02a3d4188f51323fe616df
+      internalID: -6382255971667126411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_98
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2559
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb1671ab3d81a74d963fe155f7b93c1
+      internalID: 8511618896434599036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2047
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a42ea8bfe97af049bebfabd2095b64b
+      internalID: -3704895705025510078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_100
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2047
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf014d3ec2dc9944abfbb93810618d6
+      internalID: -2911322252106879289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_101
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2047
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806d097291c7b8441b726f3e35735388
+      internalID: 7935229934702883030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_102
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2047
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25169731713ab0c46acc7980ff67f240
+      internalID: 7146215625732662583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_103
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2047
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658b5714a46439c41bc699796a8d70d9
+      internalID: 6410373201506809305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_104
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2047
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77785d224fb8cf4296c389858f58f89
+      internalID: 3203314724057319517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_105
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2047
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9081d12279cb2ee4291763fae9063382
+      internalID: 9012003753409568633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_106
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2047
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b0d0d088fe90534784bd92b0d1a819e
+      internalID: 4998618733303010035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_107
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2047
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5bb0ddf8fd33147b6aeb4bec7ad36f
+      internalID: 5600615279544717405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1535
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6387396a83115b84b8e93c1f631c219d
+      internalID: -3971241592165838706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_109
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1535
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2725bfceaae94d049945a44ff3487d66
+      internalID: -3166946790434661458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_110
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1535
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4a42fccc4ab25448fb182e1bad385b
+      internalID: 3042766561212962027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_111
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1535
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed10edfdc1ae2e4888fb2bba54fe9de
+      internalID: -2968280400595316473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_112
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1535
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f63ced54bb103634c97ea0a164c90ffd
+      internalID: 2212405582659703216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_113
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1535
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f3868204b201a40a4ae91691f5c575
+      internalID: -4867868886145163536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_114
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1535
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65979cc63a26ea44f816ec866723be79
+      internalID: 159126764405873488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_115
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1535
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cc05437ef23d3458c95b118d881eb0
+      internalID: -3336697126816936613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_116
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1535
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007f438a20c9fb449aeb20536334746e
+      internalID: -8615892161292322304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_117
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1023
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee6a5b589b7a874bbf7b8598ef4c1bd
+      internalID: 1111101216779329262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_118
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1023
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096cffbf06dc9604084ed685cd3e9471
+      internalID: 6033599774927710634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_119
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1023
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574069b2284d294488fcfddaea5891a7
+      internalID: 8782859557645325314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_120
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1023
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efd69aa65e5c46429a4096ac4bdedd7
+      internalID: 1062407902430604275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_121
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1023
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f94bdf80679d68448f72ef87c382b82
+      internalID: -3254679340548163650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_122
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1023
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a383cfd7890d114abbc47a655bfa4fc
+      internalID: -1860757802831631208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_123
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1023
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9cb9242fa9b4cb46b4d253960f4c045
+      internalID: 4262738489785322370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_124
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1023
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab885f2dcc3f7c4f9014823cf998f9e
+      internalID: -1666802680897983262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_125
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1023
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1122dbaa74e25c54b9df96408e43273e
+      internalID: -6495916231876678796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9420b40938a7b4f8a92e875f76daa2
+      internalID: -8178621177843556602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_127
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b83778b398e5ea48b6130b1be1266ba
+      internalID: 3222939744882128442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_128
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1baec82f349fe3947b62a475f28414bf
+      internalID: -2169544803487826689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_129
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2e394d9b1fe1744b36957af5cf9388
+      internalID: -3206947314988033742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_130
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d2c121911985f4b8649337467d08d5
+      internalID: -4382440105815345905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_131
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd61da0d447c4349b9f5bfa06460482
+      internalID: 3279864613110461216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_132
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82030168e89e2c4b9290994fd824497
+      internalID: 8762239526355909095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_133
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81bbbe88043f6bc4baaf8fd7adfe8653
+      internalID: 5189454753345640553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C4_Tilemap_CompressedV3_134
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd34cebbda818845b793421d90863fa
+      internalID: 8461925433284477059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
