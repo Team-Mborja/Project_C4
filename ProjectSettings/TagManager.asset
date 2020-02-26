@@ -22,6 +22,7 @@ TagManager:
   - Death
   - Settings
   - Sound
+  - End
   layers:
   - Default
   - TransparentFX

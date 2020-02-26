@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Camera_Follow : MonoBehaviour
 {
-
-
     private Transform playerTransform;
 
     public float offset;
+
+    public bool bounds;
+
+    public Vector3 minCameraPos;
+    public Vector3 maxcameraPos;
 
     void Start () {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -39,4 +42,14 @@ public class Camera_Follow : MonoBehaviour
 
         }
     }
+    void fixedupdate()
+    {
+        if (bounds)
+        {
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, minCameraPos.x, maxcameraPos.x),
+                Mathf.Clamp(transform.position.y, minCameraPos.y, maxcameraPos.y),
+                Mathf.Clamp(transform.position.z, minCameraPos.z, maxcameraPos.z));
+        }
+    }
+
 }

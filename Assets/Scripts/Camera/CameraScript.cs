@@ -23,11 +23,6 @@ public class CameraScript : MonoBehaviour
     // Camera Panned
         public bool cameraPanned;
 
-    public bool bounds;
-
-    public Vector3 minCameraPos;
-    public Vector3 maxcameraPos;
-
 
     void Start()
     {
@@ -100,15 +95,4 @@ public class CameraScript : MonoBehaviour
 
         }
     }
-    void fixedupdate()
-    {
-        if (bounds)
-        {
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, minCameraPos.x, maxcameraPos.x),
-                Mathf.Clamp(transform.position.y, minCameraPos.y, maxcameraPos.y),
-                Mathf.Clamp(transform.position.z, minCameraPos.z, maxcameraPos.z));
-        }
-    }
-
-
 }
