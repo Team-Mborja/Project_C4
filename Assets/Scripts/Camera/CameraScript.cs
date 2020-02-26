@@ -43,6 +43,7 @@ public class CameraScript : MonoBehaviour
         {
             gameObject.AddComponent<Camera_Follow>();
             cameraPanned = true;
+            gameObject.GetComponent<Animator>().enabled = false;
         }
 
        // Tracks the mouse position in game
