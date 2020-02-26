@@ -14,7 +14,7 @@ public class EndScreen : MonoBehaviour
     // Star images on the end screen
         public Image[] stars = new Image[3];
     // Int for how many stars you have 
-        int starCount;
+        public int starCount;
     // Float for the par time of the level
         public float parTime;
     // String of the name of the special objective
@@ -46,9 +46,7 @@ public class EndScreen : MonoBehaviour
             levelStatus.text = "Level Failed";
             ActivateEndScreen();
         }
-
-        // Activates the end screnn with level failed
-        if (GameObject.FindGameObjectWithTag("FuseBox") == null && gameObject.GetComponent<Image>().enabled == false)
+        else if (GameObject.FindGameObjectWithTag("FuseBox") == null && gameObject.GetComponent<Image>().enabled == false)
         {
             levelStatus.text = "Level Complete";
             ActivateEndScreen();
