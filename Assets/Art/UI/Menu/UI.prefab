@@ -19,6 +19,7 @@ MonoBehaviour:
   - {fileID: 8162214168391764540}
   - {fileID: 8181542555226030589}
   - {fileID: 2027119945466735775}
+  starCount: 0
   parTime: 0
   specialObjective: 
   jumpMax: 0
@@ -268,7 +269,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9, type: 3}
     m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
@@ -398,6 +399,24 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6539344471417918666, guid: f19e60369daa3e44fb7060e4f0e737c7,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
+        type: 3}
+    - target: {fileID: 4752158473459344332, guid: f19e60369daa3e44fb7060e4f0e737c7,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
+        type: 3}
+    - target: {fileID: 8575308187994893360, guid: f19e60369daa3e44fb7060e4f0e737c7,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f19e60369daa3e44fb7060e4f0e737c7, type: 3}
 --- !u!224 &8118078923258362334 stripped
@@ -559,6 +578,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Settings
       objectReference: {fileID: 0}
+    - target: {fileID: 5990818696699164515, guid: 839b6807fbb61334b809b1fd0346b813,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
+        type: 3}
+    - target: {fileID: 5404030565233217940, guid: 839b6807fbb61334b809b1fd0346b813,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
+        type: 3}
+    - target: {fileID: 5920733117329743230, guid: 839b6807fbb61334b809b1fd0346b813,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
+        type: 3}
+    - target: {fileID: 4051235755650356747, guid: 839b6807fbb61334b809b1fd0346b813,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
+        type: 3}
+    - target: {fileID: 1977868276038668760, guid: 839b6807fbb61334b809b1fd0346b813,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 839b6807fbb61334b809b1fd0346b813, type: 3}
 --- !u!224 &4339259452197636443 stripped
@@ -714,6 +763,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6792617764556044767, guid: d648e93d17952c449bbbde8bcd5f25ba,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
+        type: 3}
+    - target: {fileID: 9199901405638549418, guid: d648e93d17952c449bbbde8bcd5f25ba,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
+        type: 3}
+    - target: {fileID: 4267274435102812387, guid: d648e93d17952c449bbbde8bcd5f25ba,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d648e93d17952c449bbbde8bcd5f25ba, type: 3}
 --- !u!1 &3428613558072351492 stripped
