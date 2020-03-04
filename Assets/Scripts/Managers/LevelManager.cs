@@ -45,7 +45,11 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         // Creates a timer in a string
-        timerText.text = timer.ToString();
+        if (timer < 10.0f)
+            timerText.text = timer.ToString();
+        else
+            timerText.text = Mathf.FloorToInt(timer).ToString();
+
 
         // runs the level timer when the level is incomplete
             if (gameOver == false && pausedGame == false && Camera.main.GetComponent<CameraScript>().cameraPanned == true)
@@ -64,17 +68,17 @@ public class LevelManager : MonoBehaviour
             {
                 case 0:
                     inventory_Display[0].color = Color.red;
-                    inventory_Display[1].color = Color.white;
-                    inventory_Display[2].color = Color.white;
+                    inventory_Display[1].color = Color.black;
+                    inventory_Display[2].color = Color.black;
                     break;
                 case 1:
-                    inventory_Display[0].color = Color.white;
+                    inventory_Display[0].color = Color.black;
                     inventory_Display[1].color = Color.red;
-                    inventory_Display[2].color = Color.white;
+                    inventory_Display[2].color = Color.black;
                     break;
                 case 2:
-                    inventory_Display[0].color = Color.white;
-                    inventory_Display[1].color = Color.white;
+                    inventory_Display[0].color = Color.black;
+                    inventory_Display[1].color = Color.black;
                     inventory_Display[2].color = Color.red;
                     break;
 
