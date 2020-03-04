@@ -96,7 +96,7 @@ public class C4 : MonoBehaviour
         {
 
             rb = gameObject.AddComponent<Rigidbody2D>();
-
+            gameObject.AddComponent<BoxCollider2D>();
             // Throws the C4
                 rb.AddForce(new Vector2(forceForward, forceUpward));
         }

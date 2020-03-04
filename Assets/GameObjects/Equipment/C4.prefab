@@ -102,7 +102,6 @@ MonoBehaviour:
   xMax: 3
   yMax: 4
   itemName: C4
-  offset: {x: 0.84, y: 0}
   explodeObject: {fileID: 2733587457657565587}
   isStuck: 0
   stickTags:
@@ -118,7 +117,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2342420896000991908}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -233,16 +232,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4652389867022306260, guid: 452abce5134885d4db3465073b14a6f3,
-        type: 3}
-      propertyPath: m_Radius
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 691140139326212374, guid: 452abce5134885d4db3465073b14a6f3,
         type: 3}
       propertyPath: parent
       value: 
       objectReference: {fileID: 2342420896000991908}
+    - target: {fileID: 4652389867022306260, guid: 452abce5134885d4db3465073b14a6f3,
+        type: 3}
+      propertyPath: m_Radius
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 452abce5134885d4db3465073b14a6f3, type: 3}
 --- !u!1 &2733587457657565587 stripped

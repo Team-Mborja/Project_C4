@@ -113,6 +113,7 @@ public class Grenade : MonoBehaviour
         void ThrowGrenade()
         {
             Rigidbody2D rb = gameObject.AddComponent<Rigidbody2D>();
+            gameObject.AddComponent<CircleCollider2D>();
             rb.AddForce(new Vector2(forceForward, forceUpward));
         }
 }

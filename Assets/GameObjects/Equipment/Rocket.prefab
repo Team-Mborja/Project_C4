@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3343416364185018572}
   - component: {fileID: 3343416364185018574}
   - component: {fileID: 3343416364185018570}
-  - component: {fileID: 556329051874658707}
+  - component: {fileID: 2769058324425979577}
   m_Layer: 2
   m_Name: Rocket
   m_TagString: Rocket
@@ -120,7 +120,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!61 &556329051874658707
+--- !u!61 &2769058324425979577
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.68, y: 2.4128227}
+  m_Size: {x: 0.96, y: 2.46}
   m_EdgeRadius: 0
 --- !u!1001 &6015403190870517879
 PrefabInstance:
