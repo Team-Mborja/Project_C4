@@ -38,6 +38,9 @@ public class CameraScript : MonoBehaviour
         // Adds to the panning camera timer
             timer += Time.deltaTime;
 
+        if (Input.GetKeyDown(KeyCode.Backspace) && timer < panCamera)
+            timer = panCamera;
+
         // Once the timer reaches a certain value, active the camera follow script
         if (timer >= panCamera && gameObject.GetComponent<Camera_Follow>() == null)
         {
