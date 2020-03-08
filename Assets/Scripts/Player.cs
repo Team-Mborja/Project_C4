@@ -80,16 +80,21 @@ public class Player : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("FuseBox") != null && managerScript.pausedGame == false && Camera.main.GetComponent<CameraScript>().cameraPanned == true)
         {
 
-            // Player moves right with D
-            if (right.collider == null && Input.GetKey((KeyCode) System.Enum.Parse(typeof(KeyCode), settingsScript.controls[1])))
+            // Player moves right with D and left with A
+            if (right.collider == null && Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[1])))
                 transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
+         
 
-            // Player moves left with A
             if (left.collider == null && Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[0])))
                 transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
-                // Function that makes sure you are standing on something before you jump
-             if ((downLeft.collider != null || downRight.collider != null) && (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[2]))))
+            if(Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[1])) || Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[0])))
+                gameObject.GetComponent<Animator>().SetBool("Moving", true);
+            else
+                gameObject.GetComponent<Animator>().SetBool("Moving", false);
+
+            // Function that makes sure you are standing on something before you jump
+            if ((downLeft.collider != null || downRight.collider != null) && (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[2]))))
             {
                 // Jumps with force
                 rb.AddForce(Vector2.up * jumpForce);
@@ -138,6 +143,7 @@ public class Player : MonoBehaviour
             else
                 isUp = false;
         }
+
     }
 
 
