@@ -105,12 +105,21 @@ public class Player : MonoBehaviour
             }
 
             // Weapon swap keys
-            if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[3])))
+            if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[3])))
+            {
                 slot = 0;
-            else if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[4])))
+                souundScript.PlaySoundFile(souundScript.click);
+            }
+            else if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[4])))
+            {
                 slot = 1;
-            else if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[5])))
+                souundScript.PlaySoundFile(souundScript.click);
+            }
+            else if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[5])))
+            {
                 slot = 2;
+                souundScript.PlaySoundFile(souundScript.click);
+            }
 
             // Throws current weapon
             if (Input.GetMouseButtonDown(0) && managerScript.inventory[slot] > 0)
