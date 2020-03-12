@@ -98,7 +98,7 @@ MonoBehaviour:
   - Player
   - Grenade
   - C4
-  - Rocekt
+  - Rocket
 --- !u!61 &4086668734668885696
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -388,7 +388,7 @@ MonoBehaviour:
   - Player
   - Grenade
   - C4
-  - Rocekt
+  - Rocket
 --- !u!1 &4027195843791469111
 GameObject:
   m_ObjectHideFlags: 0
