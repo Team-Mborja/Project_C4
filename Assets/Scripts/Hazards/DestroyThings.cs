@@ -13,5 +13,8 @@ public class DestroyThings : MonoBehaviour
 
         if (destroyList.Contains(other.gameObject.tag))
             Destroy(other.gameObject);
+
+        if (other.gameObject.tag == "Grenade")
+            Destroy(other.gameObject.GetComponent<Grenade>().timerInstance);
     }
 }

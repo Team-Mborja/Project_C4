@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8950458944236263767}
   m_Layer: 0
   m_Name: Grenade Timer
-  m_TagString: Untagged
+  m_TagString: Timer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -35,7 +35,7 @@ public class Grenade : MonoBehaviour
 
     // GameObject of the Timer
         public GameObject timer;
-        GameObject timerInstance;
+        public GameObject timerInstance;
 
     // Start is called before the first frame update
     void Start()
@@ -105,6 +105,7 @@ public class Grenade : MonoBehaviour
 
                 Destroy(timerInstance);
                 explodeObject.GetComponent<Explode>().Explosion();
+
             }
 
     }

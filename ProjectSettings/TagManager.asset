@@ -23,6 +23,7 @@ TagManager:
   - Settings
   - Sound
   - End
+  - Timer
   layers:
   - Default
   - TransparentFX
