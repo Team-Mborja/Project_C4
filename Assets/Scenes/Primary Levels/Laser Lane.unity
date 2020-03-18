@@ -321,6 +321,16 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 0.627451
       objectReference: {fileID: 0}
+    - target: {fileID: 4086668734668885696, guid: 836814cb9c1bbb740837efc5345bdb4a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086668734668885696, guid: 836814cb9c1bbb740837efc5345bdb4a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 836814cb9c1bbb740837efc5345bdb4a, type: 3}
 --- !u!4 &98384432 stripped
@@ -1183,11 +1193,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 395514832319622190, guid: bcb5e03f6f429ef4397cf8e8e90a7384,
-        type: 3}
-      propertyPath: usedEquipment.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 395514832319622191, guid: bcb5e03f6f429ef4397cf8e8e90a7384,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1242,6 +1247,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 395514832319622190, guid: bcb5e03f6f429ef4397cf8e8e90a7384,
+        type: 3}
+      propertyPath: usedEquipment.Array.data[0]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb5e03f6f429ef4397cf8e8e90a7384, type: 3}
