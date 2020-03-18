@@ -104,8 +104,11 @@ public class C4 : MonoBehaviour
     // Code that is called when the C4 collides with an object it sticks to
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            // rotates to match the object it sticks to and locks it in place
-                if (stickTags.Contains(collision.gameObject.tag))
+
+        //souundScript.PlaySoundFile(souundScript.c4_stick);
+
+        // rotates to match the object it sticks to and locks it in place
+        if (stickTags.Contains(collision.gameObject.tag))
                 {
                     var contact = collision.contacts[0];
                     var rot = Quaternion.FromToRotation(transform.up, contact.normal);

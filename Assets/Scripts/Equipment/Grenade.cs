@@ -90,8 +90,10 @@ public class Grenade : MonoBehaviour
         if (timerInstance != null)
             timerInstance.transform.position = new Vector2(transform.position.x, transform.position.y + 0.5f);
 
+        //souundScript.PlaySoundFile(souundScript.grenade_tick);
+
         // Throws the grenade if you press left mouse
-            if (Input.GetMouseButtonUp(0) && isThrown == false)
+        if (Input.GetMouseButtonUp(0) && isThrown == false)
             {
                 ThrowGrenade();
                 isThrown = true;
