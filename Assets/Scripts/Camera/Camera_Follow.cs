@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Camera_Follow : MonoBehaviour
 {
-    private Transform playerTransform;
-
+    Vector3 playerPos;
     public float offset;
 
     public bool bounds;
@@ -13,35 +12,17 @@ public class Camera_Follow : MonoBehaviour
     public Vector3 minCameraPos;
     public Vector3 maxcameraPos;
 
-    void Start () {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-    }
 
-
-    //called after update and fixed update
-    void LateUpdate()
+    void Update()
     {
-        if (playerTransform != null)
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+
+        if(GameObject.FindGameObjectWithTag("Player") != null)
         {
-
-            // we store current camera's positon in variable temporary
-            Vector3 temp = transform.position;
-
-            //we set the players camera's position equal to the player's position x
-            temp.x = playerTransform.position.x;
-
-            //temp.y = playerTransform.position.y;
-            //temp.y += offset;
-
-
-            //this will add the offset value to the temp camera pos
-            temp.x += offset;
-
-            //we set back the camera's temp pos to the camera's current pos
-            transform.position = temp;
-
-        }
+            transform.position = new Vector3(playerPos.x, playerPos.y, transform.position.z);
+        } 
     }
+
     void fixedupdate()
     {
         if (bounds)
