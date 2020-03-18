@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3246740563609565990}
   - component: {fileID: 3246740563609565985}
-  - component: {fileID: 5367071914758572867}
+  - component: {fileID: 3871602234723886798}
   m_Layer: 0
   m_Name: Fuse_Box
   m_TagString: FuseBox
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &5367071914758572867
+--- !u!60 &3871602234723886798
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
