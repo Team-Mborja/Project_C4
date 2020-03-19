@@ -98,6 +98,7 @@ public class Player : MonoBehaviour
             {
                 // Jumps with force
                 rb.AddForce(Vector2.up * jumpForce);
+                gameObject.GetComponent<Animator>().SetTrigger("Jump");
                 // Adds one to the jump count only if you are standing on something
                 usedJump += 1;
                 // plays jump sound
