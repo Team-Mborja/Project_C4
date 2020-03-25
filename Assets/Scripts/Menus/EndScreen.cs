@@ -71,24 +71,24 @@ public class EndScreen : MonoBehaviour
         switch(starCount)
         {
             case 0:
-                stars[0].GetComponent<Image>().enabled = false;
-                stars[1].GetComponent<Image>().enabled = false;
-                stars[2].GetComponent<Image>().enabled = false;
+                stars[0].GetComponent<Animator>().enabled = false;
+                stars[1].GetComponent<Animator>().enabled = false;
+                stars[2].GetComponent<Animator>().enabled = false;
                 break;
             case 1:
-                stars[0].GetComponent<Image>().enabled = true;
-                stars[1].GetComponent<Image>().enabled = false;
-                stars[2].GetComponent<Image>().enabled = false;
+                stars[0].GetComponent<Animator>().enabled = true;
+                stars[1].GetComponent<Animator>().enabled = false;
+                stars[2].GetComponent<Animator>().enabled = false;
                 break;
             case 2:
-                stars[0].GetComponent<Image>().enabled = true;
-                stars[1].GetComponent<Image>().enabled = true;
-                stars[2].GetComponent<Image>().enabled = false;
+                stars[0].GetComponent<Animator>().enabled = true;
+                stars[1].GetComponent<Animator>().enabled = true;
+                stars[2].GetComponent<Animator>().enabled = false;
                 break;
             case 3:
-                stars[0].GetComponent<Image>().enabled = true;
-                stars[1].GetComponent<Image>().enabled = true;
-                stars[2].GetComponent<Image>().enabled = true;
+                stars[0].GetComponent<Animator>().enabled = true;
+                stars[1].GetComponent<Animator>().enabled = true;
+                stars[2].GetComponent<Animator>().enabled = true;
                 break;
         }
     }
