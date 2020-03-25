@@ -15,6 +15,7 @@ public class Camera_Follow : MonoBehaviour
 
     void Update()
     {
+        transform.position = new Vector3(transform.position.x, transform.position.y, -10.0f);
         playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
 
         if(GameObject.FindGameObjectWithTag("Player") != null)
