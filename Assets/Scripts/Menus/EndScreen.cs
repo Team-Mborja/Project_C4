@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class EndScreen : MonoBehaviour
 {
     // Text field of the level completion status
-        public Text levelStatus;
+        public Image[] status = new Image[2];
     // Buttons on the End Screen
         public Button restartButton;
         public Button mainMenuButton;
@@ -43,13 +43,13 @@ public class EndScreen : MonoBehaviour
         // Activates the end screnn with level failed
         if (GameObject.FindGameObjectWithTag("Player") == null && gameObject.GetComponent<Image>().enabled == false /*|| managerScript.gameOver == true*/)
         {
-            levelStatus.text = "Level Failed";
+            status[0].GetComponent<Image>().enabled = true;
             ActivateEndScreen();
         }
         
         if (GameObject.FindGameObjectWithTag("FuseBox") == null && gameObject.GetComponent<Image>().enabled == false)
         {
-            levelStatus.text = "Level Complete";
+            status[1].GetComponent<Image>().enabled = true;
             ActivateEndScreen();
         }
 
