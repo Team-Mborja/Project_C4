@@ -334,6 +334,27 @@ PrefabInstance:
       propertyPath: m_Text
       value: Test Your Limits
       objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 93363822fcb260448a453c81db414343,
+        type: 3}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb54cc695d026fc4996481cacf120f2d, type: 3}
 --- !u!1001 &199569883
@@ -621,6 +642,47 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Stairway to Hell
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851998, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851998, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 93363822fcb260448a453c81db414343,
+        type: 3}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851997, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851997, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb54cc695d026fc4996481cacf120f2d, type: 3}
@@ -1008,6 +1070,27 @@ PrefabInstance:
       propertyPath: m_Text
       value: The Floor is Laser
       objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 93363822fcb260448a453c81db414343,
+        type: 3}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb54cc695d026fc4996481cacf120f2d, type: 3}
 --- !u!1001 &641894423
@@ -1203,6 +1286,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Level Eight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 93363822fcb260448a453c81db414343,
+        type: 3}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb54cc695d026fc4996481cacf120f2d, type: 3}
@@ -1410,6 +1514,47 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Pipeline Detonation
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851998, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851998, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 93363822fcb260448a453c81db414343,
+        type: 3}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851997, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851997, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb54cc695d026fc4996481cacf120f2d, type: 3}
@@ -1857,6 +2002,47 @@ PrefabInstance:
       propertyPath: m_Text
       value: Complex
       objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851998, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851998, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 93363822fcb260448a453c81db414343,
+        type: 3}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851997, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851997, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb54cc695d026fc4996481cacf120f2d, type: 3}
 --- !u!224 &1426215086 stripped
@@ -2064,6 +2250,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Level Ten
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 93363822fcb260448a453c81db414343,
+        type: 3}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 135
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb54cc695d026fc4996481cacf120f2d, type: 3}
@@ -2458,6 +2665,27 @@ PrefabInstance:
       propertyPath: m_Text
       value: Level Seven
       objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 93363822fcb260448a453c81db414343,
+        type: 3}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb54cc695d026fc4996481cacf120f2d, type: 3}
 --- !u!1001 &1963503427
@@ -2653,6 +2881,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Level Nine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 93363822fcb260448a453c81db414343,
+        type: 3}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb54cc695d026fc4996481cacf120f2d, type: 3}
@@ -2972,6 +3221,47 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Easy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851998, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851998, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 93363822fcb260448a453c81db414343,
+        type: 3}
+    - target: {fileID: 5808612315544595361, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315544595375, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851997, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808612315271851997, guid: eb54cc695d026fc4996481cacf120f2d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb54cc695d026fc4996481cacf120f2d, type: 3}
