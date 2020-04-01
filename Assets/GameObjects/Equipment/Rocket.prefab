@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3343416364185018574}
   - component: {fileID: 3343416364185018570}
   - component: {fileID: 2769058324425979577}
+  - component: {fileID: 5029758652013608187}
   m_Layer: 2
   m_Name: Rocket
   m_TagString: Rocket
@@ -146,6 +147,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96, y: 2.46}
   m_EdgeRadius: 0
+--- !u!114 &5029758652013608187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3343416364185018575}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de28e0a4335d0b4480a459c718be9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dist: 5
+  other: {fileID: 0}
+  other1: {fileID: 0}
+  other2: {fileID: 0}
+  other3: {fileID: 0}
+  other4: {fileID: 0}
 --- !u!1001 &6015403190870517879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,11 +172,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3343416364185018571}
     m_Modifications:
-    - target: {fileID: 5742994416977425776, guid: 452abce5134885d4db3465073b14a6f3,
+    - target: {fileID: 691140139326212374, guid: 452abce5134885d4db3465073b14a6f3,
         type: 3}
-      propertyPath: m_Name
-      value: Explode_Object
-      objectReference: {fileID: 0}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 3343416364185018575}
     - target: {fileID: 2214070432242037864, guid: 452abce5134885d4db3465073b14a6f3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -213,11 +232,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 691140139326212374, guid: 452abce5134885d4db3465073b14a6f3,
+    - target: {fileID: 5742994416977425776, guid: 452abce5134885d4db3465073b14a6f3,
         type: 3}
-      propertyPath: parent
-      value: 
-      objectReference: {fileID: 3343416364185018575}
+      propertyPath: m_Name
+      value: Explode_Object
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 452abce5134885d4db3465073b14a6f3, type: 3}
 --- !u!1 &2073968833272159495 stripped

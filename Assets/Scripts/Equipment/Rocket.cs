@@ -19,9 +19,28 @@ public class Rocket : MonoBehaviour
     // Raycast at the front of the rocekt
         RaycastHit2D front;
 
+
+    /// <summary>
+    /// //
+    /// </summary>
+        Animator anim;
+        public Explodable other;
+        public Explodable other1;
+        public Explodable other2;
+        public Explodable other3;
+        public Explodable other4;
+    /// <summary>
+    /// //
+    /// </summary>
+
     // Start is called before the first frame update
     void Start()
     {
+
+        //////////
+            anim = gameObject.GetComponent<Animator>();
+        //////////
+
         // Initalize the player, cursor, and level manager
             player = GameObject.FindGameObjectWithTag("Player");
             cursor = GameObject.FindGameObjectWithTag("Cursor");
@@ -40,6 +59,15 @@ public class Rocket : MonoBehaviour
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, (Mathf.Atan2(cursor.transform.position.y - transform.position.y, cursor.transform.position.x - transform.position.x) * Mathf.Rad2Deg) + 90));
     }
 
+
+    void FragmentObject()
+    {
+        //Debug.Log("did the thing");
+        other.explode();
+    }
+
+
+
     // Update is called once per frame
     void Update()
     {
@@ -55,10 +83,12 @@ public class Rocket : MonoBehaviour
             else
             {
             // Destroy the rocekt if it collides with something 
-                if (front.collider.tag == "Laser")
+            if (front.collider.tag == "Laser")
                     Destroy(gameObject);
                 else
                     explosionObject.GetComponent<Explode>().Explosion();
             }
+
+
     }
 }

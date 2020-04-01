@@ -41,6 +41,7 @@ public class Explode : MonoBehaviour
     // Destroys all objects on explode list and starts the explosion annimation
     public void Explosion()
     {
+        Explode.GetComponent<Rocket.cs>().FragmentObject();
 
         foreach (GameObject objects in inRangeItems)
         {
@@ -53,8 +54,24 @@ public class Explode : MonoBehaviour
                 objects.GetComponent<Animator>().SetTrigger("Destroyed");
                 Destroy(objects, 1.0f);
             }
-            else
-                Destroy(objects);
+
+
+
+
+
+
+
+
+            //else
+                //Destroy(objects);
+
+
+
+
+
+
+
+
 
 
             if (inRangeItems.Count == 0)
