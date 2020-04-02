@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -123,7 +124,7 @@ public class Player : MonoBehaviour
             }
 
             // Throws current weapon
-            if (Input.GetMouseButtonDown(0) && managerScript.inventory[slot] > 0)
+            if (Input.GetMouseButtonDown(0) && managerScript.inventory[slot] > 0 && !EventSystem.current.IsPointerOverGameObject())
             {
                 // Spawns the equipment  
                 SpawnEqipment(inventory[slot]);
