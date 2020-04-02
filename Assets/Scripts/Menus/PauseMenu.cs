@@ -21,7 +21,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     // Enables all relevant UI Elements for the pause screen
-    void ActivatePauseScreen()
+    public void ActivatePauseScreen()
     {
         GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().pausedGame = true;
         gameObject.GetComponent<Image>().enabled = true;

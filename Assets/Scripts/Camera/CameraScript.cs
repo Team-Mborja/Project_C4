@@ -57,16 +57,6 @@ public class CameraScript : MonoBehaviour
             if (plane.Raycast(ray, out dist))
                 cursor.transform.position = ray.GetPoint(dist);
 
-            if (managerScript.pausedGame == true || managerScript.gameOver == true)
-            {
-            Cursor.visible = true;
-            cursor.GetComponent<SpriteRenderer>().enabled = false;
-            }
-            else {
-            Cursor.visible = false;
-            cursor.GetComponent<SpriteRenderer>().enabled = true;
-            }
-
         // Sets cursor maximums based on what equipment you are holding 
             if (managerScript.gameOver == false)
             {
