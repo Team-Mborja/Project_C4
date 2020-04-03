@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+
+    public Image inventory;
+    public Image timer;
+    public Image pauseButton;
+
     //Text field for the title on the pause menu
         public Text title;
     // Buttons on the pause menu
@@ -31,6 +36,10 @@ public class PauseMenu : MonoBehaviour
             var child = gameObject.transform.GetChild(i).gameObject;
             child.SetActive(true);
         }
+
+        inventory.gameObject.SetActive(false);
+        timer.gameObject.SetActive(false);
+        pauseButton.gameObject.SetActive(false);
     }
 
 
@@ -45,5 +54,9 @@ public class PauseMenu : MonoBehaviour
             var child = gameObject.transform.GetChild(j).gameObject;
             child.SetActive(false);
         }
+
+        inventory.gameObject.SetActive(true);
+        timer.gameObject.SetActive(true);
+        pauseButton.gameObject.SetActive(true);
     }
 }
