@@ -107,17 +107,17 @@ public class Player : MonoBehaviour
             }
 
             // Weapon swap keys
-            if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[3])))
+            if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[3])) && !Input.GetMouseButton(0))
             {
                 slot = 0;
                 souundScript.PlaySoundFile(souundScript.click);
             }
-            else if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[4])))
+            else if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[4])) && !Input.GetMouseButton(0))
             {
                 slot = 1;
                 souundScript.PlaySoundFile(souundScript.click);
             }
-            else if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[5])))
+            else if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), settingsScript.controls[5])) && !Input.GetMouseButton(0))
             {
                 slot = 2;
                 souundScript.PlaySoundFile(souundScript.click);
