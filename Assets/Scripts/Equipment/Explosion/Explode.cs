@@ -63,8 +63,8 @@ public class Explode : MonoBehaviour
 
 
 
-            // else
-             //    Destroy(objects);
+             else
+                 Destroy(objects);
 
 
 
