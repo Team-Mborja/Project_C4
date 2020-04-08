@@ -24,6 +24,7 @@ TagManager:
   - Sound
   - End
   - Timer
+  - piecefordestroy
   layers:
   - Default
   - TransparentFX

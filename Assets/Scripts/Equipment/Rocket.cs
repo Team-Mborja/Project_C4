@@ -24,13 +24,8 @@ public class Rocket : MonoBehaviour
     /// //
     /// </summary>
         Animator anim;
-        public Explodable other;
-        public Explodable other1;
-        public Explodable other2;
-        public Explodable other3;
-        public Explodable other4;
-    /// <summary>
-    /// //
+
+    /// 
     /// </summary>
 
     // Start is called before the first frame update
@@ -60,12 +55,7 @@ public class Rocket : MonoBehaviour
     }
 
 
-    void FragmentObject()
-    {
-        //Debug.Log("did the thing");
-        other.explode();
-    }
-
+   
 
 
     // Update is called once per frame
@@ -87,8 +77,12 @@ public class Rocket : MonoBehaviour
                     Destroy(gameObject);
                 else
                     explosionObject.GetComponent<Explode>().Explosion();
-            }
-
+            
+            
+            anim.SetTrigger("explodetrigger");
+        
+        }
 
     }
+    
 }

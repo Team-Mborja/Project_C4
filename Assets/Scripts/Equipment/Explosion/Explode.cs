@@ -5,23 +5,23 @@ using UnityEngine;
 public class Explode : MonoBehaviour
 {
     // List of tags on objects that can be destroyed
-        public List<string> explosionTags = new List<string>();
-        public List<string> animateTags = new List<string>();
+    public List<string> explosionTags = new List<string>();
+    public List<string> animateTags = new List<string>();
     // Items in Range
-        List<GameObject> inRangeItems = new List<GameObject>();
+    List<GameObject> inRangeItems = new List<GameObject>();
     // GameObjects for the explosive and the explosion
-        public GameObject explosion;
-        public GameObject parent;
+    public GameObject explosion;
+    public GameObject parent;
 
 
     // Update is called once per frame
     void Update()
     {
         //  Sets the player warning active if the the player is in range
-            if (inRangeItems.Contains(GameObject.FindGameObjectWithTag("Player")))
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().warning.SetActive(true);
-            else
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().warning.SetActive(false);
+        if (inRangeItems.Contains(GameObject.FindGameObjectWithTag("Player")))
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().warning.SetActive(true);
+        else
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().warning.SetActive(false);
     }
 
     // Adds objects to explode list if in range
@@ -41,7 +41,8 @@ public class Explode : MonoBehaviour
     // Destroys all objects on explode list and starts the explosion annimation
     public void Explosion()
     {
-        //Explode.GetComponent<Rocket.cs>().FragmentObject();
+        Invoke("DestroyPieces", 4.0f);
+        //  Explode.GetComponent<Rocket.cs>().FragmentObject();
 
         foreach (GameObject objects in inRangeItems)
         {
@@ -62,9 +63,8 @@ public class Explode : MonoBehaviour
 
 
 
-            else
-                Destroy(objects);
-
+            // else
+             //    Destroy(objects);
 
 
 
@@ -79,5 +79,11 @@ public class Explode : MonoBehaviour
         }
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(parent);
+    }
+    void DestroyPieces()
+    {
+        GameObject[] destroy = GameObject.FindGameObjectsWithTag("piecefordestroy");
+        foreach (GameObject dest in destroy)
+            GameObject.Destroy(dest);
     }
 }

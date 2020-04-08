@@ -33,9 +33,13 @@ public class C4 : MonoBehaviour
     // Tags for all objects the C4 can stick to
         public List<string> stickTags = new List<string>();
 
+    Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
+         anim = gameObject.GetComponent<Animator>();
+        
         // Initalizes the player, cursor, and level manager
             player = GameObject.FindGameObjectWithTag("Player");
             cursor = GameObject.FindGameObjectWithTag("Cursor");
@@ -88,7 +92,7 @@ public class C4 : MonoBehaviour
         // If C4 is stuck to someting and player detonates it, the C4 will explode
             if (Input.GetMouseButton(1) && isStuck == true)
                 explodeObject.GetComponent<Explode>().Explosion();
-
+        anim.SetTrigger("explodetrigger");
     }
 
     // Adds a rigidbody and adds force to the C4
