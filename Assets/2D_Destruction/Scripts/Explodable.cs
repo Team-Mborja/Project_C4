@@ -24,10 +24,19 @@ public class Explodable : MonoBehaviour
     public ShatterType shatterType;
     public List<GameObject> fragments = new List<GameObject>();
     private List<List<Vector2>> polygons = new List<List<Vector2>>();
-   
+
     /// <summary>
     /// Creates fragments if necessary and destroys original gameobject
     /// </summary>
+    /// 
+           private void OnTriggerEnter2D(Collider2D col)
+    {
+
+        if (col.gameObject.tag == "Rocket" || col.gameObject.tag == "C4" || col.gameObject.tag == "Grenade")
+        {
+            explode();
+        }
+    }
     public void explode()
     {
         //if fragments were not created before runtime then create them now
