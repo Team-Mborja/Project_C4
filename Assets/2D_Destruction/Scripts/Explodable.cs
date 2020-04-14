@@ -32,10 +32,10 @@ public class Explodable : MonoBehaviour
            private void OnTriggerEnter2D(Collider2D col)
     {
 
-        if (col.gameObject.tag == "Rocket" || col.gameObject.tag == "C4" || col.gameObject.tag == "Grenade")
-        {
-            explode();
-        }
+        //if (col.gameObject.tag == "Rocket" || col.gameObject.tag == "C4" || col.gameObject.tag == "Grenade")
+       // {
+        //    explode();
+        //}
     }
     public void explode()
     {

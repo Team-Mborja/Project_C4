@@ -56,6 +56,11 @@ public class Explode : MonoBehaviour
                 Destroy(objects, 1.0f);
             }
 
+            if(objects.GetComponent<Explodable>() != null)
+            {
+                objects.GetComponent<Explodable>().explode();
+            }
+
 
 
 
