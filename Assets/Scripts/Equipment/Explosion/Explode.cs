@@ -47,11 +47,20 @@ public class Explode : MonoBehaviour
     {
 
         if (parent.tag == "Grenade")
-            Instantiate(grenade_pushback, transform.position, Quaternion.identity);
+        {
+            GameObject push = Instantiate(grenade_pushback, transform.position, Quaternion.identity);
+            Destroy(push, 0.25f);
+        }
         else if (parent.tag == "C4")
-            Instantiate(c4_pushback, transform.position, Quaternion.identity);
+        {
+            GameObject push = Instantiate(c4_pushback, transform.position, Quaternion.identity);
+            Destroy(push, 0.25f);
+        }
         else if (parent.tag == "Rocket")
-            Instantiate(rocket_pushback, transform.position, Quaternion.identity);
+        {
+            GameObject push = Instantiate(rocket_pushback, transform.position, Quaternion.identity);
+            Destroy(push, 0.25f);
+        }
 
         Invoke("DestroyPieces", 4.0f);
         //  Explode.GetComponent<Rocket.cs>().FragmentObject();
