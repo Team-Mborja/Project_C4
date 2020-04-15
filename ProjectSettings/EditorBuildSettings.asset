@@ -42,12 +42,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Primary Levels/Easy.unity
     guid: 1c2a12829c838ee4d8a94811104c2b08
   - enabled: 1
-    path: Assets/Scenes/Primary Levels/Laser Lane.unity
+    path: Assets/Scenes/Unused Levels/Laser Lane.unity
     guid: f561dcd1ec96b8a4abfcd1819063e919
   - enabled: 1
-    path: Assets/Scenes/Primary Levels/Pipline Detonation.unity
+    path: Assets/Scenes/Unused Levels/Pipline Detonation.unity
     guid: d3d359b48aa97204ca00f7c13400d7fd
   - enabled: 1
-    path: Assets/Scenes/Primary Levels/Stairway to Hell.unity
+    path: Assets/Scenes/Unused Levels/Stairway to Hell.unity
     guid: 37b972ecd97353a40901fba6935a343b
   m_configObjects: {}
