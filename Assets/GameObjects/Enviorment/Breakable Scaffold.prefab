@@ -1847,7 +1847,6 @@ GameObject:
   - component: {fileID: 1399369641293172205}
   - component: {fileID: 1399369641293172202}
   - component: {fileID: 1399369641293172201}
-  - component: {fileID: 1399369641293172200}
   m_Layer: 0
   m_Name: Breakable Scaffold
   m_TagString: Destruct
@@ -2014,49 +2013,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1399369641293172200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399369641293172204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75953d6b31f574644be1238b08e89b8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowRuntimeFragmentation: 1
-  extraPoints: 50
-  subshatterSteps: 0
-  fragmentLayer: Default
-  sortingLayerName: Default
-  orderInLayer: 0
-  shatterType: 1
-  fragments:
-  - {fileID: 1399369640620985715}
-  - {fileID: 1399369641858213025}
-  - {fileID: 1399369641154078035}
-  - {fileID: 1399369640993617429}
-  - {fileID: 1399369640807829336}
-  - {fileID: 1399369641136195423}
-  - {fileID: 1399369640395308994}
-  - {fileID: 1399369642117570224}
-  - {fileID: 1399369641291459726}
-  - {fileID: 1399369640060377725}
-  - {fileID: 1399369641115296453}
-  - {fileID: 1399369640520026462}
-  - {fileID: 1399369641471461799}
-  - {fileID: 1399369641798308943}
-  - {fileID: 1399369642130117242}
-  - {fileID: 1399369641036769501}
-  - {fileID: 1399369641382030532}
-  - {fileID: 1399369640208979476}
-  - {fileID: 1399369641300696807}
-  - {fileID: 1399369641296213327}
-  - {fileID: 1399369641711877129}
-  - {fileID: 1399369640378412932}
-  - {fileID: 1399369640704254658}
 --- !u!1 &1399369641296213327
 GameObject:
   m_ObjectHideFlags: 0
