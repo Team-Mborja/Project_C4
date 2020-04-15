@@ -110,7 +110,7 @@ public class EndScreen : MonoBehaviour
     // Checking the special objective
     void SpecialObjective()
     {
-        if (specialObjective == "One Grenade" && playerScript.usedEquipment[0] == 1 && playerScript.usedEquipment[1] == 0 && playerScript.usedEquipment[2] == 0) // Was only one grenade used
+        if (specialObjective == "Two C4" && playerScript.usedEquipment[0] == 0 && playerScript.usedEquipment[1] == 2 && playerScript.usedEquipment[2] == 0) // Was only one grenade used
             starCount += 1;
         else if (specialObjective == "Limited Jump" && playerScript.usedJump <= jumpMax) // Was the correct amount of jumps used
             starCount += 1;
