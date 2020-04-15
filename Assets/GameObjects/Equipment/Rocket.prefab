@@ -243,6 +243,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4652389867022306260, guid: 452abce5134885d4db3465073b14a6f3,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 691140139326212374, guid: 452abce5134885d4db3465073b14a6f3,
         type: 3}
       propertyPath: parent

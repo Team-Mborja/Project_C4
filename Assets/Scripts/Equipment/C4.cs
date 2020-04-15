@@ -32,7 +32,6 @@ public class C4 : MonoBehaviour
         public bool isStuck;
     // Tags for all objects the C4 can stick to
         public List<string> stickTags = new List<string>();
-
     Animator anim;
 
     // Start is called before the first frame update

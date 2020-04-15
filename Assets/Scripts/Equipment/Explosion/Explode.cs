@@ -13,6 +13,10 @@ public class Explode : MonoBehaviour
     public GameObject explosion;
     public GameObject parent;
 
+    public GameObject grenade_pushback;
+    public GameObject c4_pushback;
+    public GameObject rocket_pushback;
+
 
     // Update is called once per frame
     void Update()
@@ -41,6 +45,14 @@ public class Explode : MonoBehaviour
     // Destroys all objects on explode list and starts the explosion annimation
     public void Explosion()
     {
+
+        if (parent.tag == "Grenade")
+            Instantiate(grenade_pushback, transform.position, Quaternion.identity);
+        else if (parent.tag == "C4")
+            Instantiate(c4_pushback, transform.position, Quaternion.identity);
+        else if (parent.tag == "Rocket")
+            Instantiate(rocket_pushback, transform.position, Quaternion.identity);
+
         Invoke("DestroyPieces", 4.0f);
         //  Explode.GetComponent<Rocket.cs>().FragmentObject();
 
