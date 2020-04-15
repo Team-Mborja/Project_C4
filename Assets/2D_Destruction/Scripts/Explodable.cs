@@ -31,11 +31,6 @@ public class Explodable : MonoBehaviour
     /// 
            private void OnTriggerEnter2D(Collider2D col)
     {
-
-        //if (col.gameObject.tag == "Rocket" || col.gameObject.tag == "C4" || col.gameObject.tag == "Grenade")
-       // {
-        //    explode();
-        //}
     }
     public void explode()
     {
@@ -57,6 +52,11 @@ public class Explodable : MonoBehaviour
         if (fragments.Count > 0)
         {
             Destroy(gameObject);
+            
+            foreach (GameObject frag in fragments)
+            {
+                Destroy(frag, 3.0f);
+            }
         }
     }
     /// <summary>
