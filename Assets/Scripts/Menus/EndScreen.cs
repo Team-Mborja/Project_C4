@@ -73,7 +73,7 @@ public class EndScreen : MonoBehaviour
                 stars[1].GetComponent<Animator>().enabled = true; ;
 
             if (playerScript.usedEquipment[0] == usedEquipment[0] && playerScript.usedEquipment[1] == usedEquipment[1] && playerScript.usedEquipment[2] == usedEquipment[2]) // Was only one two c4 used
-                stars[2].GetComponent<Animator>().enabled = true; ;
+                stars[2].GetComponent<Animator>().enabled = true;
         }
     }
 
