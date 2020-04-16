@@ -5625,7 +5625,7 @@ PrefabInstance:
     - target: {fileID: 395514832319622190, guid: bcb5e03f6f429ef4397cf8e8e90a7384,
         type: 3}
       propertyPath: usedEquipment.Array.data[0]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb5e03f6f429ef4397cf8e8e90a7384, type: 3}
@@ -11048,12 +11048,17 @@ PrefabInstance:
     - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
         type: 3}
       propertyPath: specialObjective
-      value: One Grenade
+      value: Two C4
       objectReference: {fileID: 0}
     - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
         type: 3}
       propertyPath: usedEquipment.Array.data[0]
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
+        type: 3}
+      propertyPath: usedEquipment.Array.data[1]
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6990325939485783640, guid: 2c1bcda5689242b419513ced09fe282e,
         type: 3}

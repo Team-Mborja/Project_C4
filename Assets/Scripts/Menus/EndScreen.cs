@@ -13,26 +13,17 @@ public class EndScreen : MonoBehaviour
         public Button mainMenuButton;
     // Star images on the end screen
         public Image[] stars = new Image[3];
-    // Int for how many stars you have 
-        public int starCount;
     // Float for the par time of the level
         public float parTime;
-    // String of the name of the special objective
-        public string specialObjective;
     // Scripts of the level manager and player
         LevelManager managerScript;
         Player playerScript;
-    // Max jumps allowed for max jumps objective 
-        public int jumpMax;
     // Total equipments used
         public int[] usedEquipment = new int[3];
-    // Protected GameObject for that special objective
-        public GameObject protectedObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        starCount = 0;
         managerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>();
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
@@ -68,29 +59,7 @@ public class EndScreen : MonoBehaviour
 
         AwardStars();
 
-        switch(starCount)
-        {
-            case 0:
-                stars[0].GetComponent<Animator>().enabled = false;
-                stars[1].GetComponent<Animator>().enabled = false;
-                stars[2].GetComponent<Animator>().enabled = false;
-                break;
-            case 1:
-                stars[0].GetComponent<Animator>().enabled = true;
-                stars[1].GetComponent<Animator>().enabled = false;
-                stars[2].GetComponent<Animator>().enabled = false;
-                break;
-            case 2:
-                stars[0].GetComponent<Animator>().enabled = true;
-                stars[1].GetComponent<Animator>().enabled = true;
-                stars[2].GetComponent<Animator>().enabled = false;
-                break;
-            case 3:
-                stars[0].GetComponent<Animator>().enabled = true;
-                stars[1].GetComponent<Animator>().enabled = true;
-                stars[2].GetComponent<Animator>().enabled = true;
-                break;
-        }
+        
     }
 
     // Sets star count for destoying the fuse box, beating the par time, and completing the special objective
@@ -98,25 +67,20 @@ public class EndScreen : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("FuseBox") == null)
         {
-            starCount += 1;
+            stars[0].GetComponent<Animator>().enabled = true;
 
             if (managerScript.timer <= parTime)
-                starCount += 1;
+                stars[1].GetComponent<Animator>().enabled = true; ;
 
-            SpecialObjective();
+            if (playerScript.usedEquipment[0] == usedEquipment[0] && playerScript.usedEquipment[1] == usedEquipment[1] && playerScript.usedEquipment[2] == usedEquipment[2]) // Was only one two c4 used
+                stars[2].GetComponent<Animator>().enabled = true; ;
         }
     }
 
-    // Checking the special objective
-    void SpecialObjective()
-    {
-        if (specialObjective == "Two C4" && playerScript.usedEquipment[0] == 0 && playerScript.usedEquipment[1] == 2 && playerScript.usedEquipment[2] == 0) // Was only one grenade used
-            starCount += 1;
-        else if (specialObjective == "Limited Jump" && playerScript.usedJump <= jumpMax) // Was the correct amount of jumps used
-            starCount += 1;
-        else if (specialObjective == "Protected Object" && protectedObject != null) // Was the protected object saved
-            starCount += 1;
+   
+        
+    
 
         
-    }
+    
 }
