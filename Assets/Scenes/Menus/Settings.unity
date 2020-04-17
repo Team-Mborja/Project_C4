@@ -303,6 +303,12 @@ PrefabInstance:
       propertyPath: m_Text
       value: Back
       objectReference: {fileID: 0}
+    - target: {fileID: 3183185521266185174, guid: 7857e7882fb6ddf49b1d084fbefc975c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8609bf6af068a354998ca4238f8e811c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7857e7882fb6ddf49b1d084fbefc975c, type: 3}
 --- !u!1 &183272802
