@@ -22,23 +22,23 @@ public class LevelManager : MonoBehaviour
         GameObject fuseBox;
 
     // Creates pause variable
-    public bool pausedGame;
+        public bool pausedGame;
     // Creates game over variable
-    public bool gameOver;
+        public bool gameOver;
 
     // Start is called once at the start
     void Start()
     {
         // Creates the tag for player
-        player = GameObject.FindGameObjectWithTag("Player");
+            player = GameObject.FindGameObjectWithTag("Player");
         // Creates the tag for Fusebox
-        fuseBox = GameObject.FindGameObjectWithTag("FuseBox");
+            fuseBox = GameObject.FindGameObjectWithTag("FuseBox");
         // Sets the timer variable to 0
-        timer = 0;
+            timer = 0;
         // Sets the pauseGame function bool to false
-        pausedGame = false;
+            pausedGame = false;
         // Sets the gameOver function to false
-        gameOver = false;
+            gameOver = false;
     }
 
     // Update is called once per frame

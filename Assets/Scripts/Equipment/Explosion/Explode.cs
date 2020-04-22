@@ -1,21 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Explode : MonoBehaviour
 {
     // List of tags on objects that can be destroyed
-    public List<string> explosionTags = new List<string>();
-    public List<string> animateTags = new List<string>();
-    // Items in Range
-    List<GameObject> inRangeItems = new List<GameObject>();
+        public List<string> explosionTags = new List<string>();
+    // List of objects that can be animated
+        public List<string> animateTags = new List<string>();
+    // List of items in range of the explosio 
+        List<GameObject> inRangeItems = new List<GameObject>();
     // GameObjects for the explosive and the explosion
-    public GameObject explosion;
-    public GameObject parent;
-
-    public GameObject grenade_pushback;
-    public GameObject c4_pushback;
-    public GameObject rocket_pushback;
+        public GameObject explosion;
+        public GameObject parent;
+    // Pushback GameObject for the grenade, c4, and the rocket
+        public GameObject grenade_pushback;
+        public GameObject c4_pushback;
+        public GameObject rocket_pushback;
 
 
     // Update is called once per frame
@@ -45,7 +45,43 @@ public class Explode : MonoBehaviour
     // Destroys all objects on explode list and starts the explosion annimation
     public void Explosion()
     {
+        Pushback(); // Moves objects backward away from the explosion
+        Invoke("DestroyPieces", 4.0f);
 
+        // Activates the necesary functions for each GameObject getting destroyed
+        foreach (GameObject objects in inRangeItems)
+        {
+            if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
+                objects.GetComponent<BoxDrops>().DropItem();
+
+            if (animateTags.Contains(objects.tag) && objects.GetComponent<Animator>() != null)
+            {
+                objects.GetComponent<Animator>().SetTrigger("Destroyed");
+                Destroy(objects, 1.0f);
+            }
+
+            if(objects.GetComponent<Explodable>() != null)
+                objects.GetComponent<Explodable>().explode();
+             else
+                 Destroy(objects);
+
+            if (inRangeItems.Count == 0)
+                break;
+        }
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(parent);
+    }
+
+    // Destroys the explosion fragments
+    void DestroyPieces()
+    {
+        GameObject[] destroy = GameObject.FindGameObjectsWithTag("piecefordestroy");
+        foreach (GameObject dest in destroy)
+            GameObject.Destroy(dest);
+    }
+
+    void Pushback()
+    {
         if (parent.tag == "Grenade")
         {
             GameObject push = Instantiate(grenade_pushback, transform.position, Quaternion.identity);
@@ -61,55 +97,5 @@ public class Explode : MonoBehaviour
             GameObject push = Instantiate(rocket_pushback, transform.position, Quaternion.identity);
             Destroy(push, 0.25f);
         }
-
-        Invoke("DestroyPieces", 4.0f);
-        //  Explode.GetComponent<Rocket.cs>().FragmentObject();
-
-        foreach (GameObject objects in inRangeItems)
-        {
-
-            if (objects.tag == "Box" && objects.GetComponent<BoxDrops>() != null)
-                objects.GetComponent<BoxDrops>().DropItem();
-
-            if (animateTags.Contains(objects.tag) && objects.GetComponent<Animator>() != null)
-            {
-                objects.GetComponent<Animator>().SetTrigger("Destroyed");
-                Destroy(objects, 1.0f);
-            }
-
-            if(objects.GetComponent<Explodable>() != null)
-            {
-                objects.GetComponent<Explodable>().explode();
-            }
-
-
-
-
-
-
-
-
-             else
-                 Destroy(objects);
-
-
-
-
-
-
-
-
-
-            if (inRangeItems.Count == 0)
-                break;
-        }
-        Instantiate(explosion, transform.position, Quaternion.identity);
-        Destroy(parent);
-    }
-    void DestroyPieces()
-    {
-        GameObject[] destroy = GameObject.FindGameObjectsWithTag("piecefordestroy");
-        foreach (GameObject dest in destroy)
-            GameObject.Destroy(dest);
     }
 }

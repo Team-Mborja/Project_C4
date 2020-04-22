@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class C4 : MonoBehaviour
@@ -32,12 +31,14 @@ public class C4 : MonoBehaviour
         public bool isStuck;
     // Tags for all objects the C4 can stick to
         public List<string> stickTags = new List<string>();
-    Animator anim;
+    // Animator Component
+        Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
-         anim = gameObject.GetComponent<Animator>();
+        // Assigns the Animator component
+            anim = gameObject.GetComponent<Animator>();
         
         // Initalizes the player, cursor, and level manager
             player = GameObject.FindGameObjectWithTag("Player");
@@ -91,6 +92,7 @@ public class C4 : MonoBehaviour
         // If C4 is stuck to someting and player detonates it, the C4 will explode
             if (Input.GetMouseButton(1) && isStuck == true)
                 explodeObject.GetComponent<Explode>().Explosion();
+
         anim.SetTrigger("explodetrigger");
     }
 
@@ -100,6 +102,7 @@ public class C4 : MonoBehaviour
 
             rb = gameObject.AddComponent<Rigidbody2D>();
             gameObject.AddComponent<BoxCollider2D>();
+
             // Throws the C4
                 rb.AddForce(new Vector2(forceForward, forceUpward));
         }
@@ -107,8 +110,6 @@ public class C4 : MonoBehaviour
     // Code that is called when the C4 collides with an object it sticks to
         private void OnCollisionEnter2D(Collision2D collision)
         {
-
-        //souundScript.PlaySoundFile(souundScript.c4_stick);
 
         // rotates to match the object it sticks to and locks it in place
         if (stickTags.Contains(collision.gameObject.tag))

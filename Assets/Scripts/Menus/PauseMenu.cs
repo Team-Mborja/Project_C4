@@ -1,15 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class PauseMenu : MonoBehaviour
 {
-
-    public Image inventory;
-    public Image timer;
-    public Image pauseButton;
+    // UI elements
+        public Image inventory;
+        public Image timer;
+        public Image pauseButton;
 
     //Text field for the title on the pause menu
         public Text title;
@@ -19,7 +18,6 @@ public class PauseMenu : MonoBehaviour
     // Activates pause screen when you press escape
     void Update()
     {
-        
         if (Input.GetKey(KeyCode.Escape) && gameObject.GetComponent<Image>().enabled == false && GameObject.FindGameObjectWithTag("Manager").GetComponent<LevelManager>().gameOver == false)
            ActivatePauseScreen();
 

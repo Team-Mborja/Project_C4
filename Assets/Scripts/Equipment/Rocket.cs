@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
@@ -18,23 +16,15 @@ public class Rocket : MonoBehaviour
         public GameObject explosionObject;
     // Raycast at the front of the rocekt
         RaycastHit2D front;
-
-
-    /// <summary>
-    /// //
-    /// </summary>
+    // Animator component
         Animator anim;
 
-    /// 
-    /// </summary>
 
     // Start is called before the first frame update
     void Start()
     {
-
-        //////////
+        // Assigns the Animator component
             anim = gameObject.GetComponent<Animator>();
-        //////////
 
         // Initalize the player, cursor, and level manager
             player = GameObject.FindGameObjectWithTag("Player");
@@ -53,10 +43,6 @@ public class Rocket : MonoBehaviour
        // Sets the rotation again
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, (Mathf.Atan2(cursor.transform.position.y - transform.position.y, cursor.transform.position.x - transform.position.x) * Mathf.Rad2Deg) + 90));
     }
-
-
-   
-
 
     // Update is called once per frame
     void Update()
@@ -78,11 +64,7 @@ public class Rocket : MonoBehaviour
                 else
                     explosionObject.GetComponent<Explode>().Explosion();
             
-            
             anim.SetTrigger("explodetrigger");
-        
         }
-
-    }
-    
+    }   
 }

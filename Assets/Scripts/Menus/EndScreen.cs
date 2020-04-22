@@ -31,13 +31,14 @@ public class EndScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Activates the end screnn with level failed
+        // Activates the end scren with level failed
         if (GameObject.FindGameObjectWithTag("Player") == null && gameObject.GetComponent<Image>().enabled == false /*|| managerScript.gameOver == true*/)
         {
             status[0].GetComponent<Image>().enabled = true;
             ActivateEndScreen();
         }
         
+        // Activates the end screen with level complete
         if (GameObject.FindGameObjectWithTag("FuseBox") == null && gameObject.GetComponent<Image>().enabled == false)
         {
             status[1].GetComponent<Image>().enabled = true;
