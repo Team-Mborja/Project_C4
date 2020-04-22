@@ -11881,6 +11881,11 @@ PrefabInstance:
       propertyPath: usedEquipment.Array.data[1]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
+        type: 3}
+      propertyPath: usedEquipment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6990325939485783640, guid: 2c1bcda5689242b419513ced09fe282e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
