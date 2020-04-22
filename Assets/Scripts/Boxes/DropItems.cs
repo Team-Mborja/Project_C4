@@ -1,14 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DropItems : MonoBehaviour
 {
-    // Item that the script applies to 
+   // Item that you are picking up 
         public GameObject item;
 
-
-    // Checks which item in the invenvtory is chosen, it matches and adds one to it
+    // If a player runs into the gameobject, add it to your inventory
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -22,7 +19,6 @@ public class DropItems : MonoBehaviour
 
             //Destroys the object after its picked up
                 Destroy(gameObject);
-
         }
     }
 }

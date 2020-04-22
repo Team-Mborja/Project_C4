@@ -83,14 +83,14 @@ public class Grenade : MonoBehaviour
 
         // timer counts down
             destruct -= Time.deltaTime;
-
+        
+        //Creates the Grenade Timer after it has reached 3 seconds
         if (destruct <= 3.0f && timerInstance == null)
             timerInstance = Instantiate(timer, new Vector2(transform.position.x, transform.position.y + 0.5f), Quaternion.identity);
 
+        // Moves the Grenade Timer with the Grenade as long as the grenade is active
         if (timerInstance != null)
             timerInstance.transform.position = new Vector2(transform.position.x, transform.position.y + 0.5f);
-
-        //souundScript.PlaySoundFile(souundScript.grenade_tick);
 
         // Throws the grenade if you press left mouse
         if (Input.GetMouseButtonUp(0) && isThrown == false)

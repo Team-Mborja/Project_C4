@@ -1,29 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Camera_Follow : MonoBehaviour
 {
-    Vector3 playerPos;
+    // Position of the player
+        Vector3 playerPos;
+    // Offset for the camera from the player
     public float offset;
-
-    public bool bounds;
-
-    public Vector3 minCameraPos;
-    public Vector3 maxcameraPos;
+    // Is the camera bound
+        public bool bounds;
+    // Boundry positions for the camera
+        public Vector3 minCameraPos;
+        public Vector3 maxcameraPos;
 
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, -10.0f);
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        // Keeps the camera at -10 on the z axis
+            transform.position = new Vector3(transform.position.x, transform.position.y, -10.0f);
+        // updates the Player position every frame
+            playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
 
+        // Updates the camera position as long as the player is alive
         if(GameObject.FindGameObjectWithTag("Player") != null)
-        {
             transform.position = new Vector3(playerPos.x, playerPos.y, transform.position.z);
-        } 
     }
 
+    //Lock the camera in place if the player reaches a boundry
     void fixedupdate()
     {
         if (bounds)
