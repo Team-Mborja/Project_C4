@@ -19,7 +19,7 @@ public class EndScreen : MonoBehaviour
         LevelManager managerScript;
         Player playerScript;
     // Total equipments used
-        public int[] usedEquipment = new int[3];
+    public int usedEquipment;
 
     // Start is called before the first frame update
     void Start()
@@ -73,7 +73,7 @@ public class EndScreen : MonoBehaviour
             if (managerScript.timer <= parTime)
                 stars[1].GetComponent<Animator>().enabled = true; ;
 
-            if (playerScript.usedEquipment[0] == usedEquipment[0] && playerScript.usedEquipment[1] == usedEquipment[1] && playerScript.usedEquipment[2] == usedEquipment[2]) // Was only one two c4 used
+            if (playerScript.usedEquipment[0] + playerScript.usedEquipment[1] + playerScript.usedEquipment[2] == usedEquipment)
                 stars[2].GetComponent<Animator>().enabled = true;
         }
     }
