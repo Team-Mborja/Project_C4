@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1cf244d7795fd469bddd9b18211d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  souundScript: {fileID: 9085345529502556746, guid: c7930dce37e09ce4bb7f99c643f32416,
+  soundScript: {fileID: 9085345529502556746, guid: c7930dce37e09ce4bb7f99c643f32416,
     type: 3}
   moveSpeed: 5
   jumpForce: 250
