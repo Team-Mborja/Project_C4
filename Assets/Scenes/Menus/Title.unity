@@ -310,18 +310,19 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 8300000, guid: 549da9df2027af641b31b850d323b084, type: 3}
-    - target: {fileID: 3183185521047630326, guid: 7857e7882fb6ddf49b1d084fbefc975c,
-        type: 3}
-      propertyPath: m_Text
-      value: Credits
-      objectReference: {fileID: 0}
     - target: {fileID: 3183185521266185174, guid: 7857e7882fb6ddf49b1d084fbefc975c,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8609bf6af068a354998ca4238f8e811c,
         type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 3183185521047630326, guid: 7857e7882fb6ddf49b1d084fbefc975c,
+        type: 3}
+      propertyPath: m_Text
+      value: Credits
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8560266541380181248, guid: 7857e7882fb6ddf49b1d084fbefc975c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7857e7882fb6ddf49b1d084fbefc975c, type: 3}
 --- !u!114 &528280199 stripped
 MonoBehaviour:
@@ -771,18 +772,19 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 8300000, guid: 549da9df2027af641b31b850d323b084, type: 3}
-    - target: {fileID: 3183185521047630326, guid: 7857e7882fb6ddf49b1d084fbefc975c,
-        type: 3}
-      propertyPath: m_Text
-      value: Settings
-      objectReference: {fileID: 0}
     - target: {fileID: 3183185521266185174, guid: 7857e7882fb6ddf49b1d084fbefc975c,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8609bf6af068a354998ca4238f8e811c,
         type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 3183185521047630326, guid: 7857e7882fb6ddf49b1d084fbefc975c,
+        type: 3}
+      propertyPath: m_Text
+      value: Settings
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8560266541380181248, guid: 7857e7882fb6ddf49b1d084fbefc975c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7857e7882fb6ddf49b1d084fbefc975c, type: 3}
 --- !u!1001 &1442624692
 PrefabInstance:
@@ -952,18 +954,19 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 8300000, guid: 549da9df2027af641b31b850d323b084, type: 3}
-    - target: {fileID: 3183185521047630326, guid: 7857e7882fb6ddf49b1d084fbefc975c,
-        type: 3}
-      propertyPath: m_Text
-      value: Quit
-      objectReference: {fileID: 0}
     - target: {fileID: 3183185521266185174, guid: 7857e7882fb6ddf49b1d084fbefc975c,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8609bf6af068a354998ca4238f8e811c,
         type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 3183185521047630326, guid: 7857e7882fb6ddf49b1d084fbefc975c,
+        type: 3}
+      propertyPath: m_Text
+      value: Quit
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8560266541380181248, guid: 7857e7882fb6ddf49b1d084fbefc975c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7857e7882fb6ddf49b1d084fbefc975c, type: 3}
 --- !u!1 &1581139692
 GameObject:
@@ -1346,17 +1349,6 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 0.7607844
       objectReference: {fileID: 0}
-    - target: {fileID: 3183185521047630326, guid: 7857e7882fb6ddf49b1d084fbefc975c,
-        type: 3}
-      propertyPath: m_Text
-      value: Start
-      objectReference: {fileID: 0}
-    - target: {fileID: 3183185521047630326, guid: 7857e7882fb6ddf49b1d084fbefc975c,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
-        type: 3}
     - target: {fileID: 3183185521266185174, guid: 7857e7882fb6ddf49b1d084fbefc975c,
         type: 3}
       propertyPath: m_Sprite
@@ -1368,7 +1360,19 @@ PrefabInstance:
       propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3183185521047630326, guid: 7857e7882fb6ddf49b1d084fbefc975c,
+        type: 3}
+      propertyPath: m_Text
+      value: Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183185521047630326, guid: 7857e7882fb6ddf49b1d084fbefc975c,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a02da4db1907fbd46bd4a180bd9508d9,
+        type: 3}
+    m_RemovedComponents:
+    - {fileID: 8560266541380181248, guid: 7857e7882fb6ddf49b1d084fbefc975c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7857e7882fb6ddf49b1d084fbefc975c, type: 3}
 --- !u!1001 &7901997925261629414
 PrefabInstance:
