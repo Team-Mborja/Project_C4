@@ -55,7 +55,7 @@ public class Explodable : MonoBehaviour
             
             foreach (GameObject frag in fragments)
             {
-                Destroy(frag, 3.0f);
+                Destroy(frag, 0.75f);
             }
         }
     }
