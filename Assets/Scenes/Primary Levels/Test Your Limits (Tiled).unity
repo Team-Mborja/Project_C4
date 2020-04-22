@@ -11864,7 +11864,7 @@ PrefabInstance:
     - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
         type: 3}
       propertyPath: parTime
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4907117862397519955, guid: 2c1bcda5689242b419513ced09fe282e,
         type: 3}
