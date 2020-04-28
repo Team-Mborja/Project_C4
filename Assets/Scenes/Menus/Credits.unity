@@ -191,9 +191,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Angel Doyle                - Designer\nHaylee Jarosz           - Artist\nIllir
-    Mborja\t               - Studio Owner\nKyle Stanton              - Lead Producer/Lead
-    Programmer\t\t\nOwen Record             - Producer\t\t\t\nReid Fitzhugh             -
-    Lead Design\t\t\t\t\t\t"
+    Mborja\t               - Studio Owner\nKemoni Francis        - Lead Artist\nKyle
+    Stanton              - Lead Producer/Lead Programmer\t\t\nOwen Record             -
+    Producer\t\t\t\nReid Fitzhugh             - Lead Design\t\t\t\t\t\t"
 --- !u!222 &51516433
 CanvasRenderer:
   m_ObjectHideFlags: 0
